@@ -16,7 +16,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPORT_DIR="$SCRIPT_DIR/reports"
 TIMESTAMP="$(TZ=Asia/Kolkata date '+%Y%m%d-%H%M%S')"
 REPORT_FILE="$REPORT_DIR/baseline-$TIMESTAMP.txt"
-LOG_FILE="/tmp/$(basename "$0" .sh).log" # Adjusted to /tmp as /var/log/apps often requires sudo
+LOG_FILE="var/log/apps/$(basename "$0" .sh).log"
 
 # Logging functions
 log_info() { echo "[$(TZ=Asia/Kolkata date '+%Y-%m-%d %H:%M:%S')] [INFO] $1" | tee -a "$LOG_FILE"; }
