@@ -93,23 +93,23 @@ Usage: sudo ./permission_audit.sh
 - Allow developers to restart web services only
 - Allow ops team to run any command
 
-![creating custom policies](image.png)
+![creating custom policies](public/image.png)
 
 - Secure the Policy File
 
-![Secure the Policy File](image-1.png)
+![Secure the Policy File](public/image-1.png)
 
 - Disable Direct Root Login
-![Disabled Direct Root Login](image-2.png)
+![Disabled Direct Root Login](public/image-2.png)
 
 - Enable Direct Root Login
-![Enabled Direct Root Login](image-3.png)
+![Enabled Direct Root Login](public/image-3.png)
 
 - Set up sudo logging to /var/log/sudo.log
-![Set up sudo logging ](image-4.png)
+![Set up sudo logging ](public/image-4.png)
 
 - Test each policy with sudo -l -U username
-![Test each policy for users](image-5.png)
+![Test each policy for users](public/image-5.png)
 
 
 ## backup_system.sh
