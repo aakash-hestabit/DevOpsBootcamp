@@ -1,0 +1,4 @@
+username,fullname,group,role
+jdoe,John Doe,developers,developer
+asmith,Alice Smith,ops,sysadmin
+jdoe,John Doe,developers,developer

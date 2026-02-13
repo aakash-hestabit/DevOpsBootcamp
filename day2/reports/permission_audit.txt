@@ -1,0 +1,68 @@
+--------------- Permission Audit Report ---------------
+Generated on: Fri Feb 13 02:47:13 AM IST 2026
+Scanned Paths: /home /var/www
+
+--------------------------------------------
+Files with 777 Permissions in /home
+-----------------------------------------------
+None found.
+
+--------------------------------------------
+World-Writable Directories WITHOUT Sticky Bit in /home
+-----------------------------------------------
+None found.
+
+--------------------------------------------
+SUID / SGID Files in /home
+-----------------------------------------------
+None found.
+
+--------------------------------------------
+Files Owned by Non-Existent Users in /home
+-----------------------------------------------
+/home/test
+
+Suggested Fix: chown validuser:group <file>
+
+--------------------------------------------
+Files Owned by Non-Existent Groups in /home
+-----------------------------------------------
+/home/test
+
+Suggested Fix: chgrp validgroup <file>
+
+--------------------------------------------
+Files with 777 Permissions in /var/www
+-----------------------------------------------
+/var/www/test
+
+Suggested Fix: chmod 755 <file>
+
+--------------------------------------------
+World-Writable Directories WITHOUT Sticky Bit in /var/www
+-----------------------------------------------
+None found.
+
+--------------------------------------------
+SUID / SGID Files in /var/www
+-----------------------------------------------
+None found.
+
+--------------------------------------------
+Files Owned by Non-Existent Users in /var/www
+-----------------------------------------------
+None found.
+
+--------------------------------------------
+Files Owned by Non-Existent Groups in /var/www
+-----------------------------------------------
+None found.
+
+--------------------------------------------
+Audit Summary
+-----------------------------------------------
+777 Files Found: 1
+World-Writable Directories Found: 0
+SUID/SGID Files Found: 0
+Files with No Owner Found: 1
+Files with No Group Found: 1

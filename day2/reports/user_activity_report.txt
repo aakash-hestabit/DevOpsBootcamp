@@ -1,0 +1,108 @@
+USER ACTIVITY REPORT
+Generated on: Fri Feb 13 01:33:13 PM IST 2026
+
+-------------------------------------------
+Currently Logged-In Users
+----------------------------------------------
+aakash   tty2         2026-02-01 20:03 (tty2)
+aakash   pts/2        2026-02-12 12:11
+aakash   pts/3        2026-02-12 12:17
+aakash   pts/5        2026-02-13 13:33
+
+Detailed View (w):
+aakash   tty2     -                01Feb26 11days  0.03s  0.02s /usr/libexec/gnome-session-binary --session=ubuntu
+
+-------------------------------------------
+Recent Login History (Last 20)
+----------------------------------------------
+hestabit tty3         tty3             Fri Feb 13 01:29 - 01:29  (00:00)
+hestabit seat0        login screen     Fri Feb 13 01:29    gone - no logout
+hestabit tty3         tty3             Thu Feb 12 19:57 - 01:27  (05:30)
+hestabit seat0        login screen     Thu Feb 12 19:57 - 01:29  (05:31)
+hestabit tty3         tty3             Thu Feb 12 19:05 - 19:12  (00:06)
+hestabit seat0        login screen     Thu Feb 12 19:05 - 19:57  (00:51)
+aakash   tty2         tty2             Sun Feb  1 20:03   still logged in
+aakash   seat0        login screen     Sun Feb  1 20:03 - 19:05 (10+23:01)
+reboot   system boot  6.14.0-37-generi Sun Feb  1 20:02   still running
+aakash   tty2         tty2             Sat Jan 31 22:04 - down   (21:57)
+aakash   seat0        login screen     Sat Jan 31 22:04 - down   (21:57)
+reboot   system boot  6.14.0-37-generi Sat Jan 31 22:04 - 20:02  (21:58)
+aakash   tty2         tty2             Sat Jan 24 15:31 - down  (7+06:32)
+aakash   seat0        login screen     Sat Jan 24 15:31 - down  (7+06:32)
+reboot   system boot  6.14.0-37-generi Sat Jan 24 15:31 - 22:04 (7+06:33)
+aakash   tty2         tty2             Mon Jan 12 11:03 - crash (12+04:28)
+aakash   seat0        login screen     Mon Jan 12 11:03 - crash (12+04:28)
+reboot   system boot  6.14.0-37-generi Mon Jan 12 11:02 - 22:04 (19+11:01)
+aakash   tty2         tty2             Sun Jan 11 17:52 - down   (13:47)
+aakash   seat0        login screen     Sun Jan 11 17:52 - down   (13:47)
+
+wtmp begins Sat Nov  1 08:49:29 2025
+
+-------------------------------------------
+Last Login Per Human User (UID >= 1000)
+----------------------------------------------
+hestabit tty3         tty3             Fri Feb 13 01:29 - 01:29  (00:00)
+
+aakash   tty2         tty2             Sun Feb  1 20:03   still logged in
+
+
+
+
+
+-------------------------------------------
+Recent Command History (Last 10 Commands Per User)
+----------------------------------------------
+
+User: aakash
+cd /sys
+ls
+cd module/
+ls
+cd bluetooth/
+ls
+cat version 
+clear 
+cd ..
+clear 
+
+User: asmith
+  [No .bash_history found]
+
+User: hestabit
+logout
+who
+whoami 
+id
+who
+who -a
+w
+clear 
+su - hestabit
+logout
+
+User: jdoe
+clea 
+clear 
+logout
+
+User: test_inactive_user
+  [No .bash_history found]
+
+-------------------------------------------
+Inactive Users (No Login > 90 Days)
+----------------------------------------------
+
+-------------------------------------------
+Never Logged-In Users
+----------------------------------------------
+hestabit  Never logged in
+aakash  Never logged in
+jdoe  Never logged in
+asmith  Never logged in
+test_inactive_user  Never logged in
+
+-------------------------------------------
+Summary
+----------------------------------------------
+Currently Logged-In Users: 4
+Inactive Users (>90 days): 0
