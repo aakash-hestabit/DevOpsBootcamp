@@ -1,0 +1,8 @@
+[Unit]
+Description=System Monitoring Service
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/aakash/Desktop/DevOpsBootcamp/day5/monitor.sh
+User=root
