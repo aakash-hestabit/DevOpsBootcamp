@@ -1,0 +1,14 @@
+[2026-02-17 11:26:30] [INFO] Network diagnostics started
+[2026-02-17 11:26:30] [INFO] Checking internet connectivity
+[2026-02-17 11:26:34] [PASS] Internet connectivity: OK
+[2026-02-17 11:26:34] [INFO] Checking DNS resolution
+[2026-02-17 11:26:34] [PASS] DNS resolution: OK
+[2026-02-17 11:26:34] [INFO] Listing network interfaces and IP addresses
+[2026-02-17 11:26:34] [INFO] Displaying routing table
+[2026-02-17 11:26:34] [INFO] Listing listening ports
+[2026-02-17 11:26:34] [INFO] Measuring latency to 8.8.8.8
+[2026-02-17 11:26:38] [PASS] Latency to 8.8.8.8: 84.308 ms
+[2026-02-17 11:26:38] [INFO] Measuring latency to 1.1.1.1
+[2026-02-17 11:26:42] [PASS] Latency to 1.1.1.1: 78.763 ms
+[2026-02-17 11:26:42] [INFO] Network diagnostics completed
+[2026-02-17 11:26:42] [INFO] Report written to reports/infrastructure-monitor-2026-02-17_11-26-23.txt

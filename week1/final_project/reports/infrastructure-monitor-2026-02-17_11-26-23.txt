@@ -1,0 +1,796 @@
+====================================================
+       INFRASTRUCTURE MONITORING REPORT
+====================================================
+Generated : Tue Feb 17 11:26:23 AM IST 2026
+Hostname  : hestabit-Latitude-3450
+Report ID : infrastructure-monitor-2026-02-17_11-26-23
+====================================================
+
+==================================================
+Baseline Report Generator
+==================================================
+
+=====================================================
+             SYSTEM BASELINE REPORT
+=====================================================
+Generated on : Tue Feb 17 11:26:23 AM IST 2026
+Hostname     : hestabit-Latitude-3450
+=====================================================
+
+================ SYSTEM INVENTORY ===================
+========== SYSTEM INVENTORY ==========
+Generated on: Tue Feb 17 11:26:23 AM IST 2026
+
+--- System Information ---
+Operating System : Ubuntu 24.04.4 LTS
+Kernel Version   : 6.14.0-37-generic
+System Uptime    : up 2 weeks, 1 day, 15 hours, 23 minutes
+
+--- Hardware Information ---
+CPU Model        : 13th Gen Intel(R) Core(TM) i5-1335U
+Total RAM        : 23Gi
+Disk Size (/)    : 468G
+
+--- Software Information ---
+Installed Packages: 1704
+
+--- Network Interfaces ---
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp44s0          DOWN           
+wlp0s20f3        UP             10.10.1.98/22 fe80::c3de:46c6:23b7:d460/64 
+docker0          DOWN           172.17.0.1/16 
+
+======================================
+
+================ PROCESS SNAPSHOT ===================
+========== PROCESS SNAPSHOT ==========
+Generated on: Tue Feb 17 11:26:23 AM IST 2026
+
+Total Processes: 431
+
+--- Top 10 CPU Consuming Processes ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+aakash   2577311  5.6  2.8 1460085620 694144 ?   Sl   02:14  31:07 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4469 --enable-crash-reporter=bebcc9de-18e7-44d9-9965-c636dfc30d25, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=wayland --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=11212 --time-ticks-at-unix-epoch=-1769956373521482 --launch-time-ticks=541713803525 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,9131960599374101758,13372145855519254317,2097152 --field-trial-handle=3,i,3180628286980148311,3079890958721493442,262144 --disable-features=EyeDropper --variations-seed-version=20260131-030012.499000 --trace-process-track-uuid=3190719492425082482
+aakash   2007645  1.2  2.6 1481870880 644488 ?   Sl   Feb13  79:11 /usr/share/code/code --type=zygote
+aakash      2788  1.1  1.3 4945060 335824 ?      Ssl  Feb01 268:20 /usr/bin/gnome-shell
+aakash   2553864  0.9  1.3 1461823388 326660 ?   Sl   01:15   5:59 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4469 --enable-crash-reporter=bebcc9de-18e7-44d9-9965-c636dfc30d25, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=wayland --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=11145 --time-ticks-at-unix-epoch=-1769956373521482 --launch-time-ticks=538168233120 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,16028417503745618976,1776312630167277421,2097152 --field-trial-handle=3,i,3180628286980148311,3079890958721493442,262144 --disable-features=EyeDropper --variations-seed-version=20260131-030012.499000 --trace-process-track-uuid=3190719429643278599
+aakash   2367664  0.9  1.0 1460073100 244800 ?   Sl   Feb16  10:54 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4469 --enable-crash-reporter=bebcc9de-18e7-44d9-9965-c636dfc30d25, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=wayland --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=10748 --time-ticks-at-unix-epoch=-1769956373521482 --launch-time-ticks=513666321452 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,7785699414356747387,7342930899842270954,2097152 --field-trial-handle=3,i,3180628286980148311,3079890958721493442,262144 --disable-features=EyeDropper --variations-seed-version=20260131-030012.499000 --trace-process-track-uuid=3190719057637664546
+aakash      4460  0.7  3.5 34623028 872304 ?     SLl  Feb01 170:30 /opt/google/chrome/chrome
+aakash      4752  0.5  0.7 34693096 188712 ?     Sl   Feb01 125:42 /opt/google/chrome/chrome --type=gpu-process --ozone-platform=wayland --render-node-override=/dev/dri/renderD128 --crashpad-handler-pid=4469 --enable-crash-reporter=bebcc9de-18e7-44d9-9965-c636dfc30d25, --change-stack-guard-on-fork=enable --gpu-preferences=UAAAAAAAAAAgAQAEAAAAAAAAAAAAAGAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAABgAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAA --shared-files --metrics-shmem-handle=4,i,8914896378240573550,10389102948723752239,262144 --field-trial-handle=3,i,3180628286980148311,3079890958721493442,262144 --disable-features=EyeDropper --variations-seed-version=20260131-030012.499000 --trace-process-track-uuid=3190708988185955192
+mysql    1465024  0.5  1.4 2377344 344072 ?      Ssl  Feb09  60:33 /usr/sbin/mysqld
+aakash   2181224  0.5  1.4 1461823676 350460 ?   Sl   Feb16   9:51 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4469 --enable-crash-reporter=bebcc9de-18e7-44d9-9965-c636dfc30d25, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=wayland --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=10377 --time-ticks-at-unix-epoch=-1769956373521482 --launch-time-ticks=488060300912 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,14510037351201085110,9860254381838038758,2097152 --field-trial-handle=3,i,3180628286980148311,3079890958721493442,262144 --disable-features=EyeDropper --variations-seed-version=20260131-030012.499000 --trace-process-track-uuid=3190718709995138567
+aakash   2007605  0.4  0.6 34487980 163456 ?     Sl   Feb13  27:02 /usr/share/code/code --type=zygote --no-zygote-sandbox
+
+--- Top 10 Memory Consuming Processes ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+aakash      4460  0.7  3.5 34623028 872304 ?     SLl  Feb01 170:30 /opt/google/chrome/chrome
+aakash   2577311  5.6  2.8 1460085620 694144 ?   Sl   02:14  31:07 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4469 --enable-crash-reporter=bebcc9de-18e7-44d9-9965-c636dfc30d25, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=wayland --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=11212 --time-ticks-at-unix-epoch=-1769956373521482 --launch-time-ticks=541713803525 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,9131960599374101758,13372145855519254317,2097152 --field-trial-handle=3,i,3180628286980148311,3079890958721493442,262144 --disable-features=EyeDropper --variations-seed-version=20260131-030012.499000 --trace-process-track-uuid=3190719492425082482
+aakash   2007645  1.2  2.6 1481870880 644488 ?   Sl   Feb13  79:11 /usr/share/code/code --type=zygote
+aakash   2307389  0.2  2.4 1464994936 589308 ?   Sl   Feb16   2:47 /proc/self/exe --type=renderer --enable-crash-reporter=7ed42bd8-d5f5-486a-8be7-327c96ec8e07,no_channel --user-data-dir=/home/aakash/snap/teams-for-linux/1257/.config/teams-for-linux --app-path=/snap/teams-for-linux/1257/resources/app.asar --no-sandbox --no-zygote --no-sandbox --use-fake-ui-for-media-stream --ozone-platform=x11 --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=4 --time-ticks-at-unix-epoch=-1770721528338122 --launch-time-ticks=505386491318 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,1353131364697176017,11260057435234902113,262144 --enable-features=PdfUseShowSaveFilePicker,WebRTCPipeWireCapturer --disable-features=HardwareMediaKeyHandling,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708990060038890
+aakash   2007941  0.1  2.4 1461311660 584436 ?   Sl   Feb13   8:53 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --dns-result-order=ipv4first --experimental-network-inspection --inspect-port=0 --crashpad-handler-pid=2007586 --enable-crash-reporter=df083b5d-a547-4db6-85ee-48e6bb2c35f4,no_channel --user-data-dir=/home/aakash/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,239547773574070743,4216693429977364810,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,ScreenAIOCREnabled,SpareRendererForSitePerProcess --variations-seed-version
+aakash    885912  0.3  2.0 1472067048 497080 ?   Sl   Feb05  64:32 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4469 --enable-crash-reporter=bebcc9de-18e7-44d9-9965-c636dfc30d25, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=wayland --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=2902 --time-ticks-at-unix-epoch=-1769956373521482 --launch-time-ticks=132612823022 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,17640653704797977245,5037890658999296240,2097152 --field-trial-handle=3,i,3180628286980148311,3079890958721493442,262144 --disable-features=EyeDropper --variations-seed-version=20260131-030012.499000 --trace-process-track-uuid=3190711705607317292
+aakash   2178837  0.3  1.7 1460116640 433192 ?   Sl   Feb16   6:40 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4469 --enable-crash-reporter=bebcc9de-18e7-44d9-9965-c636dfc30d25, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=wayland --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=10267 --time-ticks-at-unix-epoch=-1769956373521482 --launch-time-ticks=480627450727 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,13022555307648953033,1126677816336547331,2097152 --field-trial-handle=3,i,3180628286980148311,3079890958721493442,262144 --disable-features=EyeDropper --variations-seed-version=20260131-030012.499000 --trace-process-track-uuid=3190718606920535177
+aakash   1479540  0.0  1.7 1463524424 418756 ?   Sl   Feb09   8:40 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4469 --enable-crash-reporter=bebcc9de-18e7-44d9-9965-c636dfc30d25, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=wayland --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=5046 --time-ticks-at-unix-epoch=-1769956373521482 --launch-time-ticks=214303522292 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,13926574907043409818,7903251471792590392,2097152 --field-trial-handle=3,i,3180628286980148311,3079890958721493442,262144 --disable-features=EyeDropper --variations-seed-version=20260131-030012.499000 --trace-process-track-uuid=3190713714625041548
+aakash   2181224  0.5  1.4 1461823676 350460 ?   Sl   Feb16   9:51 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4469 --enable-crash-reporter=bebcc9de-18e7-44d9-9965-c636dfc30d25, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=wayland --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=10377 --time-ticks-at-unix-epoch=-1769956373521482 --launch-time-ticks=488060300912 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,14510037351201085110,9860254381838038758,2097152 --field-trial-handle=3,i,3180628286980148311,3079890958721493442,262144 --disable-features=EyeDropper --variations-seed-version=20260131-030012.499000 --trace-process-track-uuid=3190718709995138567
+aakash   2007559  0.2  1.4 1461674052 349920 ?   SLl  Feb13  13:40 /usr/share/code/code
+
+======================================
+
+================ HEALTH CHECK =======================
+========== SYSTEM HEALTH CHECK ==========
+Generated on: Tue Feb 17 11:26:23 AM IST 2026
+
+--- Service Status ---
+[PASS] Service ssh is active
+[PASS] Service cron is active
+
+--- Resource Usage ---
+[PASS] Disk usage is 75% (below 90% threshold)
+[PASS] Memory usage is 45% (below 85% threshold)
+
+--- Network Status ---
+[PASS] Network connectivity is working (ping to 8.8.8.8 successful)
+
+--- Overall Status ---
+[PASS] System status: HEALTHY
+
+==========================================
+
+================ END OF REPORT ======================
+
+==================================================
+Permission Audit
+==================================================
+
+========== PERMISSION AUDIT REPORT ==========
+Generated on: Tue Feb 17 11:26:24 AM IST 2026
+Scanned Paths: /home /var/www
+
+--------------------------------------------
+Files with 777 Permissions in /home
+--------------------------------------------
+/home/aakash/Desktop/DevOpsBootcamp/week1/day2/var/log/apps/user_provision.log
+/home/aakash/Desktop/DevOpsBootcamp/week1/day3/logs/zone_generator.log
+/home/aakash/.config/Code/User/History/-17882d72/A0UZ.log
+/home/aakash/.config/Code/User/History/-17882d72/MNqw.log
+/home/aakash/.config/Code/User/History/-17882d72/IFAF.log
+/home/aakash/.config/Code/User/History/-17882d72/nJAu.log
+
+Suggested Fix: chmod 755 <file>
+
+--------------------------------------------
+World-Writable Directories WITHOUT Sticky Bit in /home
+--------------------------------------------
+None found.
+
+--------------------------------------------
+SUID / SGID Files in /home
+--------------------------------------------
+None found.
+
+--------------------------------------------
+Files Owned by Non-Existent Users in /home
+--------------------------------------------
+None found.
+
+--------------------------------------------
+Files Owned by Non-Existent Groups in /home
+--------------------------------------------
+/home/test
+
+Suggested Fix: chgrp validgroup <file>
+
+--------------------------------------------
+Files with 777 Permissions in /var/www
+--------------------------------------------
+/var/www/test
+
+Suggested Fix: chmod 755 <file>
+
+--------------------------------------------
+World-Writable Directories WITHOUT Sticky Bit in /var/www
+--------------------------------------------
+None found.
+
+--------------------------------------------
+SUID / SGID Files in /var/www
+--------------------------------------------
+None found.
+
+--------------------------------------------
+Files Owned by Non-Existent Users in /var/www
+--------------------------------------------
+None found.
+
+--------------------------------------------
+Files Owned by Non-Existent Groups in /var/www
+--------------------------------------------
+None found.
+
+--------------------------------------------
+Audit Summary
+--------------------------------------------
+777 Files Found: 7
+World-Writable Directories Found: 0
+SUID/SGID Files Found: 0
+Files with No Owner Found: 0
+Files with No Group Found: 1
+==============================================
+
+==================================================
+User Activity Monitoring
+==================================================
+
+========== USER ACTIVITY REPORT ==========
+Generated on: Tue Feb 17 11:26:30 AM IST 2026
+
+-------------------------------------------
+Currently Logged-In Users
+-------------------------------------------
+aakash   tty2         2026-02-01 20:03 (tty2)
+aakash   pts/2        2026-02-12 12:11
+aakash   pts/3        2026-02-12 12:17
+aakash   pts/5        2026-02-17 11:26
+
+Detailed View (w):
+aakash   tty2     -                01Feb26 15days  0.04s  0.02s /usr/libexec/gnome-session-binary --session=ubuntu
+
+-------------------------------------------
+Recent Login History (Last 20)
+-------------------------------------------
+hestabit tty3         tty3             Fri Feb 13 01:29 - 01:29  (00:00)
+hestabit seat0        login screen     Fri Feb 13 01:29    gone - no logout
+hestabit tty3         tty3             Thu Feb 12 19:57 - 01:27  (05:30)
+hestabit seat0        login screen     Thu Feb 12 19:57 - 01:29  (05:31)
+hestabit tty3         tty3             Thu Feb 12 19:05 - 19:12  (00:06)
+hestabit seat0        login screen     Thu Feb 12 19:05 - 19:57  (00:51)
+aakash   tty2         tty2             Sun Feb  1 20:03   still logged in
+aakash   seat0        login screen     Sun Feb  1 20:03 - 19:05 (10+23:01)
+reboot   system boot  6.14.0-37-generi Sun Feb  1 20:02   still running
+aakash   tty2         tty2             Sat Jan 31 22:04 - down   (21:57)
+aakash   seat0        login screen     Sat Jan 31 22:04 - down   (21:57)
+reboot   system boot  6.14.0-37-generi Sat Jan 31 22:04 - 20:02  (21:58)
+aakash   tty2         tty2             Sat Jan 24 15:31 - down  (7+06:32)
+aakash   seat0        login screen     Sat Jan 24 15:31 - down  (7+06:32)
+reboot   system boot  6.14.0-37-generi Sat Jan 24 15:31 - 22:04 (7+06:33)
+aakash   tty2         tty2             Mon Jan 12 11:03 - crash (12+04:28)
+aakash   seat0        login screen     Mon Jan 12 11:03 - crash (12+04:28)
+reboot   system boot  6.14.0-37-generi Mon Jan 12 11:02 - 22:04 (19+11:01)
+aakash   tty2         tty2             Sun Jan 11 17:52 - down   (13:47)
+aakash   seat0        login screen     Sun Jan 11 17:52 - down   (13:47)
+
+wtmp begins Sat Nov  1 08:49:29 2025
+
+-------------------------------------------
+Last Login Per Human User (UID >= 1000)
+-------------------------------------------
+hestabit tty3         tty3             Fri Feb 13 01:29 - 01:29  (00:00)
+
+aakash   tty2         tty2             Sun Feb  1 20:03   still logged in
+
+
+
+
+
+-------------------------------------------
+Recent Command History (Last 10 Commands Per User)
+-------------------------------------------
+
+User: aakash
+clear 
+ufw status verbose
+clear 
+sudo ufw status verbose
+clear 
+vmstat 1 10 output
+clear 
+vmstat 1 10
+fail2ban-client status sshd
+clear 
+
+User: asmith
+  [No .bash_history found]
+
+User: hestabit
+logout
+who
+whoami 
+id
+who
+who -a
+w
+clear 
+su - hestabit
+logout
+
+User: jdoe
+  [No .bash_history found]
+
+User: test_inactive_user
+  [No .bash_history found]
+
+-------------------------------------------
+Inactive Users (No Login > 90 Days)
+-------------------------------------------
+
+-------------------------------------------
+Summary
+-------------------------------------------
+Currently Logged-In Users: 4
+Inactive Users (>90 days): 0
+==========================================
+
+==================================================
+Network Diagnostics
+==================================================
+
+========== NETWORK DIAGNOSTICS ==========
+Generated on: Tue Feb 17 11:26:30 AM IST 2026
+
+[PASS] Internet connectivity: OK
+[PASS] DNS resolution: OK
+
+Network Interfaces:
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: enp44s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+    link/ether b4:e9:b8:8e:20:ae brd ff:ff:ff:ff:ff:ff
+3: wlp0s20f3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether bc:cd:99:83:45:05 brd ff:ff:ff:ff:ff:ff
+    inet 10.10.1.98/22 brd 10.10.3.255 scope global dynamic noprefixroute wlp0s20f3
+       valid_lft 85272sec preferred_lft 85272sec
+    inet6 fe80::c3de:46c6:23b7:d460/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+4: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 2e:67:e4:ea:19:70 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+
+Routing Table:
+default via 10.10.0.1 dev wlp0s20f3 proto dhcp src 10.10.1.98 metric 600 
+10.10.0.0/22 dev wlp0s20f3 proto kernel scope link src 10.10.1.98 metric 600 
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown 
+
+Listening Ports:
+Netid State  Recv-Q Send-Q                         Local Address:Port  Peer Address:PortProcess
+udp   UNCONN 0      0                                    0.0.0.0:56477      0.0.0.0:*          
+udp   UNCONN 0      0                                    0.0.0.0:45723      0.0.0.0:*          
+udp   UNCONN 0      0                                 10.10.1.98:53         0.0.0.0:*          
+udp   UNCONN 0      0                                 10.10.1.98:53         0.0.0.0:*          
+udp   UNCONN 0      0                                 10.10.1.98:53         0.0.0.0:*          
+udp   UNCONN 0      0                                 10.10.1.98:53         0.0.0.0:*          
+udp   UNCONN 0      0                                 10.10.1.98:53         0.0.0.0:*          
+udp   UNCONN 0      0                                 10.10.1.98:53         0.0.0.0:*          
+udp   UNCONN 0      0                                 10.10.1.98:53         0.0.0.0:*          
+udp   UNCONN 0      0                                 10.10.1.98:53         0.0.0.0:*          
+udp   UNCONN 0      0                                 10.10.1.98:53         0.0.0.0:*          
+udp   UNCONN 0      0                                 10.10.1.98:53         0.0.0.0:*          
+udp   UNCONN 0      0                                 10.10.1.98:53         0.0.0.0:*          
+udp   UNCONN 0      0                                 10.10.1.98:53         0.0.0.0:*          
+udp   UNCONN 0      0                                 127.0.0.54:53         0.0.0.0:*          
+udp   UNCONN 0      0                              127.0.0.53%lo:53         0.0.0.0:*          
+udp   UNCONN 0      0                                 172.17.0.1:53         0.0.0.0:*          
+udp   UNCONN 0      0                                 172.17.0.1:53         0.0.0.0:*          
+udp   UNCONN 0      0                                 172.17.0.1:53         0.0.0.0:*          
+udp   UNCONN 0      0                                 172.17.0.1:53         0.0.0.0:*          
+udp   UNCONN 0      0                                 172.17.0.1:53         0.0.0.0:*          
+udp   UNCONN 0      0                                 172.17.0.1:53         0.0.0.0:*          
+udp   UNCONN 0      0                                 172.17.0.1:53         0.0.0.0:*          
+udp   UNCONN 0      0                                 172.17.0.1:53         0.0.0.0:*          
+udp   UNCONN 0      0                                 172.17.0.1:53         0.0.0.0:*          
+udp   UNCONN 0      0                                 172.17.0.1:53         0.0.0.0:*          
+udp   UNCONN 0      0                                 172.17.0.1:53         0.0.0.0:*          
+udp   UNCONN 0      0                                 172.17.0.1:53         0.0.0.0:*          
+udp   UNCONN 0      0                                  127.0.0.1:53         0.0.0.0:*          
+udp   UNCONN 0      0                                  127.0.0.1:53         0.0.0.0:*          
+udp   UNCONN 0      0                                  127.0.0.1:53         0.0.0.0:*          
+udp   UNCONN 0      0                                  127.0.0.1:53         0.0.0.0:*          
+udp   UNCONN 0      0                                  127.0.0.1:53         0.0.0.0:*          
+udp   UNCONN 0      0                                  127.0.0.1:53         0.0.0.0:*          
+udp   UNCONN 0      0                                  127.0.0.1:53         0.0.0.0:*          
+udp   UNCONN 0      0                                  127.0.0.1:53         0.0.0.0:*          
+udp   UNCONN 0      0                                  127.0.0.1:53         0.0.0.0:*          
+udp   UNCONN 0      0                                  127.0.0.1:53         0.0.0.0:*          
+udp   UNCONN 0      0                                  127.0.0.1:53         0.0.0.0:*          
+udp   UNCONN 0      0                                  127.0.0.1:53         0.0.0.0:*          
+udp   UNCONN 0      0                                224.0.0.251:5353       0.0.0.0:*          
+udp   UNCONN 0      0                                224.0.0.251:5353       0.0.0.0:*          
+udp   UNCONN 0      0                                224.0.0.251:5353       0.0.0.0:*          
+udp   UNCONN 0      0                                    0.0.0.0:5353       0.0.0.0:*          
+udp   UNCONN 0      0                                      [::1]:53            [::]:*          
+udp   UNCONN 0      0                                      [::1]:53            [::]:*          
+udp   UNCONN 0      0                                      [::1]:53            [::]:*          
+udp   UNCONN 0      0                                      [::1]:53            [::]:*          
+udp   UNCONN 0      0                                      [::1]:53            [::]:*          
+udp   UNCONN 0      0                                      [::1]:53            [::]:*          
+udp   UNCONN 0      0                                      [::1]:53            [::]:*          
+udp   UNCONN 0      0                                      [::1]:53            [::]:*          
+udp   UNCONN 0      0                                      [::1]:53            [::]:*          
+udp   UNCONN 0      0                                      [::1]:53            [::]:*          
+udp   UNCONN 0      0                                      [::1]:53            [::]:*          
+udp   UNCONN 0      0                                      [::1]:53            [::]:*          
+udp   UNCONN 0      0      [fe80::c3de:46c6:23b7:d460]%wlp0s20f3:53            [::]:*          
+udp   UNCONN 0      0      [fe80::c3de:46c6:23b7:d460]%wlp0s20f3:53            [::]:*          
+udp   UNCONN 0      0      [fe80::c3de:46c6:23b7:d460]%wlp0s20f3:53            [::]:*          
+udp   UNCONN 0      0      [fe80::c3de:46c6:23b7:d460]%wlp0s20f3:53            [::]:*          
+udp   UNCONN 0      0      [fe80::c3de:46c6:23b7:d460]%wlp0s20f3:53            [::]:*          
+udp   UNCONN 0      0      [fe80::c3de:46c6:23b7:d460]%wlp0s20f3:53            [::]:*          
+udp   UNCONN 0      0      [fe80::c3de:46c6:23b7:d460]%wlp0s20f3:53            [::]:*          
+udp   UNCONN 0      0      [fe80::c3de:46c6:23b7:d460]%wlp0s20f3:53            [::]:*          
+udp   UNCONN 0      0      [fe80::c3de:46c6:23b7:d460]%wlp0s20f3:53            [::]:*          
+udp   UNCONN 0      0      [fe80::c3de:46c6:23b7:d460]%wlp0s20f3:53            [::]:*          
+udp   UNCONN 0      0      [fe80::c3de:46c6:23b7:d460]%wlp0s20f3:53            [::]:*          
+udp   UNCONN 0      0      [fe80::c3de:46c6:23b7:d460]%wlp0s20f3:53            [::]:*          
+udp   UNCONN 0      0                                       [::]:50102         [::]:*          
+udp   UNCONN 0      0                                       [::]:5353          [::]:*          
+tcp   LISTEN 0      10                                172.17.0.1:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                172.17.0.1:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                172.17.0.1:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                172.17.0.1:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                172.17.0.1:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                172.17.0.1:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                172.17.0.1:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                172.17.0.1:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                172.17.0.1:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                172.17.0.1:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                172.17.0.1:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                172.17.0.1:53         0.0.0.0:*          
+tcp   LISTEN 0      4096                               127.0.0.1:11434      0.0.0.0:*          
+tcp   LISTEN 0      10                                10.10.1.98:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                10.10.1.98:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                10.10.1.98:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                10.10.1.98:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                10.10.1.98:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                10.10.1.98:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                10.10.1.98:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                10.10.1.98:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                10.10.1.98:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                10.10.1.98:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                10.10.1.98:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                10.10.1.98:53         0.0.0.0:*          
+tcp   LISTEN 0      4096                               127.0.0.1:27017      0.0.0.0:*          
+tcp   LISTEN 0      511                                127.0.0.1:34637      0.0.0.0:*          
+tcp   LISTEN 0      5                                  127.0.0.1:953        0.0.0.0:*          
+tcp   LISTEN 0      5                                  127.0.0.1:953        0.0.0.0:*          
+tcp   LISTEN 0      5                                  127.0.0.1:953        0.0.0.0:*          
+tcp   LISTEN 0      5                                  127.0.0.1:953        0.0.0.0:*          
+tcp   LISTEN 0      5                                  127.0.0.1:953        0.0.0.0:*          
+tcp   LISTEN 0      5                                  127.0.0.1:953        0.0.0.0:*          
+tcp   LISTEN 0      5                                  127.0.0.1:953        0.0.0.0:*          
+tcp   LISTEN 0      5                                  127.0.0.1:953        0.0.0.0:*          
+tcp   LISTEN 0      5                                  127.0.0.1:953        0.0.0.0:*          
+tcp   LISTEN 0      5                                  127.0.0.1:953        0.0.0.0:*          
+tcp   LISTEN 0      5                                  127.0.0.1:953        0.0.0.0:*          
+tcp   LISTEN 0      5                                  127.0.0.1:953        0.0.0.0:*          
+tcp   LISTEN 0      65535                              127.0.0.1:631        0.0.0.0:*          
+tcp   LISTEN 0      70                                 127.0.0.1:33060      0.0.0.0:*          
+tcp   LISTEN 0      10                                 127.0.0.1:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                 127.0.0.1:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                 127.0.0.1:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                 127.0.0.1:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                 127.0.0.1:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                 127.0.0.1:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                 127.0.0.1:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                 127.0.0.1:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                 127.0.0.1:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                 127.0.0.1:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                 127.0.0.1:53         0.0.0.0:*          
+tcp   LISTEN 0      10                                 127.0.0.1:53         0.0.0.0:*          
+tcp   LISTEN 0      151                                127.0.0.1:3306       0.0.0.0:*          
+tcp   LISTEN 0      4096                           127.0.0.53%lo:53         0.0.0.0:*          
+tcp   LISTEN 0      4096                                 0.0.0.0:22         0.0.0.0:*          
+tcp   LISTEN 0      511                                  0.0.0.0:80         0.0.0.0:*          
+tcp   LISTEN 0      4096                              127.0.0.54:53         0.0.0.0:*          
+tcp   LISTEN 0      511                                127.0.0.1:6379       0.0.0.0:*          
+tcp   LISTEN 0      511                                    [::1]:6379          [::]:*          
+tcp   LISTEN 0      10                                     [::1]:53            [::]:*          
+tcp   LISTEN 0      10                                     [::1]:53            [::]:*          
+tcp   LISTEN 0      10                                     [::1]:53            [::]:*          
+tcp   LISTEN 0      10                                     [::1]:53            [::]:*          
+tcp   LISTEN 0      10                                     [::1]:53            [::]:*          
+tcp   LISTEN 0      10                                     [::1]:53            [::]:*          
+tcp   LISTEN 0      10                                     [::1]:53            [::]:*          
+tcp   LISTEN 0      10                                     [::1]:53            [::]:*          
+tcp   LISTEN 0      10                                     [::1]:53            [::]:*          
+tcp   LISTEN 0      10                                     [::1]:53            [::]:*          
+tcp   LISTEN 0      10                                     [::1]:53            [::]:*          
+tcp   LISTEN 0      10                                     [::1]:53            [::]:*          
+tcp   LISTEN 0      5                                      [::1]:953           [::]:*          
+tcp   LISTEN 0      5                                      [::1]:953           [::]:*          
+tcp   LISTEN 0      5                                      [::1]:953           [::]:*          
+tcp   LISTEN 0      5                                      [::1]:953           [::]:*          
+tcp   LISTEN 0      5                                      [::1]:953           [::]:*          
+tcp   LISTEN 0      5                                      [::1]:953           [::]:*          
+tcp   LISTEN 0      5                                      [::1]:953           [::]:*          
+tcp   LISTEN 0      5                                      [::1]:953           [::]:*          
+tcp   LISTEN 0      5                                      [::1]:953           [::]:*          
+tcp   LISTEN 0      5                                      [::1]:953           [::]:*          
+tcp   LISTEN 0      5                                      [::1]:953           [::]:*          
+tcp   LISTEN 0      5                                      [::1]:953           [::]:*          
+tcp   LISTEN 0      65535                                  [::1]:631           [::]:*          
+tcp   LISTEN 0      4096                                    [::]:22            [::]:*          
+tcp   LISTEN 0      10     [fe80::c3de:46c6:23b7:d460]%wlp0s20f3:53            [::]:*          
+tcp   LISTEN 0      10     [fe80::c3de:46c6:23b7:d460]%wlp0s20f3:53            [::]:*          
+tcp   LISTEN 0      10     [fe80::c3de:46c6:23b7:d460]%wlp0s20f3:53            [::]:*          
+tcp   LISTEN 0      10     [fe80::c3de:46c6:23b7:d460]%wlp0s20f3:53            [::]:*          
+tcp   LISTEN 0      10     [fe80::c3de:46c6:23b7:d460]%wlp0s20f3:53            [::]:*          
+tcp   LISTEN 0      10     [fe80::c3de:46c6:23b7:d460]%wlp0s20f3:53            [::]:*          
+tcp   LISTEN 0      10     [fe80::c3de:46c6:23b7:d460]%wlp0s20f3:53            [::]:*          
+tcp   LISTEN 0      10     [fe80::c3de:46c6:23b7:d460]%wlp0s20f3:53            [::]:*          
+tcp   LISTEN 0      10     [fe80::c3de:46c6:23b7:d460]%wlp0s20f3:53            [::]:*          
+tcp   LISTEN 0      10     [fe80::c3de:46c6:23b7:d460]%wlp0s20f3:53            [::]:*          
+tcp   LISTEN 0      10     [fe80::c3de:46c6:23b7:d460]%wlp0s20f3:53            [::]:*          
+tcp   LISTEN 0      10     [fe80::c3de:46c6:23b7:d460]%wlp0s20f3:53            [::]:*          
+tcp   LISTEN 0      511                                     [::]:80            [::]:*          
+
+Latency Checks:
+[PASS] Latency to 8.8.8.8: 84.308 ms
+[PASS] Latency to 1.1.1.1: 78.763 ms
+
+==========================================
+
+==================================================
+DNS Monitoring
+==================================================
+
+========== DNS MONITORING ==========
+Generated on: Tue Feb 17 11:26:42 AM IST 2026
+DNS Server: 127.0.0.1
+Zone File: /etc/bind/zones/db.devops.lab
+Latency Threshold: 100ms
+
+[PASS] Forward lookup OK: ns1 → 192.168.1.10
+[PASS] Reverse lookup OK: 192.168.1.10 → ns1
+[PASS] DNS latency OK for ns1.devops.lab: 34ms
+[PASS] Forward lookup OK: web → 192.168.1.20
+[PASS] Reverse lookup OK: 192.168.1.20 → web
+[PASS] DNS latency OK for web.devops.lab: 29ms
+[PASS] Forward lookup OK: db → 192.168.1.30
+[PASS] Reverse lookup OK: 192.168.1.30 → db
+[PASS] DNS latency OK for db.devops.lab: 29ms
+[PASS] Forward lookup OK: mail → 192.168.1.40
+[PASS] Reverse lookup OK: 192.168.1.40 → mail
+[PASS] DNS latency OK for mail.devops.lab: 31ms
+[PASS] Forward lookup OK: web01 → 192.168.1.21
+[PASS] Reverse lookup OK: 192.168.1.21 → web01
+[PASS] DNS latency OK for web01.devops.lab: 29ms
+[PASS] Forward lookup OK: web02 → 192.168.1.22
+[PASS] Reverse lookup OK: 192.168.1.22 → web02
+[PASS] DNS latency OK for web02.devops.lab: 30ms
+
+========================================
+
+==================================================
+Firewall Audit
+==================================================
+
+========== FIREWALL AUDIT ==========
+Date: Tue Feb 17 11:26:44 AM IST 2026
+
+Total Rules: 11
+Issues Found: 0
+
+Current Firewall Status:
+----------------------------------------
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), deny (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     LIMIT IN    Anywhere                   # SSH rate limit
+80/tcp                     ALLOW IN    Anywhere                   # HTTP
+443/tcp                    ALLOW IN    Anywhere                   # HTTPS
+3306                       ALLOW IN    192.168.1.0/24             # MySQL local network
+22/tcp (OpenSSH)           ALLOW IN    Anywhere                  
+80,443/tcp (Nginx Full)    ALLOW IN    Anywhere                  
+22/tcp (v6)                LIMIT IN    Anywhere (v6)              # SSH rate limit
+80/tcp (v6)                ALLOW IN    Anywhere (v6)              # HTTP
+443/tcp (v6)               ALLOW IN    Anywhere (v6)              # HTTPS
+22/tcp (OpenSSH (v6))      ALLOW IN    Anywhere (v6)             
+80,443/tcp (Nginx Full (v6)) ALLOW IN    Anywhere (v6)             
+
+
+---------- Findings ----------
+✓ No security issues found
+
+---------- Recommendations ----------
+✓ No immediate action required
+
+Security Score: 100/100
+====================================
+
+==================================================
+Performance Baseline
+==================================================
+
+========== PERFORMANCE BASELINE ==========
+Date: Tue Feb 17 11:26:44 AM IST 2026
+Duration: 60s (sampling interval: 5s)
+
+Collecting performance metrics (60s sampling period)...
+
+----- CPU Usage -----
+Average CPU Usage: 13.5%
+Peak CPU Usage: 66.9%
+
+Per-Core CPU Usage:
+Linux 6.14.0-37-generic (hestabit-Latitude-3450) 	02/17/2026 	_x86_64_	(12 CPU)
+
+11:27:48 AM  CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
+11:27:49 AM  all    5.13    0.00    0.93    0.08    0.00    0.00    0.00    0.00    0.00   93.86
+11:27:49 AM    0   19.39    0.00    1.02    0.00    0.00    0.00    0.00    0.00    0.00   79.59
+11:27:49 AM    1    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
+11:27:49 AM    2   10.20    0.00    1.02    0.00    0.00    0.00    0.00    0.00    0.00   88.78
+11:27:49 AM    3    2.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00   98.00
+11:27:49 AM    4    7.07    0.00    2.02    0.00    0.00    0.00    0.00    0.00    0.00   90.91
+11:27:49 AM    5    7.00    0.00    2.00    0.00    0.00    0.00    0.00    0.00    0.00   91.00
+11:27:49 AM    6    3.06    0.00    0.00    1.02    0.00    0.00    0.00    0.00    0.00   95.92
+11:27:49 AM    7    5.00    0.00    2.00    0.00    0.00    0.00    0.00    0.00    0.00   93.00
+11:27:49 AM    8    2.04    0.00    1.02    0.00    0.00    0.00    0.00    0.00    0.00   96.94
+11:27:49 AM    9    2.02    0.00    1.01    0.00    0.00    0.00    0.00    0.00    0.00   96.97
+11:27:49 AM   10    2.02    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00   97.98
+11:27:49 AM   11    2.00    0.00    1.00    0.00    0.00    0.00    0.00    0.00    0.00   97.00
+
+Average:     CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
+Average:     all    5.13    0.00    0.93    0.08    0.00    0.00    0.00    0.00    0.00   93.86
+Average:       0   19.39    0.00    1.02    0.00    0.00    0.00    0.00    0.00    0.00   79.59
+Average:       1    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
+Average:       2   10.20    0.00    1.02    0.00    0.00    0.00    0.00    0.00    0.00   88.78
+Average:       3    2.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00   98.00
+Average:       4    7.07    0.00    2.02    0.00    0.00    0.00    0.00    0.00    0.00   90.91
+Average:       5    7.00    0.00    2.00    0.00    0.00    0.00    0.00    0.00    0.00   91.00
+Average:       6    3.06    0.00    0.00    1.02    0.00    0.00    0.00    0.00    0.00   95.92
+Average:       7    5.00    0.00    2.00    0.00    0.00    0.00    0.00    0.00    0.00   93.00
+Average:       8    2.04    0.00    1.02    0.00    0.00    0.00    0.00    0.00    0.00   96.94
+Average:       9    2.02    0.00    1.01    0.00    0.00    0.00    0.00    0.00    0.00   96.97
+Average:      10    2.02    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00   97.98
+Average:      11    2.00    0.00    1.00    0.00    0.00    0.00    0.00    0.00    0.00   97.00
+
+----- Load Average -----
+Peak Load (1m):  1.14
+Peak Load (5m):  0.58
+Peak Load (15m): 0.55
+
+----- Memory Usage -----
+               total        used        free      shared  buff/cache   available
+Mem:            23Gi        10Gi       1.5Gi       1.1Gi        13Gi        12Gi
+Swap:          8.0Gi       527Mi       7.5Gi
+
+Peak Memory Used: 10975 MB
+Peak Swap Used:   530 MB
+
+----- Disk I/O -----
+Linux 6.14.0-37-generic (hestabit-Latitude-3450) 	02/17/2026 	_x86_64_	(12 CPU)
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           1.86    0.01    0.71    0.06    0.00   97.37
+
+Device            r/s     rkB/s   rrqm/s  %rrqm r_await rareq-sz     w/s     wkB/s   wrqm/s  %wrqm w_await wareq-sz     d/s     dkB/s   drqm/s  %drqm d_await dareq-sz     f/s f_await  aqu-sz  %util
+dm-0             0.00      0.00     0.00   0.00    0.09    19.34    0.00      0.18     0.00   0.00    2.42    77.67    0.00      7.76     0.00   0.00   49.33 1747627.33    0.00    0.00    0.00   0.00
+dm-1             0.00      0.00     0.00   0.00    0.06    19.40    0.00      0.34     0.00   0.00    1.40   340.91    0.00     15.52     0.00   0.00   27.64 1906502.18    0.00    0.00    0.00   0.00
+dm-2             0.00      0.00     0.00   0.00    0.04    15.56    0.00      0.05     0.00   0.00    0.07   840.05    0.00     11.64     0.00   0.00   29.50 1966080.00    0.00    0.00    0.00   0.00
+loop0            0.00      0.00     0.00   0.00    0.00     1.21    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop1            0.00      0.00     0.00   0.00    0.03     4.02    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop10           0.00      0.01     0.00   0.00    0.03     3.64    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop11           0.01      0.14     0.00   0.00    0.07    21.47    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop12           0.01      0.04     0.00   0.00    0.02     3.15    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop13           0.00      0.02     0.00   0.00    0.17    39.60    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop14           0.00      0.00     0.00   0.00    0.19    25.57    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop15           0.00      0.16     0.00   0.00    0.21    41.57    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop16           0.00      0.00     0.00   0.00    0.10     2.76    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop17           0.00      0.00     0.00   0.00    0.10    11.79    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop18           0.00      0.00     0.00   0.00    0.17    26.65    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop19           0.00      0.00     0.00   0.00    0.15    24.67    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop2            0.00      0.00     0.00   0.00    0.03     4.07    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop20           0.00      0.20     0.00   0.00    0.19    46.28    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop21           0.00      0.01     0.00   0.00    0.06    22.34    0.00      0.34     0.00  79.54    1.02  1646.58    0.00     15.52     0.00   0.00   27.64 1906502.18    0.00    3.97    0.00   0.00
+loop22           0.00      0.05     0.00   0.00    0.11    42.31    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.01
+loop3            0.00      0.00     0.00   0.00    0.03     4.03    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop4            0.00      0.03     0.00   0.00    0.12    12.49    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop5            0.00      0.02     0.00   0.09    0.07    19.95    0.00      0.23     0.00  46.82    2.83   181.96    0.00     19.40     0.00   0.00   38.07 1872457.43    0.00    4.62    0.00   0.00
+loop6            0.00      0.00     0.00   0.00    0.33    29.17    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop7            0.00      0.02     0.00   0.00    0.14    41.53    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop8            0.00      0.00     0.00   0.00    0.27    34.25    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop9            0.00      0.06     0.00   0.00    0.11    14.75    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+nvme0n1          2.07    149.89     0.31  12.99    0.37    72.37    6.15    344.87     4.31  41.24   12.99    56.10    0.15    276.84     0.00   0.00    0.27  1841.99    0.42    1.00    0.08   0.32
+
+
+
+----- Network Activity -----
+Total RX Bytes: 50094995190
+Total TX Bytes: 4188292951
+
+----- Process Information -----
+Peak Process Count: 434
+
+Top CPU Consumers:
+    PID COMMAND         %CPU
+2593479 ps               200
+2577311 chrome           5.6
+2007645 code             1.2
+   2788 gnome-shell      1.1
+2553864 chrome           0.9
+
+Top Memory Consumers:
+    PID COMMAND         %MEM
+   4460 chrome           3.6
+2007645 code             2.9
+2007941 code             2.4
+2307389 teams-for-linux  2.3
+ 885912 chrome           2.0
+
+==========================================
+
+==================================================
+System Health Report Generator
+==================================================
+
+=========================================
+        SYSTEM HEALTH REPORT
+   Generated: 2026-02-17 11:27:49
+=========================================
+
+--- SYSTEM INFORMATION ---
+Hostname : hestabit-Latitude-3450
+OS       : Ubuntu 24.04.4 LTS
+Kernel   : 6.14.0-37-generic
+Uptime   : up 2 weeks, 1 day, 15 hours, 24 minutes
+
+--- DISK USAGE ---
+/dev/nvme0n1p2                     468G  331G  113G  75% /
+efivarfs                           438K  331K  103K  77% /sys/firmware/efi/efivars
+/dev/nvme0n1p1                     1.1G  6.2M  1.1G   1% /boot/efi
+/dev/mapper/vg_data-lv_logs        9.8G  152K  9.3G   1% /var/log/apps
+/dev/mapper/vg_data-lv_backups      20G  176K   19G   1% /backup
+/dev/mapper/vg_data-lv_monitoring   15G  326M   15G   3% /monitoring
+
+--- MEMORY USAGE ---
+               total        used        free      shared  buff/cache   available
+Mem:            23Gi        10Gi       1.5Gi       1.1Gi        13Gi        12Gi
+Swap:          8.0Gi       527Mi       7.5Gi
+
+--- CPU LOAD ---
+ 11:27:49 up 15 days, 15:24,  1 user,  load average: 1.04, 0.59, 0.55
+
+--- TOP PROCESSES (CPU) ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root     2593505  200  0.0  13880  5012 pts/5    R+   11:27   0:00 ps aux --sort=-%cpu
+aakash   2577311  5.6  1.9 1460085620 473240 ?   Sl   02:14  31:09 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4469 --enable-crash-reporter=bebcc9de-18e7-44d9-9965-c636dfc30d25, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=wayland --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=11212 --time-ticks-at-unix-epoch=-1769956373521482 --launch-time-ticks=541713803525 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,9131960599374101758,13372145855519254317,2097152 --field-trial-handle=3,i,3180628286980148311,3079890958721493442,262144 --disable-features=EyeDropper --variations-seed-version=20260131-030012.499000 --trace-process-track-uuid=3190719492425082482
+aakash   2007645  1.2  2.9 1481868704 711304 ?   Sl   Feb13  79:36 /usr/share/code/code --type=zygote
+aakash      2788  1.1  1.3 4944844 335948 ?      Ssl  Feb01 268:29 /usr/bin/gnome-shell
+aakash   2553864  0.9  1.3 1461823388 326676 ?   Sl   01:15   5:59 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4469 --enable-crash-reporter=bebcc9de-18e7-44d9-9965-c636dfc30d25, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=wayland --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=11145 --time-ticks-at-unix-epoch=-1769956373521482 --launch-time-ticks=538168233120 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,16028417503745618976,1776312630167277421,2097152 --field-trial-handle=3,i,3180628286980148311,3079890958721493442,262144 --disable-features=EyeDropper --variations-seed-version=20260131-030012.499000 --trace-process-track-uuid=3190719429643278599
+
+--- TOP PROCESSES (MEMORY) ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+aakash      4460  0.7  3.6 34630204 874364 ?     SLl  Feb01 170:33 /opt/google/chrome/chrome
+aakash   2007645  1.2  2.9 1481868704 711304 ?   Sl   Feb13  79:36 /usr/share/code/code --type=zygote
+aakash   2007941  0.1  2.4 1461311660 585088 ?   Sl   Feb13   8:55 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --dns-result-order=ipv4first --experimental-network-inspection --inspect-port=0 --crashpad-handler-pid=2007586 --enable-crash-reporter=df083b5d-a547-4db6-85ee-48e6bb2c35f4,no_channel --user-data-dir=/home/aakash/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,239547773574070743,4216693429977364810,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,ScreenAIOCREnabled,SpareRendererForSitePerProcess --variations-seed-version
+aakash   2307389  0.2  2.3 1464999036 582704 ?   Sl   Feb16   2:52 /proc/self/exe --type=renderer --enable-crash-reporter=7ed42bd8-d5f5-486a-8be7-327c96ec8e07,no_channel --user-data-dir=/home/aakash/snap/teams-for-linux/1257/.config/teams-for-linux --app-path=/snap/teams-for-linux/1257/resources/app.asar --no-sandbox --no-zygote --no-sandbox --use-fake-ui-for-media-stream --ozone-platform=x11 --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=4 --time-ticks-at-unix-epoch=-1770721528338122 --launch-time-ticks=505386491318 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,1353131364697176017,11260057435234902113,262144 --enable-features=PdfUseShowSaveFilePicker,WebRTCPipeWireCapturer --disable-features=HardwareMediaKeyHandling,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708990060038890
+aakash    885912  0.3  2.0 1470367148 496304 ?   Sl   Feb05  64:33 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4469 --enable-crash-reporter=bebcc9de-18e7-44d9-9965-c636dfc30d25, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=wayland --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=2902 --time-ticks-at-unix-epoch=-1769956373521482 --launch-time-ticks=132612823022 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,17640653704797977245,5037890658999296240,2097152 --field-trial-handle=3,i,3180628286980148311,3079890958721493442,262144 --disable-features=EyeDropper --variations-seed-version=20260131-030012.499000 --trace-process-track-uuid=3190711705607317292
+
+--- NETWORK INTERFACES ---
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp44s0          DOWN           
+wlp0s20f3        UP             10.10.1.98/22 fe80::c3de:46c6:23b7:d460/64 
+docker0          DOWN           172.17.0.1/16 
+
+--- ACTIVE CONNECTIONS ---
+Total connections: 170
+
+--- RECENT ERRORS (Last 50) ---
+
+--- SERVICE STATUS ---
+SSH  : Active
+Cron : Active
+
+=========================================
+          END OF REPORT
+=========================================
+
+==================================================
+SYSTEMD MONITORING STATUS
+==================================================
+
+--- monitor.service ---
+○ monitor.service - System Monitoring Service
+     Loaded: loaded (/etc/systemd/system/monitor.service; static)
+     Active: inactive (dead) since Mon 2026-02-16 17:39:04 IST; 17h ago
+TriggeredBy: ○ monitor.timer
+   Main PID: 2431530 (code=exited, status=0/SUCCESS)
+        CPU: 100ms
+
+Feb 16 17:39:04 hestabit-Latitude-3450 monitor.sh[2431538]: [2026-02-16 17:39:04] [INFO] Checking disk usage...
+Feb 16 17:39:04 hestabit-Latitude-3450 monitor.sh[2431546]: [2026-02-16 17:39:04] [INFO] Disk usage: OK
+Feb 16 17:39:04 hestabit-Latitude-3450 monitor.sh[2431549]: [2026-02-16 17:39:04] [INFO] Checking memory usage...
+Feb 16 17:39:04 hestabit-Latitude-3450 monitor.sh[2431555]: [2026-02-16 17:39:04] [INFO] Memory usage: 41% - OK
+Feb 16 17:39:04 hestabit-Latitude-3450 monitor.sh[2431558]: [2026-02-16 17:39:04] [INFO] Checking CPU usage...
+Feb 16 17:39:04 hestabit-Latitude-3450 monitor.sh[2431564]: [2026-02-16 17:39:04] [INFO] CPU usage: 0% - OK
+Feb 16 17:39:04 hestabit-Latitude-3450 monitor.sh[2431567]: [2026-02-16 17:39:04] [INFO] All system checks passed successfully
+Feb 16 17:39:04 hestabit-Latitude-3450 monitor.sh[2431570]: [2026-02-16 17:39:04] [INFO] ========== System Health Check Completed ==========
+Feb 16 17:39:04 hestabit-Latitude-3450 systemd[1]: monitor.service: Deactivated successfully.
+Feb 16 17:39:04 hestabit-Latitude-3450 systemd[1]: Finished monitor.service - System Monitoring Service.
+monitor.service not found or inactive
+
+--- monitor.timer ---
+monitor.timer not found
+
+==================================================
+             INFRASTRUCTURE DASHBOARD
+==================================================
+Host        : hestabit-Latitude-3450
+Timestamp   : Tue Feb 17 11:27:49 AM IST 2026
+Report File : reports/infrastructure-monitor-2026-02-17_11-26-23.txt
+Critical    : 0
+0
+Errors      : 0
+0
+Warnings    : 0
+0
+Overall     : HEALTHY
+==================================================
