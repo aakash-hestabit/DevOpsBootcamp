@@ -1,0 +1,36 @@
+[2026-02-09 20:17:06] [INFO] 
+----- SYSTEM INVENTORY REPORT -----
+COMPONENT        DETAILS
+------------------------------------------------------------
+OS               Ubuntu 24.04.3 LTS
+Kernel           6.14.0-37-generic
+Uptime           up 1 week, 1 day, 14 minutes
+CPU              13th Gen Intel(R) Core(TM) i5-1335U
+RAM Total        23Gi
+Disk (/)         468G
+Packages         1681
+------------------------------------------------------------
+
+Network Interfaces:
+lo         UNKNOWN  127.0.0.1/8    ::1/128
+enp44s0    DOWN                    
+wlp0s20f3  UP       10.10.1.98/22  fe80::c3de:46c6:23b7:d460/64
+docker0    DOWN     172.17.0.1/16  
+[2026-02-09 20:18:40] [INFO] 
+----- SYSTEM INVENTORY REPORT -----
+COMPONENT        DETAILS
+------------------------------------------------------------
+OS               Ubuntu 24.04.3 LTS
+Kernel           6.14.0-37-generic
+Uptime           up 1 week, 1 day, 15 minutes
+CPU              13th Gen Intel(R) Core(TM) i5-1335U
+RAM Total        23Gi
+Disk (/)         468G
+Packages         1681
+------------------------------------------------------------
+
+Network Interfaces:
+lo         UNKNOWN  127.0.0.1/8    ::1/128
+enp44s0    DOWN                    
+wlp0s20f3  UP       10.10.1.98/22  fe80::c3de:46c6:23b7:d460/64
+docker0    DOWN     172.17.0.1/16  

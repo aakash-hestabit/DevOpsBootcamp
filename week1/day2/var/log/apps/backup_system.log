@@ -1,0 +1,10 @@
+[2026-02-13 11:28:36] [INFO] Backup script started
+[2026-02-13 11:28:36] [INFO] Backing up /etc to /backup/etc_20260213_112836.tar.gz
+[2026-02-13 11:28:37] [INFO] Integrity check passed for etc_20260213_112836.tar.gz
+[2026-02-13 11:28:37] [INFO] Backing up /home/hestabit to /backup/hestabit_20260213_112836.tar.gz
+[2026-02-13 11:28:56] [INFO] Integrity check passed for hestabit_20260213_112836.tar.gz
+[2026-02-13 11:28:56] [INFO] Backing up /var/log to /backup/log_20260213_112836.tar.gz
+[2026-02-13 11:29:11] [INFO] Integrity check passed for log_20260213_112836.tar.gz
+[2026-02-13 11:29:11] [INFO] Applying retention policy (older than 7 days)
+[2026-02-13 11:29:11] [INFO] Old backups cleaned
+[2026-02-13 11:29:11] [INFO] Backup script completed successfully

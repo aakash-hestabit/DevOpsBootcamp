@@ -1,0 +1,116 @@
+[2026-02-13 16:52:14] [INFO] Network diagnostics started
+[2026-02-13 16:52:14] [INFO] Checking internet connectivity
+[2026-02-13 16:52:18] [PASS] Internet connectivity: OK
+[2026-02-13 16:52:18] [INFO] Checking DNS resolution
+[2026-02-13 16:52:18] [PASS] DNS resolution: OK
+[2026-02-13 16:52:18] [INFO] Listing network interfaces and IP addresses
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: enp44s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+    link/ether b4:e9:b8:8e:20:ae brd ff:ff:ff:ff:ff:ff
+3: wlp0s20f3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether bc:cd:99:83:45:05 brd ff:ff:ff:ff:ff:ff
+    inet 10.10.1.98/22 brd 10.10.3.255 scope global dynamic noprefixroute wlp0s20f3
+       valid_lft 65276sec preferred_lft 65276sec
+    inet6 fe80::c3de:46c6:23b7:d460/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+4: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 2e:67:e4:ea:19:70 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+[2026-02-13 16:52:18] [INFO] Displaying routing table
+default via 10.10.0.1 dev wlp0s20f3 proto dhcp src 10.10.1.98 metric 600 
+10.10.0.0/22 dev wlp0s20f3 proto kernel scope link src 10.10.1.98 metric 600 
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown 
+[2026-02-13 16:52:18] [INFO] Listing listening ports
+Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
+udp   UNCONN 0      0            0.0.0.0:45723      0.0.0.0:*          
+udp   UNCONN 0      0         127.0.0.54:53         0.0.0.0:*          
+udp   UNCONN 0      0      127.0.0.53%lo:53         0.0.0.0:*          
+udp   UNCONN 0      0        224.0.0.251:5353       0.0.0.0:*          
+udp   UNCONN 0      0        224.0.0.251:5353       0.0.0.0:*          
+udp   UNCONN 0      0        224.0.0.251:5353       0.0.0.0:*          
+udp   UNCONN 0      0            0.0.0.0:5353       0.0.0.0:*          
+udp   UNCONN 0      0               [::]:50102         [::]:*          
+udp   UNCONN 0      0               [::]:5353          [::]:*          
+tcp   LISTEN 0      4096       127.0.0.1:11434      0.0.0.0:*          
+tcp   LISTEN 0      4096       127.0.0.1:27017      0.0.0.0:*          
+tcp   LISTEN 0      511        127.0.0.1:34637      0.0.0.0:*          
+tcp   LISTEN 0      4096       127.0.0.1:631        0.0.0.0:*          
+tcp   LISTEN 0      70         127.0.0.1:33060      0.0.0.0:*          
+tcp   LISTEN 0      151        127.0.0.1:3306       0.0.0.0:*          
+tcp   LISTEN 0      4096   127.0.0.53%lo:53         0.0.0.0:*          
+tcp   LISTEN 0      4096         0.0.0.0:22         0.0.0.0:*          
+tcp   LISTEN 0      4096      127.0.0.54:53         0.0.0.0:*          
+tcp   LISTEN 0      511        127.0.0.1:6379       0.0.0.0:*          
+tcp   LISTEN 0      511            [::1]:6379          [::]:*          
+tcp   LISTEN 0      4096           [::1]:631           [::]:*          
+tcp   LISTEN 0      4096            [::]:22            [::]:*          
+[2026-02-13 16:52:18] [INFO] Testing TCP connectivity to localhost:11434
+[2026-02-13 16:52:18] [PASS] Port 11434 on localhost: Connection successful
+[2026-02-13 16:52:18] [INFO] Measuring latency to 8.8.8.8
+[2026-02-13 16:52:22] [PASS] Latency to 8.8.8.8: 17.246 ms
+[2026-02-13 16:52:22] [INFO] Measuring latency to 1.1.1.1
+[2026-02-13 16:52:26] [PASS] Latency to 1.1.1.1: 7.244 ms
+[2026-02-13 16:52:26] [INFO] Network diagnostics completed
+[2026-02-13 17:04:47] [INFO] Network diagnostics started
+[2026-02-13 17:04:47] [INFO] Checking internet connectivity
+[2026-02-13 17:04:51] [PASS] Internet connectivity: OK
+[2026-02-13 17:04:51] [INFO] Checking DNS resolution
+[2026-02-13 17:04:51] [PASS] DNS resolution: OK
+[2026-02-13 17:04:51] [INFO] Listing network interfaces and IP addresses
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: enp44s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+    link/ether b4:e9:b8:8e:20:ae brd ff:ff:ff:ff:ff:ff
+3: wlp0s20f3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether bc:cd:99:83:45:05 brd ff:ff:ff:ff:ff:ff
+    inet 10.10.1.98/22 brd 10.10.3.255 scope global dynamic noprefixroute wlp0s20f3
+       valid_lft 64524sec preferred_lft 64524sec
+    inet6 fe80::c3de:46c6:23b7:d460/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+4: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 2e:67:e4:ea:19:70 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+[2026-02-13 17:04:51] [INFO] Displaying routing table
+default via 10.10.0.1 dev wlp0s20f3 proto dhcp src 10.10.1.98 metric 600 
+10.10.0.0/22 dev wlp0s20f3 proto kernel scope link src 10.10.1.98 metric 600 
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown 
+[2026-02-13 17:04:51] [INFO] Listing listening ports
+Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
+udp   UNCONN 0      0            0.0.0.0:45723      0.0.0.0:*          
+udp   UNCONN 0      0         127.0.0.54:53         0.0.0.0:*          
+udp   UNCONN 0      0      127.0.0.53%lo:53         0.0.0.0:*          
+udp   UNCONN 0      0        224.0.0.251:5353       0.0.0.0:*          
+udp   UNCONN 0      0        224.0.0.251:5353       0.0.0.0:*          
+udp   UNCONN 0      0        224.0.0.251:5353       0.0.0.0:*          
+udp   UNCONN 0      0            0.0.0.0:5353       0.0.0.0:*          
+udp   UNCONN 0      0               [::]:50102         [::]:*          
+udp   UNCONN 0      0               [::]:5353          [::]:*          
+tcp   LISTEN 0      4096       127.0.0.1:11434      0.0.0.0:*          
+tcp   LISTEN 0      4096       127.0.0.1:27017      0.0.0.0:*          
+tcp   LISTEN 0      511        127.0.0.1:34637      0.0.0.0:*          
+tcp   LISTEN 0      4096       127.0.0.1:631        0.0.0.0:*          
+tcp   LISTEN 0      70         127.0.0.1:33060      0.0.0.0:*          
+tcp   LISTEN 0      151        127.0.0.1:3306       0.0.0.0:*          
+tcp   LISTEN 0      4096   127.0.0.53%lo:53         0.0.0.0:*          
+tcp   LISTEN 0      4096         0.0.0.0:22         0.0.0.0:*          
+tcp   LISTEN 0      4096      127.0.0.54:53         0.0.0.0:*          
+tcp   LISTEN 0      511        127.0.0.1:6379       0.0.0.0:*          
+tcp   LISTEN 0      511            [::1]:6379          [::]:*          
+tcp   LISTEN 0      4096           [::1]:631           [::]:*          
+tcp   LISTEN 0      4096            [::]:22            [::]:*          
+[2026-02-13 17:04:51] [INFO] Measuring latency to 8.8.8.8
+[2026-02-13 17:04:55] [PASS] Latency to 8.8.8.8: 7.788 ms
+[2026-02-13 17:04:55] [INFO] Measuring latency to 1.1.1.1
+[2026-02-13 17:04:59] [PASS] Latency to 1.1.1.1: 7.169 ms
+[2026-02-13 17:04:59] [INFO] Network diagnostics completed

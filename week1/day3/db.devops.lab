@@ -1,0 +1,22 @@
+$TTL 86400
+@   IN  SOA ns1.devops.lab. admin.devops.lab. (
+        2026021401 ; Serial
+        604800     ; Refresh
+        86400      ; Retry
+        2419200    ; Expire
+        300 )      ; Negative Cache TTL
+
+; Name Servers
+@       IN  NS      ns1.devops.lab.
+
+; A Records
+ns1     IN  A       192.168.1.10
+web     IN  A       192.168.1.20
+db      IN  A       192.168.1.30
+mail    IN  A       192.168.1.40
+
+; CNAME
+www     IN  CNAME   web
+
+; MX
+@       IN  MX 10   mail.devops.lab.

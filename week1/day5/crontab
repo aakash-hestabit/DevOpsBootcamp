@@ -1,0 +1,9 @@
+#00 11 * * 1 /bin/bash /home/aakash/Desktop/Launchpad/day5/build.sh
+# System monitoring every 5 minutes
+*/5 * * * * /bin/bash /home/aakash/Desktop/DevOpsBootcamp/day5/monitor.sh
+
+# Daily system health report at 6 AM
+0 6 * * * /bin/bash /home/aakash/Desktop/DevOpsBootcamp/day5/syshealth-report.sh
+
+# Daily system backup at midnight
+0 0 * * * /bin/bash /home/aakash/Desktop/DevOpsBootcamp/day2/backup_system.sh

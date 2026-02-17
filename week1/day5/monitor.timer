@@ -1,0 +1,10 @@
+Description=Run System Monitor every 5 minutes
+Requires=monitor.service
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=5min
+Unit=monitor.service
+
+[Install]
+WantedBy=timers.target
