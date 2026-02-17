@@ -1,6 +1,0 @@
-[2026-02-13 14:20:54] [INFO] Script started
-[2026-02-13 14:20:54] [INFO] User created: jdoe (Group: developers)
-[2026-02-13 14:20:55] [INFO] Granted sudo access to asmith
-[2026-02-13 14:20:55] [INFO] User created: asmith (Group: ops)
-[2026-02-13 14:20:55] [INFO] User jdoe already exists. Skipping.
-[2026-02-13 14:20:55] [INFO] Script completed successfully

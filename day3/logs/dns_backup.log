@@ -1,8 +1,0 @@
-[2026-02-15 04:28:21] [INFO] DNS backup started
-[2026-02-15 04:28:21] [INFO] Preparing DNS backup: /backup/dns/dns_backup_20260215_042821.tar.gz
-[2026-02-15 04:28:21] [INFO] Including full BIND configuration (/etc/bind)
-[2026-02-15 04:28:21] [INFO] Backup archive verified successfully
-[2026-02-15 04:28:21] [INFO] Testing restore procedure (archive readability)
-[2026-02-15 04:28:21] [INFO] Restore test passed
-[2026-02-15 04:28:21] [INFO] Applying retention policy (30 days)
-[2026-02-15 04:28:21] [INFO] DNS backup completed successfully
