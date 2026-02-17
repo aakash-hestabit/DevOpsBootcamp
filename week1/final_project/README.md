@@ -1,4 +1,79 @@
 
+# Server Provisioning System
+
+## What It Does
+Runs system inventory  
+Creates users with proper permissions  
+Configures DNS client settings  
+Sets up UFW firewall from rules file  
+Applies security hardening from config files  
+Deploys centralized logging and log rotation  
+
+## Main Script
+- **server-provision.sh** — Master orchestrator, runs all 6 steps in sequence
+
+## Scripts in server-provision_scripts/
+
+- **system_inventory.sh** — Collects OS, CPU, RAM, disk, network info into report
+- **user_provision.sh** — Creates users from `users.txt`, sets SSH dirs, assigns sudo by role
+- **ufw_setup.sh** — Reads `firewall_rules.csv`, applies UFW rules and defaults
+- **security_hardening.sh** — Validates and deploys SSH, Fail2Ban, sysctl configs before going live
+- **setup_logging.sh** — Validates and deploys rsyslog + logrotate configs before going live
+
+## Config / Input Files (in server-provision_scripts/)
+
+### Users
+- **users.txt** — CSV: `username,fullname,group,role`
+
+### Firewall
+- **firewall_rules.csv** — Columns: `type,rule,from,comment`
+  - `type`: `port` | `app` | `limit`
+  - Example: `port,22/tcp,,SSH` / `limit,22/tcp,,SSH rate limit`
+
+### Security Hardening (read and validated before deployment)
+- **sshd_config.hardened** - deployed to `/etc/ssh/sshd_config`
+- **jail.local** - deployed to `/etc/fail2ban/jail.local`
+- **99-custom-performance.conf** - deployed to `/etc/sysctl.d/`
+
+### Logging (read and validated before deployment)
+- **10-custom.conf** - deployed to `/etc/rsyslog.d/10-custom.conf`
+- **custom-apps** - deployed to `/etc/logrotate.d/custom-apps`
+
+## What Gets Configured
+
+### Logging (setup_logging.sh)
+- `/var/log/apps/` created with correct permissions
+- `application.log`, `security.log`, `monitoring.log`, `auth.log`, `errors.log` pre-created
+- rsyslog routes: `local0` → application, `local1` → security, `local2` → monitoring
+- logrotate: daily rotation, 30-day retention, errors.log 60-day / 100MB
+
+### Firewall (ufw_setup.sh)
+- Default: deny incoming, allow outgoing
+- Ports: 22/tcp (SSH + rate-limit), 80/tcp, 443/tcp, 3306 (LAN only)
+- Apps: OpenSSH, Nginx Full
+
+### Security Hardening (security_hardening.sh)
+- SSH: root login disabled, password auth off, port - 2222
+- Fail2Ban: SSH jail, 3 retries, 1h ban
+- Sysctl: network performance + security hardening
+- Removes: telnet, ftp, rsh-server, xinetd
+- Disables: avahi-daemon, cups
+- Password policy: 90-day max, 7-day warning
+- Enables: unattended-upgrades, auditd
+
+## Script Call Chain
+```
+server-provision.sh
+├── system_inventory.sh           (Step 1)
+├── user_provision.sh users.txt   (Step 2)
+├── (internal) configure_dns_client - /etc/resolv.conf  (Step 3)
+├── ufw_setup.sh                  (Step 4) - reads firewall_rules.csv
+├── security_hardening.sh         (Step 5) - reads sshd_config.hardened,
+│                                             jail.local,
+│                                             99-custom-performance.conf
+└── setup_logging.sh              (Step 6) - reads 10-custom.conf,
+                                              custom-apps
+```
 
 
 
