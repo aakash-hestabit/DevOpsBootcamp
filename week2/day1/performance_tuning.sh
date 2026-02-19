@@ -2,65 +2,58 @@
 set -euo pipefail
 
 # Script: performance_tuning.sh
-# Description: Applies performance tuning for Node.js, Python, and PHP runtimes
+# Description: Applies production performance tuning for Node.js, Python, and PHP
 # Author: Aakash
 # Date: 2026-02-19
 # Usage: sudo ./performance_tuning.sh
 
-# Exit codes
 readonly EXIT_SUCCESS=0
 readonly EXIT_ERROR=1
 
-# Configuration
 LOG_DIR="var/log/apps"
 LOG_FILE="${LOG_DIR}/performance_tuning.log"
 BACKUP_DIR="/var/backups/runtime-performance"
 
-NODE_OPTIONS_FILE="/etc/node-options"
-PYTHON_BASHRC="$HOME/.bashrc"
-PHP_INI_TUNED="/etc/php/performance-tuned.ini"
-
 mkdir -p "$LOG_DIR" "$BACKUP_DIR"
+
+RUNTIME_USER="${SUDO_USER:-$USER}"
+RUNTIME_HOME="$(getent passwd "$RUNTIME_USER" | cut -d: -f6)"
 
 # Logging
 log_info() {
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] [INFO] $1" | tee -a "$LOG_FILE"
-}
-
-log_error() {
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] [ERROR] $1" | tee -a "$LOG_FILE" >&2
+    echo "[$(date '+%F %T')] [INFO] $1" | tee -a "$LOG_FILE"
 }
 
 # Backup helper
 backup_file() {
     local file="$1"
-    if [[ -f "$file" ]]; then
-        cp "$file" "$BACKUP_DIR/$(basename "$file").$(date '+%Y%m%d%H%M%S').bak"
-        log_info "Backup created for $file"
-    fi
+    [[ -f "$file" ]] && cp "$file" "$BACKUP_DIR/$(basename "$file").$(date '+%Y%m%d%H%M%S').bak"
 }
 
-# ===== NODE.JS TUNING =====
+# NODE.JS
 tune_node() {
     log_info "Applying Node.js performance tuning"
 
-    backup_file "$NODE_OPTIONS_FILE"
+    local node_env="/etc/profile.d/node-options.sh"
+    backup_file "$node_env"
 
-    sudo tee "$NODE_OPTIONS_FILE" > /dev/null <<EOF
---max-old-space-size=4096
---max-http-header-size=16384
+    cat <<EOF > "$node_env"
+# Node.js performance tuning
+export NODE_OPTIONS="--max-old-space-size=4096 --max-http-header-size=16384"
 EOF
 
-    log_info "Node.js options written to $NODE_OPTIONS_FILE"
+    chmod 644 "$node_env"
+    log_info "NODE_OPTIONS exported system-wide via $node_env"
 }
 
-# ===== PYTHON TUNING =====
+#  PYTHON 
 tune_python() {
-    log_info "Applying Python performance tuning"
+    log_info "Applying Python performance tuning for user: $RUNTIME_USER"
 
-    backup_file "$PYTHON_BASHRC"
+    local bashrc="${RUNTIME_HOME}/.bashrc"
+    backup_file "$bashrc"
 
-    grep -q "PYTHONOPTIMIZE" "$PYTHON_BASHRC" || cat << 'EOF' >> "$PYTHON_BASHRC"
+    grep -q "Python performance tuning" "$bashrc" || cat <<EOF >> "$bashrc"
 
 # >>> Python performance tuning >>>
 export PYTHONOPTIMIZE=1
@@ -68,16 +61,21 @@ export PYTHONUNBUFFERED=1
 # <<< Python performance tuning <<<
 EOF
 
-    log_info "Python environment variables configured in ~/.bashrc"
+    log_info "Python environment variables added to $bashrc"
 }
 
-# ===== PHP TUNING =====
+# PHP
 tune_php() {
     log_info "Applying PHP performance tuning"
 
-    backup_file "$PHP_INI_TUNED"
+    for sapi in cli fpm; do
+        for dir in /etc/php/*/$sapi/conf.d; do
+            [[ -d "$dir" ]] || continue
 
-    sudo tee "$PHP_INI_TUNED" > /dev/null <<EOF
+            local ini="$dir/99-performance.ini"
+            backup_file "$ini"
+
+            cat <<EOF > "$ini"
 ; PHP Performance Tuning
 memory_limit = 256M
 max_execution_time = 300
@@ -88,12 +86,14 @@ opcache.interned_strings_buffer = 16
 opcache.max_accelerated_files = 10000
 opcache.validate_timestamps = 1
 EOF
+        done
+    done
 
-    log_info "Optimized PHP configuration written to $PHP_INI_TUNED"
-    log_info "You may include this file in active php.ini configurations"
+    systemctl restart php*-fpm 2>/dev/null || true
+    log_info "PHP performance tuning applied and PHP-FPM restarted"
 }
 
-# ===== MAIN =====
+#  MAIN 
 main() {
     log_info "Performance tuning started"
 
