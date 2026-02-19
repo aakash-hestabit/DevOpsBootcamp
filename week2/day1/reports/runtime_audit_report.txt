@@ -1,0 +1,13 @@
+RUNTIME AUDIT REPORT
+Generated: 2026-02-19 04:17:17
+==============================================================
+RUNTIME  | INSTALLED VERSIONS             | DEFAULT    | STATUS     | PATH
+---------|--------------------------------|------------|------------|------------------
+Node.js  | 18.19.0,20.11.0,22.0.0,24.11.0,25.1.0 | 24.11.0    | NEWER      | /home/aakash/.nvm/versions
+Python   | 3.9.18,3.10.13,3.11.7,3.12.1   | 3.10.13    | OUTDATED   | /home/aakash/.pyenv/versions
+PHP      | 7.4.33,8.1.34,8.2.30,8.3.30,8.4.18 | 8.3.30     | NEWER      | /usr/bin/php*
+
+LTS BASELINE
+Node.js  : 20.11.0
+Python   : 3.11.7
+PHP      : 8.2.15

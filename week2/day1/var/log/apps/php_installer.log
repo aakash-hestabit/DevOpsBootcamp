@@ -1,0 +1,18 @@
+[2026-02-19 02:22:47] [INFO] PHP installer started
+[2026-02-19 02:22:47] [INFO] Installing PHP dependencies
+[2026-02-19 02:22:50] [INFO] Ondrej PHP repository already exists
+[2026-02-19 02:22:50] [INFO] Installing PHP 7.4
+[2026-02-19 02:22:51] [INFO] Installing PHP 8.1
+[2026-02-19 02:22:52] [INFO] Installing PHP 8.2
+[2026-02-19 02:22:53] [INFO] Installing PHP 8.3
+[2026-02-19 02:22:54] [INFO] Setting PHP 8.2 as default
+[2026-02-19 02:22:54] [INFO] Configuring php-fpm for PHP 8.2
+[2026-02-19 02:22:55] [INFO] Creating php.ini templates
+[2026-02-19 02:22:55] [INFO] Composer already installed
+[2026-02-19 02:22:55] [INFO] Verifying PHP and Composer installation
+PHP 8.2.30 (cli) (built: Feb 13 2026 15:58:16) (NTS)
+Copyright (c) The PHP Group
+Zend Engine v4.2.30, Copyright (c) Zend Technologies
+    with Zend OPcache v8.2.30, Copyright (c), by Zend Technologies
+Composer version 2.9.5 2026-01-29 11:40:53
+[2026-02-19 02:23:05] [INFO] PHP installer completed successfully

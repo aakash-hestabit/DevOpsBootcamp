@@ -1,0 +1,16 @@
+[2026-02-19 02:40:28] [INFO] Runtime version switcher started
+[2026-02-19 02:40:59] [INFO] Switched PHP to 8.3
+[2026-02-19 02:41:14] [INFO] Exiting runtime version switcher
+[2026-02-19 03:53:15] [INFO] Runtime version switcher started
+[2026-02-19 03:53:35] [INFO] Runtime version switcher started
+[2026-02-19 03:53:44] [INFO] Runtime version switcher started
+[2026-02-19 03:57:28] [INFO] Runtime version switcher started
+[2026-02-19 04:04:41] [INFO] Runtime version switcher started
+[2026-02-19 04:07:47] [INFO] Runtime version switcher started
+[2026-02-19 04:07:48] [INFO] Collecting PHP patch versions...
+[2026-02-19 04:07:58] [INFO] Runtime version switcher started
+[2026-02-19 04:08:00] [INFO] Collecting PHP patch versions...
+[2026-02-19 04:08:07] [INFO] Switched PHP to 8.4.18 (Binary: 8.4)
+[2026-02-19 04:08:49] [INFO] Runtime version switcher started
+[2026-02-19 04:08:51] [INFO] Collecting PHP patch versions...
+[2026-02-19 04:08:52] [INFO] Switched PHP to 8.3.30 (Binary: 8.3)

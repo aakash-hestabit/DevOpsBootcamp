@@ -1,0 +1,48 @@
+[2026-02-18 17:16:28] [INFO] Python installer started
+[2026-02-18 17:16:28] [INFO] Installing Python build dependencies
+[2026-02-18 17:18:12] [INFO] Installing pyenv
+[2026-02-18 17:18:22] [INFO] Configuring ~/.profile for pyenv
+[2026-02-18 17:18:22] [INFO] Configuring ~/.bashrc for pyenv (guarded)
+[2026-02-18 17:18:22] [INFO] Installing Python 3.9.18
+[2026-02-18 17:19:41] [INFO] Installing Python 3.10.13
+[2026-02-18 17:21:03] [INFO] Installing Python 3.11.7
+[2026-02-18 17:22:24] [INFO] Installing Python 3.12.1
+[2026-02-18 17:24:31] [INFO] Setting Python 3.11.7 as global default
+[2026-02-18 17:24:31] [INFO] Installing pip, virtualenv, pipenv
+[2026-02-18 17:24:52] [INFO] Creating virtual environment template
+[2026-02-18 17:24:55] [INFO] Verifying installation
+Python 3.11.7
+pip 26.0.1 from /home/aakash/.pyenv/versions/3.11.7/lib/python3.11/site-packages/pip (python 3.11)
+[2026-02-18 17:24:55] [INFO] Python installer completed successfully
+[2026-02-18 17:33:37] [INFO] Python installer started
+[2026-02-18 17:33:37] [INFO] Installing Python build dependencies
+[2026-02-18 17:33:44] [INFO] pyenv already installed
+[2026-02-18 17:33:44] [INFO] Configuring ~/.profile for pyenv
+[2026-02-18 17:33:44] [INFO] Configuring ~/.bashrc for pyenv (guarded)
+[2026-02-18 17:33:45] [INFO] Python 3.9.18 already installed
+[2026-02-18 17:33:45] [INFO] Python 3.10.13 already installed
+[2026-02-18 17:33:45] [INFO] Python 3.11.7 already installed
+[2026-02-18 17:33:45] [INFO] Python 3.12.1 already installed
+[2026-02-18 17:33:45] [INFO] Setting Python 3.11.7 as global default
+[2026-02-18 17:33:45] [INFO] Installing pip, virtualenv, pipenv
+[2026-02-18 17:33:46] [INFO] Creating virtual environment template
+[2026-02-18 17:33:48] [INFO] Verifying installation
+Python 3.11.7
+pip 26.0.1 from /home/aakash/.pyenv/versions/3.11.7/lib/python3.11/site-packages/pip (python 3.11)
+[2026-02-18 17:33:48] [INFO] Python installer completed successfully
+[2026-02-18 17:40:22] [INFO] Python installer started
+[2026-02-18 17:40:22] [INFO] Installing Python build dependencies
+[2026-02-18 17:40:26] [INFO] pyenv already installed
+[2026-02-18 17:40:26] [INFO] Configuring ~/.profile for pyenv
+[2026-02-18 17:40:26] [INFO] Configuring ~/.bashrc for pyenv (guarded)
+[2026-02-18 17:40:26] [INFO] Python 3.9.18 already installed
+[2026-02-18 17:40:26] [INFO] Python 3.10.13 already installed
+[2026-02-18 17:40:26] [INFO] Python 3.11.7 already installed
+[2026-02-18 17:40:26] [INFO] Python 3.12.1 already installed
+[2026-02-18 17:40:26] [INFO] Setting Python 3.11.7 as global default
+[2026-02-18 17:40:26] [INFO] Installing pip, virtualenv, pipenv
+[2026-02-18 17:40:28] [INFO] Creating virtual environment template
+[2026-02-18 17:40:29] [INFO] Verifying installation
+Python 3.11.7
+pip 26.0.1 from /home/aakash/.pyenv/versions/3.11.7/lib/python3.11/site-packages/pip (python 3.11)
+[2026-02-18 17:40:30] [INFO] Python installer completed successfully
