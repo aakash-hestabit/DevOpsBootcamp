@@ -1,0 +1,4 @@
+[2026-02-23 12:47:06] [OP]    PostgreSQL: Created user 'testuser' with 'read' on 'test'
+[2026-02-23 12:53:20] [OP]    PostgreSQL: Created user 'testuser' with 'read' on 'test'
+[2026-02-23 12:54:04] [OP]    PostgreSQL: Created user 'testuser' with 'read' on 'test'
+[2026-02-23 12:58:39] [OP]    MySQL: Created user 'testuser' with 'read' on 'testdb'

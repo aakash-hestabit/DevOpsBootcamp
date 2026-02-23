@@ -1,0 +1,24 @@
+DATABASE PERFORMANCE BASELINE
+Generated: 2026-02-23 15:16:17
+Iterations: 50 per operation
+========================================
+
+PostgreSQL (testdb):
+  INSERT: 50 queries in .037s (1351 qps)
+  SELECT: 50 queries in .043s (1162 qps)
+  UPDATE: 50 queries in .049s (1020 qps)
+  Avg query time: .86ms
+
+MySQL (appdb):
+  INSERT: 50 queries in .008s (6250 qps)
+  SELECT: 50 queries in .013s (3846 qps)
+  UPDATE: 50 queries in .015s (3333 qps)
+  Avg query time: .24ms
+
+MongoDB (appdb):
+  insert: 50 docs in .354s (141 ops/s)
+  find:   50 docs in .252s (198 ops/s)
+  update: 50 docs in .245s (204 ops/s)
+  Avg operation time: 5.67ms
+
+========================================

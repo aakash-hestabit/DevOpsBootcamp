@@ -1,0 +1,28 @@
+[2026-02-23 15:00:48] [INFO]  Script started
+[2026-02-23 15:00:50] [INFO]  PostgreSQL restore initiated
+[2026-02-23 15:01:23] [INFO]  Creating safety backup...
+[2026-02-23 15:01:23] [INFO]    ✓ Current database backed up → /backups/postgresql/pre_restore/test_before_restore_20260223_150048.dump.gz
+[2026-02-23 15:03:42] [INFO]  Script started
+[2026-02-23 15:03:42] [INFO]  MySQL restore initiated
+[2026-02-23 15:03:42] [INFO]  Restore cancelled by user
+[2026-02-23 15:03:42] [INFO]  Script completed successfully
+[2026-02-23 15:03:55] [INFO]  Script started
+[2026-02-23 15:03:55] [INFO]  PostgreSQL restore initiated
+[2026-02-23 15:03:55] [INFO]  Restore cancelled by user
+[2026-02-23 15:03:55] [INFO]  Script completed successfully
+[2026-02-23 15:04:07] [INFO]  Script started
+[2026-02-23 15:04:07] [INFO]  MongoDB restore initiated
+[2026-02-23 15:04:07] [INFO]  Restore cancelled by user
+[2026-02-23 15:04:07] [INFO]  Script completed successfully
+[2026-02-23 15:05:21] [INFO]  Script started
+[2026-02-23 15:05:21] [INFO]  MySQL restore initiated
+[2026-02-23 15:05:21] [INFO]  Restore cancelled by user
+[2026-02-23 15:05:21] [INFO]  Script completed successfully
+[2026-02-23 15:05:29] [INFO]  Script started
+[2026-02-23 15:05:29] [INFO]  PostgreSQL restore initiated
+[2026-02-23 15:05:29] [INFO]  Restore cancelled by user
+[2026-02-23 15:05:29] [INFO]  Script completed successfully
+[2026-02-23 15:05:37] [INFO]  Script started
+[2026-02-23 15:05:37] [INFO]  MongoDB restore initiated
+[2026-02-23 15:05:37] [INFO]  Restore cancelled by user
+[2026-02-23 15:05:37] [INFO]  Script completed successfully

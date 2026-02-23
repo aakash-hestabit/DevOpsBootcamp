@@ -1,0 +1,17 @@
+[2026-02-23 11:41:44] [INFO]  ========== MySQL Setup ==========
+[2026-02-23 11:41:44] [INFO]  Installing MySQL 8.0
+[2026-02-23 11:41:47] [INFO]  MySQL 8.0 installed
+[2026-02-23 11:41:47] [INFO]  Securing MySQL installation
+[2026-02-23 11:41:47] [INFO]  MySQL secured (root password set, test db removed)
+[2026-02-23 11:41:47] [INFO]  Applying optimized MySQL configuration
+[2026-02-23 11:41:47] [INFO]  Configuration optimized
+[2026-02-23 11:41:47] [INFO]  Restarting and enabling MySQL service
+[2026-02-23 11:41:49] [INFO]   Service started and enabled
+[2026-02-23 11:41:49] [INFO]  Creating application user and database
+[2026-02-23 11:41:49] [INFO]   User 'appuser' created
+[2026-02-23 11:41:49] [INFO]   Database 'appdb' created
+[2026-02-23 11:41:49] [INFO]  Verifying MySQL installation
+[2026-02-23 11:41:49] [INFO]   Connection test: SUCCESSFUL
+[2026-02-23 11:41:49] [INFO]  Status: Ready for production
+[2026-02-23 11:41:49] [INFO]  =================================
+[2026-02-23 11:41:49] [INFO]  Script completed successfully

@@ -1,0 +1,20 @@
+BACKUP REPORT
+Generated: 2026-02-23 14:35:10
+Category:  daily
+========================================
+
+POSTGRESQL:
+  test_20260223_143510.dump.gz  4.0K
+  testdb_20260223_143510.dump.gz  4.0K
+
+MYSQL:
+  appdb_20260223_143510.sql.gz  4.0K
+  testdb_20260223_143510.sql.gz  4.0K
+
+MONGODB:
+  mongodb_20260223_143510.archive.gz  4.0K
+
+Retention Policy:
+  Daily:   last 7 days
+  Weekly:  last 4 weeks
+  Monthly: last 12 months

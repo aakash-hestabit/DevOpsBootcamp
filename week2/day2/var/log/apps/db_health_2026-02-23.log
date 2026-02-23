@@ -1,0 +1,40 @@
+
+DB HEALTH REPORT — 2026-02-23 14:57:46
+========================================
+
+PostgreSQL:
+  ─────────────────────────────────────────
+   Service: running
+   Connection: successful
+   Connections: 1/100 (1%)
+  Database sizes:
+    testdb: 7567 kB
+    test: 7567 kB
+    postgres: 7487 kB
+   Long-running queries: none
+   Replication lag: 0 MB (or standalone)
+   Disk PostgreSQL data: 76% used
+
+MySQL:
+  ─────────────────────────────────────────
+   Service: running
+   Connection: successful
+   Connections: 1/150 (0%)
+   InnoDB buffer pool: 3% used
+   Slow queries (cumulative): 0
+  Database sizes:
+   Disk MySQL data: 76% used
+
+MongoDB:
+  ─────────────────────────────────────────
+   Service: running
+   Connection: successful
+   Replica set: standalone
+  Database sizes:
+   Total indexes: unknown
+   Disk MongoDB data: 76% used
+
+========================================
+Health check completed: 2026-02-23 14:57:48
+  All systems healthy — no alerts
+========================================

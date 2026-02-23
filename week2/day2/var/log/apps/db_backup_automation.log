@@ -1,0 +1,228 @@
+[2026-02-23 13:00:44] [INFO]  Script started
+[2026-02-23 13:00:44] [INFO]  ========== Backup Automation ==========
+[2026-02-23 13:00:44] [INFO]  Starting PostgreSQL backup
+[2026-02-23 13:01:29] [INFO]  Script started
+[2026-02-23 13:01:29] [INFO]  ========== Backup Automation ==========
+[2026-02-23 13:01:29] [INFO]  Starting PostgreSQL backup
+[2026-02-23 13:03:24] [INFO]  Script started
+[2026-02-23 13:03:24] [INFO]  ========== Backup Automation ==========
+[2026-02-23 13:03:24] [INFO]  Starting PostgreSQL backup
+[2026-02-23 13:03:24] [DEBUG] Backing up PostgreSQL database: testdb
+[2026-02-23 13:03:25] [INFO]    ✓ PostgreSQL/testdb → /backups/postgresql/daily/2026-02-23/testdb_20260223_130324.dump.gz (4.0K)
+[2026-02-23 13:03:25] [DEBUG] Backing up PostgreSQL database: test
+[2026-02-23 13:03:25] [INFO]    ✓ PostgreSQL/test → /backups/postgresql/daily/2026-02-23/test_20260223_130324.dump.gz (4.0K)
+[2026-02-23 13:03:25] [INFO]  PostgreSQL backup complete [daily]
+[2026-02-23 13:03:25] [INFO]  Backup report: var/log/apps/backup_report_2026-02-23.txt
+[2026-02-23 13:03:25] [INFO]  =======================================
+[2026-02-23 13:03:25] [INFO]  Script completed successfully
+[2026-02-23 13:03:39] [INFO]  Script started
+[2026-02-23 13:03:39] [INFO]  ========== Backup Automation ==========
+[2026-02-23 13:03:39] [INFO]  Starting MySQL backup
+[2026-02-23 13:03:39] [DEBUG] Backing up MySQL database: appdb
+[2026-02-23 13:03:39] [INFO]    ✓ MySQL/appdb → /backups/mysql/daily/2026-02-23/appdb_20260223_130339.sql.gz (4.0K)
+[2026-02-23 13:03:39] [DEBUG] Backing up MySQL database: testdb
+[2026-02-23 13:03:39] [INFO]    ✓ MySQL/testdb → /backups/mysql/daily/2026-02-23/testdb_20260223_130339.sql.gz (4.0K)
+[2026-02-23 13:03:39] [INFO]  MySQL backup complete [daily]
+[2026-02-23 13:03:40] [INFO]  Backup report: var/log/apps/backup_report_2026-02-23.txt
+[2026-02-23 13:03:40] [INFO]  =======================================
+[2026-02-23 13:03:40] [INFO]  Script completed successfully
+[2026-02-23 13:03:54] [INFO]  Script started
+[2026-02-23 13:03:54] [INFO]  ========== Backup Automation ==========
+[2026-02-23 13:03:54] [INFO]  Starting MongoDB backup
+[2026-02-23 13:03:54] [INFO]    ✓ MongoDB → /backups/mongodb/daily/2026-02-23/mongodb_20260223_130354.archive.gz ()
+[2026-02-23 13:03:54] [INFO]  MongoDB backup complete [daily]
+[2026-02-23 13:03:54] [INFO]  Backup report: var/log/apps/backup_report_2026-02-23.txt
+[2026-02-23 13:03:54] [INFO]  =======================================
+[2026-02-23 13:03:54] [INFO]  Script completed successfully
+[2026-02-23 13:04:04] [INFO]  Script started
+[2026-02-23 13:04:04] [INFO]  ========== Backup Automation ==========
+[2026-02-23 13:04:04] [INFO]  Starting PostgreSQL backup
+[2026-02-23 13:04:05] [DEBUG] Backing up PostgreSQL database: testdb
+[2026-02-23 13:04:05] [INFO]    ✓ PostgreSQL/testdb → /backups/postgresql/daily/2026-02-23/testdb_20260223_130404.dump.gz (4.0K)
+[2026-02-23 13:04:05] [DEBUG] Backing up PostgreSQL database: test
+[2026-02-23 13:04:05] [INFO]    ✓ PostgreSQL/test → /backups/postgresql/daily/2026-02-23/test_20260223_130404.dump.gz (4.0K)
+[2026-02-23 13:04:05] [INFO]  PostgreSQL backup complete [daily]
+[2026-02-23 13:04:05] [INFO]  Starting MySQL backup
+[2026-02-23 13:04:05] [DEBUG] Backing up MySQL database: appdb
+[2026-02-23 13:04:05] [INFO]    ✓ MySQL/appdb → /backups/mysql/daily/2026-02-23/appdb_20260223_130404.sql.gz (4.0K)
+[2026-02-23 13:04:05] [DEBUG] Backing up MySQL database: testdb
+[2026-02-23 13:04:05] [INFO]    ✓ MySQL/testdb → /backups/mysql/daily/2026-02-23/testdb_20260223_130404.sql.gz (4.0K)
+[2026-02-23 13:04:05] [INFO]  MySQL backup complete [daily]
+[2026-02-23 13:04:05] [INFO]  Starting MongoDB backup
+[2026-02-23 13:04:05] [INFO]    ✓ MongoDB → /backups/mongodb/daily/2026-02-23/mongodb_20260223_130404.archive.gz ()
+[2026-02-23 13:04:05] [INFO]  MongoDB backup complete [daily]
+[2026-02-23 13:04:05] [INFO]  Backup report: var/log/apps/backup_report_2026-02-23.txt
+[2026-02-23 13:04:05] [INFO]  =======================================
+[2026-02-23 13:04:05] [INFO]  Script completed successfully
+[2026-02-23 13:06:27] [INFO]  Script started
+[2026-02-23 13:06:27] [INFO]  ========== Backup Automation ==========
+[2026-02-23 13:06:27] [INFO]  Starting MongoDB backup
+[2026-02-23 13:06:28] [INFO]    ✓ MongoDB → /backups/mongodb/daily/2026-02-23/mongodb_20260223_130627.archive.gz (4.0K)
+[2026-02-23 13:06:28] [INFO]  MongoDB backup complete [daily]
+[2026-02-23 13:06:28] [INFO]  Backup report: var/log/apps/backup_report_2026-02-23.txt
+[2026-02-23 13:06:28] [INFO]  =======================================
+[2026-02-23 13:06:28] [INFO]  Script completed successfully
+[2026-02-23 13:07:18] [INFO]  Script started
+[2026-02-23 13:07:18] [INFO]  ========== Backup Automation ==========
+[2026-02-23 13:07:18] [INFO]  Starting PostgreSQL backup
+[2026-02-23 13:10:19] [INFO]  Script started
+[2026-02-23 13:10:19] [INFO]  ========== Backup Automation ==========
+[2026-02-23 13:10:19] [INFO]  Starting PostgreSQL backup
+[2026-02-23 13:10:50] [INFO]  Script started
+[2026-02-23 13:10:50] [INFO]  ========== Backup Automation ==========
+[2026-02-23 13:10:50] [INFO]  Starting PostgreSQL backup
+[2026-02-23 13:10:50] [DEBUG] Backing up PostgreSQL database: testdb
+[2026-02-23 13:10:51] [INFO]    ✓ PostgreSQL/testdb → /backups/postgresql/daily/2026-02-23/testdb_20260223_131050.dump.gz (4.0K)
+[2026-02-23 13:10:51] [DEBUG] Backing up PostgreSQL database: test
+[2026-02-23 13:10:51] [INFO]    ✓ PostgreSQL/test → /backups/postgresql/daily/2026-02-23/test_20260223_131050.dump.gz (4.0K)
+[2026-02-23 13:10:51] [INFO]  PostgreSQL backup complete [daily]
+[2026-02-23 13:10:51] [INFO]  Backup report: var/log/apps/backup_report_2026-02-23.txt
+[2026-02-23 13:10:51] [INFO]  =======================================
+[2026-02-23 13:10:51] [INFO]  Script completed successfully
+[2026-02-23 13:10:59] [INFO]  Script started
+[2026-02-23 13:10:59] [INFO]  ========== Backup Automation ==========
+[2026-02-23 13:10:59] [INFO]  Starting PostgreSQL backup
+[2026-02-23 13:11:09] [INFO]  Script started
+[2026-02-23 13:11:09] [INFO]  ========== Backup Automation ==========
+[2026-02-23 13:11:09] [INFO]  Starting PostgreSQL backup
+[2026-02-23 13:11:51] [INFO]  Script started
+[2026-02-23 13:11:51] [INFO]  ========== Backup Automation ==========
+[2026-02-23 13:11:51] [INFO]  Starting PostgreSQL backup
+[2026-02-23 13:12:08] [INFO]  Script started
+[2026-02-23 13:12:08] [INFO]  ========== Backup Automation ==========
+[2026-02-23 13:12:08] [INFO]  Starting PostgreSQL backup
+[2026-02-23 13:12:08] [INFO]    ✓ PostgreSQL/testdb → /backups/postgresql/daily/2026-02-23/testdb_20260223_131208.dump.gz (4.0K)
+[2026-02-23 13:12:08] [INFO]    ✓ PostgreSQL/test → /backups/postgresql/daily/2026-02-23/test_20260223_131208.dump.gz (4.0K)
+[2026-02-23 13:12:08] [INFO]  PostgreSQL backup complete [daily]
+[2026-02-23 13:12:08] [INFO]  Starting MySQL backup
+[2026-02-23 13:12:09] [INFO]    ✓ MySQL/appdb → /backups/mysql/daily/2026-02-23/appdb_20260223_131208.sql.gz (4.0K)
+[2026-02-23 13:12:09] [INFO]    ✓ MySQL/testdb → /backups/mysql/daily/2026-02-23/testdb_20260223_131208.sql.gz (4.0K)
+[2026-02-23 13:12:09] [INFO]  MySQL backup complete [daily]
+[2026-02-23 13:12:09] [INFO]  Starting MongoDB backup
+[2026-02-23 13:12:09] [INFO]    ✓ MongoDB → /backups/mongodb/daily/2026-02-23/mongodb_20260223_131208.archive.gz (4.0K)
+[2026-02-23 13:12:09] [INFO]  MongoDB backup complete [daily]
+[2026-02-23 13:12:09] [INFO]  Backup report: var/log/apps/backup_report_2026-02-23.txt
+[2026-02-23 13:12:09] [INFO]  =======================================
+[2026-02-23 13:12:09] [INFO]  Script completed successfully
+[2026-02-23 13:14:19] [INFO]  Script started
+[2026-02-23 13:14:19] [INFO]  ========== Backup Automation ==========
+[2026-02-23 13:14:19] [INFO]  Starting PostgreSQL backup
+[2026-02-23 13:14:19] [INFO]    ✓ PostgreSQL/testdb → /backups/postgresql/daily/2026-02-23/testdb_20260223_131419.dump.gz (4.0K)
+[2026-02-23 13:14:19] [INFO]    ✓ PostgreSQL/test → /backups/postgresql/daily/2026-02-23/test_20260223_131419.dump.gz (4.0K)
+[2026-02-23 13:14:19] [INFO]  PostgreSQL backup complete [daily]
+[2026-02-23 13:14:19] [INFO]  Starting MySQL backup
+[2026-02-23 13:14:19] [INFO]    ✓ MySQL/appdb → /backups/mysql/daily/2026-02-23/appdb_20260223_131419.sql.gz (4.0K)
+[2026-02-23 13:14:19] [INFO]    ✓ MySQL/testdb → /backups/mysql/daily/2026-02-23/testdb_20260223_131419.sql.gz (4.0K)
+[2026-02-23 13:14:19] [INFO]  MySQL backup complete [daily]
+[2026-02-23 13:14:19] [INFO]  Starting MongoDB backup
+[2026-02-23 13:14:20] [INFO]    ✓ MongoDB → /backups/mongodb/daily/2026-02-23/mongodb_20260223_131419.archive.gz (4.0K)
+[2026-02-23 13:14:20] [INFO]  MongoDB backup complete [daily]
+[2026-02-23 13:14:20] [INFO]  Backup report: var/log/apps/backup_report_2026-02-23.txt
+[2026-02-23 13:14:20] [INFO]  =======================================
+[2026-02-23 13:14:20] [INFO]  Script completed successfully
+[2026-02-23 13:15:32] [INFO]  Script started
+[2026-02-23 13:15:32] [INFO]  ========== Backup Automation ==========
+[2026-02-23 13:15:32] [INFO]  Starting PostgreSQL backup
+[2026-02-23 13:15:32] [INFO]    ✓ PostgreSQL/testdb → /backups/postgresql/daily/2026-02-23/testdb_20260223_131532.dump.gz (4.0K)
+[2026-02-23 13:15:32] [INFO]    ✓ PostgreSQL/test → /backups/postgresql/daily/2026-02-23/test_20260223_131532.dump.gz (4.0K)
+[2026-02-23 13:15:32] [INFO]  PostgreSQL backup complete [daily]
+[2026-02-23 13:15:32] [INFO]  Starting MySQL backup
+[2026-02-23 13:15:32] [INFO]    ✓ MySQL/appdb → /backups/mysql/daily/2026-02-23/appdb_20260223_131532.sql.gz (4.0K)
+[2026-02-23 13:15:32] [INFO]    ✓ MySQL/testdb → /backups/mysql/daily/2026-02-23/testdb_20260223_131532.sql.gz (4.0K)
+[2026-02-23 13:15:32] [INFO]  MySQL backup complete [daily]
+[2026-02-23 13:15:32] [INFO]  Starting MongoDB backup
+[2026-02-23 13:15:32] [INFO]    ✓ MongoDB → /backups/mongodb/daily/2026-02-23/mongodb_20260223_131532.archive.gz (4.0K)
+[2026-02-23 13:15:32] [INFO]  MongoDB backup complete [daily]
+[2026-02-23 14:24:13] [INFO]  Script started
+[2026-02-23 14:24:13] [INFO]  ========== Backup Automation ==========
+[2026-02-23 14:24:13] [INFO]  Starting PostgreSQL backup
+[2026-02-23 14:24:13] [INFO]    ✓ PostgreSQL/testdb → /backups/postgresql/daily/2026-02-23/testdb_20260223_142413.dump.gz (4.0K)
+[2026-02-23 14:24:13] [INFO]    ✓ PostgreSQL/test → /backups/postgresql/daily/2026-02-23/test_20260223_142413.dump.gz (4.0K)
+[2026-02-23 14:24:13] [INFO]  PostgreSQL backup complete [daily]
+[2026-02-23 14:24:13] [INFO]  Starting MySQL backup
+[2026-02-23 14:24:13] [INFO]    ✓ MySQL/appdb → /backups/mysql/daily/2026-02-23/appdb_20260223_142413.sql.gz (4.0K)
+[2026-02-23 14:24:13] [INFO]    ✓ MySQL/testdb → /backups/mysql/daily/2026-02-23/testdb_20260223_142413.sql.gz (4.0K)
+[2026-02-23 14:24:13] [INFO]  MySQL backup complete [daily]
+[2026-02-23 14:24:13] [INFO]  Starting MongoDB backup
+[2026-02-23 14:24:13] [INFO]    ✓ MongoDB → /backups/mongodb/daily/2026-02-23/mongodb_20260223_142413.archive.gz (4.0K)
+[2026-02-23 14:24:13] [INFO]  MongoDB backup complete [daily]
+[2026-02-23 14:25:17] [INFO]  Script started
+[2026-02-23 14:25:17] [INFO]  ========== Backup Automation ==========
+[2026-02-23 14:25:17] [INFO]  Starting PostgreSQL backup
+[2026-02-23 14:25:17] [DEBUG] Backing up PostgreSQL database: testdb
+[2026-02-23 14:25:17] [INFO]    ✓ PostgreSQL/testdb → /backups/postgresql/daily/2026-02-23/testdb_20260223_142517.dump.gz (4.0K)
+[2026-02-23 14:25:17] [DEBUG] Backing up PostgreSQL database: test
+[2026-02-23 14:25:17] [INFO]    ✓ PostgreSQL/test → /backups/postgresql/daily/2026-02-23/test_20260223_142517.dump.gz (4.0K)
+[2026-02-23 14:25:17] [INFO]  PostgreSQL backup complete [daily]
+[2026-02-23 14:25:17] [INFO]  Starting MySQL backup
+[2026-02-23 14:25:17] [DEBUG] Backing up MySQL database: appdb
+[2026-02-23 14:25:17] [INFO]    ✓ MySQL/appdb → /backups/mysql/daily/2026-02-23/appdb_20260223_142517.sql.gz (4.0K)
+[2026-02-23 14:25:17] [DEBUG] Backing up MySQL database: testdb
+[2026-02-23 14:25:17] [INFO]    ✓ MySQL/testdb → /backups/mysql/daily/2026-02-23/testdb_20260223_142517.sql.gz (4.0K)
+[2026-02-23 14:25:17] [INFO]  MySQL backup complete [daily]
+[2026-02-23 14:25:17] [INFO]  Starting MongoDB backup
+[2026-02-23 14:25:17] [INFO]    ✓ MongoDB → /backups/mongodb/daily/2026-02-23/mongodb_20260223_142517.archive.gz (4.0K)
+[2026-02-23 14:25:17] [INFO]  MongoDB backup complete [daily]
+[2026-02-23 14:25:17] [INFO]  Backup report: var/log/apps/backup_report_2026-02-23.txt
+[2026-02-23 14:25:17] [INFO]  =======================================
+[2026-02-23 14:25:17] [INFO]  Script completed successfully
+[2026-02-23 14:32:52] [INFO]  Script started
+[2026-02-23 14:32:52] [INFO]  ========== Backup Automation ==========
+[2026-02-23 14:32:52] [INFO]  Starting PostgreSQL backup
+[2026-02-23 14:32:52] [DEBUG] Backing up PostgreSQL database: testdb
+[2026-02-23 14:32:52] [INFO]     PostgreSQL/testdb → /backups/postgresql/daily/2026-02-23/testdb_20260223_143252.dump.gz (4.0K)
+[2026-02-23 14:32:52] [DEBUG] Backing up PostgreSQL database: test
+[2026-02-23 14:32:52] [INFO]     PostgreSQL/test → /backups/postgresql/daily/2026-02-23/test_20260223_143252.dump.gz (4.0K)
+[2026-02-23 14:32:52] [INFO]  PostgreSQL backup complete [daily]
+[2026-02-23 14:32:52] [INFO]  Starting MySQL backup
+[2026-02-23 14:32:52] [DEBUG] Backing up MySQL database: appdb
+[2026-02-23 14:32:52] [INFO]     MySQL/appdb → /backups/mysql/daily/2026-02-23/appdb_20260223_143252.sql.gz (4.0K)
+[2026-02-23 14:32:52] [DEBUG] Backing up MySQL database: testdb
+[2026-02-23 14:32:52] [INFO]     MySQL/testdb → /backups/mysql/daily/2026-02-23/testdb_20260223_143252.sql.gz (4.0K)
+[2026-02-23 14:32:52] [INFO]  MySQL backup complete [daily]
+[2026-02-23 14:32:52] [INFO]  Starting MongoDB backup
+[2026-02-23 14:32:52] [INFO]      MongoDB → /backups/mongodb/daily/2026-02-23/mongodb_20260223_143252.archive.gz (4.0K)
+[2026-02-23 14:32:52] [INFO]  MongoDB backup complete [daily]
+[2026-02-23 14:32:53] [INFO]  Backup report: var/log/apps/backup_report_2026-02-23.txt
+[2026-02-23 14:32:53] [INFO]  =======================================
+[2026-02-23 14:32:53] [INFO]  Script completed successfully
+[2026-02-23 14:33:45] [INFO]  Script started
+[2026-02-23 14:33:45] [INFO]  ========== Backup Automation ==========
+[2026-02-23 14:33:45] [INFO]  Starting PostgreSQL backup
+[2026-02-23 14:33:45] [DEBUG] Backing up PostgreSQL database: testdb
+[2026-02-23 14:33:45] [INFO]     PostgreSQL/testdb --> /backups/postgresql/daily/2026-02-23/testdb_20260223_143345.dump.gz (4.0K)
+[2026-02-23 14:33:45] [DEBUG] Backing up PostgreSQL database: test
+[2026-02-23 14:33:45] [INFO]     PostgreSQL/test --> /backups/postgresql/daily/2026-02-23/test_20260223_143345.dump.gz (4.0K)
+[2026-02-23 14:33:45] [INFO]  PostgreSQL backup complete [daily]
+[2026-02-23 14:33:45] [INFO]  Starting MySQL backup
+[2026-02-23 14:33:45] [DEBUG] Backing up MySQL database: appdb
+[2026-02-23 14:33:45] [INFO]     MySQL/appdb --> /backups/mysql/daily/2026-02-23/appdb_20260223_143345.sql.gz (4.0K)
+[2026-02-23 14:33:45] [DEBUG] Backing up MySQL database: testdb
+[2026-02-23 14:33:45] [INFO]     MySQL/testdb --> /backups/mysql/daily/2026-02-23/testdb_20260223_143345.sql.gz (4.0K)
+[2026-02-23 14:33:45] [INFO]  MySQL backup complete [daily]
+[2026-02-23 14:33:45] [INFO]  Starting MongoDB backup
+[2026-02-23 14:33:45] [INFO]      MongoDB --> /backups/mongodb/daily/2026-02-23/mongodb_20260223_143345.archive.gz (4.0K)
+[2026-02-23 14:33:45] [INFO]  MongoDB backup complete [daily]
+[2026-02-23 14:33:45] [INFO]  Backup report: var/log/apps/backup_report_2026-02-23.txt
+[2026-02-23 14:33:45] [INFO]  =======================================
+[2026-02-23 14:33:45] [INFO]  Script completed successfully
+[2026-02-23 14:35:10] [INFO]  Script started
+[2026-02-23 14:35:10] [INFO]  ========== Backup Automation ==========
+[2026-02-23 14:35:10] [INFO]  Starting PostgreSQL backup
+[2026-02-23 14:35:10] [DEBUG] Backing up PostgreSQL database: testdb
+[2026-02-23 14:35:10] [INFO]     PostgreSQL/testdb --> /backups/postgresql/daily/2026-02-23/testdb_20260223_143510.dump.gz (4.0K)
+[2026-02-23 14:35:10] [DEBUG] Backing up PostgreSQL database: test
+[2026-02-23 14:35:10] [INFO]     PostgreSQL/test --> /backups/postgresql/daily/2026-02-23/test_20260223_143510.dump.gz (4.0K)
+[2026-02-23 14:35:10] [INFO]  PostgreSQL backup complete [daily]
+[2026-02-23 14:35:10] [INFO]  Starting MySQL backup
+[2026-02-23 14:35:10] [DEBUG] Backing up MySQL database: appdb
+[2026-02-23 14:35:10] [INFO]     MySQL/appdb --> /backups/mysql/daily/2026-02-23/appdb_20260223_143510.sql.gz (4.0K)
+[2026-02-23 14:35:10] [DEBUG] Backing up MySQL database: testdb
+[2026-02-23 14:35:10] [INFO]     MySQL/testdb --> /backups/mysql/daily/2026-02-23/testdb_20260223_143510.sql.gz (4.0K)
+[2026-02-23 14:35:10] [INFO]  MySQL backup complete [daily]
+[2026-02-23 14:35:10] [INFO]  Starting MongoDB backup
+[2026-02-23 14:35:10] [INFO]      MongoDB --> /backups/mongodb/daily/2026-02-23/mongodb_20260223_143510.archive.gz (4.0K)
+[2026-02-23 14:35:10] [INFO]  MongoDB backup complete [daily]
+[2026-02-23 14:35:10] [INFO]  Backup report: var/log/apps/backup_report_2026-02-23.txt
+[2026-02-23 14:35:10] [INFO]  =======================================
+[2026-02-23 14:35:10] [INFO]  Script completed successfully

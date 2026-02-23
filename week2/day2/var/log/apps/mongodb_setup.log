@@ -1,0 +1,17 @@
+[2026-02-23 11:46:57] [INFO]  ========== MongoDB Setup ==========
+[2026-02-23 11:46:57] [INFO]  Installing MongoDB 7.0
+[2026-02-23 11:47:04] [INFO]  MongoDB 7.0 installed
+[2026-02-23 11:47:04] [INFO]  Applying base MongoDB configuration (pre-auth)
+[2026-02-23 11:47:04] [INFO]  Base configuration applied
+[2026-02-23 11:47:04] [INFO]  Creating admin and application users
+[2026-02-23 11:47:09] [INFO]  Enabling authentication in MongoDB configuration
+[2026-02-23 11:47:17] [INFO]   Admin user 'mongoadmin' created
+[2026-02-23 11:47:17] [INFO]   App user 'appuser' created
+[2026-02-23 11:47:17] [INFO]   Database 'appdb' created
+[2026-02-23 11:47:17] [INFO]  Enabling MongoDB service
+[2026-02-23 11:47:17] [INFO]   Service started and enabled
+[2026-02-23 11:47:17] [INFO]  Verifying MongoDB installation
+[2026-02-23 11:47:19] [INFO]   Connection test: SUCCESSFUL
+[2026-02-23 11:47:19] [INFO]  Status: Ready for production
+[2026-02-23 11:47:19] [INFO]  ===================================
+[2026-02-23 11:47:19] [INFO]  Script completed successfully

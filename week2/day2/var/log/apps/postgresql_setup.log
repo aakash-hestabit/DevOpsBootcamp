@@ -1,0 +1,92 @@
+[2026-02-23 02:33:53] [INFO] ========== PostgreSQL Setup ==========
+[2026-02-23 02:33:53] [INFO] Installing PostgreSQL 15
+[2026-02-23 02:34:46] [INFO]  PostgreSQL 15 installed
+[2026-02-23 02:34:46] [INFO] Configuring PostgreSQL
+[2026-02-23 02:34:46] [INFO]  Configuration optimized
+[2026-02-23 02:34:46] [INFO] Starting PostgreSQL service
+[2026-02-23 02:34:47] [INFO]  Service started and enabled
+[2026-02-23 02:34:47] [INFO] Creating database user and database
+[2026-02-23 02:40:41] [INFO] ========== PostgreSQL Setup ==========
+[2026-02-23 02:40:41] [INFO] Installing PostgreSQL 15
+[2026-02-23 02:40:48] [INFO]  PostgreSQL 15 installed
+[2026-02-23 02:40:48] [INFO] Configuring PostgreSQL
+[2026-02-23 02:40:48] [INFO]  Configuration optimized
+[2026-02-23 02:40:48] [INFO] Starting PostgreSQL service
+[2026-02-23 02:40:49] [INFO]  Service started and enabled
+[2026-02-23 02:40:49] [INFO] Creating database user and database
+[2026-02-23 11:06:27] [INFO] ========== PostgreSQL Setup ==========
+[2026-02-23 11:06:27] [INFO] Installing PostgreSQL 15
+[2026-02-23 11:06:40] [INFO]  PostgreSQL 15 installed
+[2026-02-23 11:06:40] [INFO] Configuring PostgreSQL
+[2026-02-23 11:06:40] [INFO]  Configuration optimized
+[2026-02-23 11:06:40] [INFO] Starting PostgreSQL service
+[2026-02-23 11:06:41] [INFO]  Service started and enabled
+[2026-02-23 11:06:41] [INFO] Creating database user and database
+[2026-02-23 11:12:57] [INFO] ========== PostgreSQL Setup ==========
+[2026-02-23 11:12:57] [INFO] Installing PostgreSQL 15
+[2026-02-23 11:13:02] [INFO]  PostgreSQL 15 installed
+[2026-02-23 11:13:02] [INFO] Configuring PostgreSQL
+[2026-02-23 11:13:02] [INFO]  Configuration optimized
+[2026-02-23 11:13:02] [INFO] Starting PostgreSQL service
+[2026-02-23 11:13:03] [INFO]  Service started and enabled
+[2026-02-23 11:13:03] [INFO] Creating database user and database
+[2026-02-23 11:17:44] [INFO] ========== PostgreSQL Setup ==========
+[2026-02-23 11:17:44] [INFO] Installing PostgreSQL 15
+[2026-02-23 11:17:49] [INFO]  PostgreSQL 15 installed
+[2026-02-23 11:17:49] [INFO] Configuring PostgreSQL
+[2026-02-23 11:17:49] [INFO]  Configuration optimized
+[2026-02-23 11:17:49] [INFO] Starting PostgreSQL service
+[2026-02-23 11:17:49] [INFO]  Service started and enabled
+[2026-02-23 11:17:49] [INFO] Creating database user and database
+[2026-02-23 11:18:24] [INFO] ========== PostgreSQL Setup ==========
+[2026-02-23 11:18:24] [INFO] Installing PostgreSQL 15
+[2026-02-23 11:18:29] [INFO]  PostgreSQL 15 installed
+[2026-02-23 11:18:29] [INFO] Configuring PostgreSQL
+[2026-02-23 11:18:29] [INFO]  Configuration optimized
+[2026-02-23 11:18:29] [INFO] Starting PostgreSQL service
+[2026-02-23 11:18:30] [INFO]  Service started and enabled
+[2026-02-23 11:18:30] [INFO] Creating database user and database
+[2026-02-23 11:18:38] [INFO] ========== PostgreSQL Setup ==========
+[2026-02-23 11:18:38] [INFO] Installing PostgreSQL 15
+[2026-02-23 11:18:43] [INFO]  PostgreSQL 15 installed
+[2026-02-23 11:18:43] [INFO] Configuring PostgreSQL
+[2026-02-23 11:18:43] [INFO]  Configuration optimized
+[2026-02-23 11:18:43] [INFO] Starting PostgreSQL service
+[2026-02-23 11:18:43] [INFO]  Service started and enabled
+[2026-02-23 11:18:43] [INFO] Creating database user and database
+[2026-02-23 11:19:49] [INFO] ========== PostgreSQL Setup ==========
+[2026-02-23 11:19:49] [INFO] Installing PostgreSQL 15
+[2026-02-23 11:19:54] [INFO]  PostgreSQL 15 installed
+[2026-02-23 11:19:54] [INFO] Configuring PostgreSQL
+[2026-02-23 11:19:54] [INFO]  Configuration optimized
+[2026-02-23 11:19:54] [INFO] Starting PostgreSQL service
+[2026-02-23 11:19:54] [INFO]  Service started and enabled
+[2026-02-23 11:19:54] [INFO] Creating database user and database
+[2026-02-23 11:21:48] [INFO] ========== PostgreSQL Setup ==========
+[2026-02-23 11:21:48] [INFO] Installing PostgreSQL 15
+[2026-02-23 11:21:53] [INFO]  PostgreSQL 15 installed
+[2026-02-23 11:21:53] [INFO] Configuring PostgreSQL
+[2026-02-23 11:21:53] [INFO]  Configuration optimized
+[2026-02-23 11:21:53] [INFO] Starting PostgreSQL service
+[2026-02-23 11:21:56] [INFO]  Service started and enabled
+[2026-02-23 11:21:56] [INFO] Creating database user and database
+[2026-02-23 11:21:56] [INFO]  User 'dbadmin' created
+[2026-02-23 11:21:56] [INFO]  Test database 'testdb' created
+[2026-02-23 11:21:56] [INFO] Verifying PostgreSQL installation
+[2026-02-23 11:21:56] [INFO]  Connection test: SUCCESSFUL
+[2026-02-23 11:21:56] [INFO] Status: Ready for production
+[2026-02-23 11:21:56] [INFO] ======================================
+[2026-02-23 11:30:42] [INFO] ========== PostgreSQL Setup ==========
+[2026-02-23 11:30:42] [INFO] Installing PostgreSQL 15
+[2026-02-23 11:30:48] [INFO]  PostgreSQL 15 installed
+[2026-02-23 11:30:48] [INFO] Configuring PostgreSQL
+[2026-02-23 11:30:48] [INFO]  Configuration optimized
+[2026-02-23 11:30:49] [INFO] Starting PostgreSQL service
+[2026-02-23 11:30:51] [INFO]  Service started and enabled
+[2026-02-23 11:30:51] [INFO] Creating database user and database
+[2026-02-23 11:30:52] [INFO]  User 'dbadmin' created
+[2026-02-23 11:30:52] [INFO]  Test database 'testdb' created
+[2026-02-23 11:30:52] [INFO] Verifying PostgreSQL installation
+[2026-02-23 11:30:52] [INFO]  Connection test: SUCCESSFUL
+[2026-02-23 11:30:52] [INFO] Status: Ready for production
+[2026-02-23 11:30:52] [INFO] ======================================

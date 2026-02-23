@@ -1,0 +1,90 @@
+[2026-02-23 15:07:02] [INFO]  Script started
+[2026-02-23 15:07:02] [INFO]  Running PostgreSQL benchmark (1000 iterations)
+[2026-02-23 15:07:02] [INFO]  Running MySQL benchmark (1000 iterations)
+[2026-02-23 15:07:05] [INFO]  Running MongoDB benchmark (1000 iterations)
+DATABASE PERFORMANCE BASELINE
+Generated: 2026-02-23 15:07:06
+Iterations: 1000 per operation
+========================================
+
+PostgreSQL (testdb):
+  INSERT: 1000 queries in .048s (20833 qps)
+  SELECT: 1000 queries in .054s (18518 qps)
+  UPDATE: 1000 queries in .052s (19230 qps)
+  Avg query time: .05ms
+
+MySQL (appdb):
+  INSERT: 1000 queries in .010s (100000 qps)
+  SELECT: 1000 queries in .008s (125000 qps)
+  UPDATE: 1000 queries in .009s (111111 qps)
+  Avg query time: 0ms
+
+MongoDB (appdb):
+  insert: 1000 docs in .272s (3676 ops/s)
+  find:   1000 docs in .258s (3875 ops/s)
+  update: 1000 docs in .276s (3623 ops/s)
+  Avg operation time: .26ms
+
+========================================
+[2026-02-23 15:07:06] [INFO]  Report saved to /home/aakash/Desktop/DevOpsBootcamp/week2/day2/scripts/db_performance_baseline.txt
+[2026-02-23 15:07:06] [INFO]  Script completed successfully
+[2026-02-23 15:12:12] [INFO]  Script started
+[2026-02-23 15:12:12] [INFO]  Running PostgreSQL benchmark (100 iterations)
+[2026-02-23 15:12:12] [INFO]  Running MySQL benchmark (100 iterations)
+[2026-02-23 15:12:12] [INFO]  Running MongoDB benchmark (100 iterations)
+DATABASE PERFORMANCE BASELINE
+Generated: 2026-02-23 15:12:13
+Iterations: 100 per operation
+========================================
+
+PostgreSQL (testdb):
+  INSERT: 100 queries in .037s (2702 qps)
+  SELECT: 100 queries in .031s (3225 qps)
+  UPDATE: 100 queries in .033s (3030 qps)
+  Avg query time: .33ms
+
+MySQL (appdb):
+  INSERT: 100 queries in .014s (7142 qps)
+  SELECT: 100 queries in .012s (8333 qps)
+  UPDATE: 100 queries in .011s (9090 qps)
+  Avg query time: .12ms
+
+MongoDB (appdb):
+  insert: 100 docs in .291s (343 ops/s)
+  find:   100 docs in .260s (384 ops/s)
+  update: 100 docs in .241s (414 ops/s)
+  Avg operation time: 2.64ms
+
+========================================
+[2026-02-23 15:12:13] [INFO]  Report saved to var/log/apps/db_performance_baseline.txt
+[2026-02-23 15:12:13] [INFO]  Script completed successfully
+[2026-02-23 15:16:16] [INFO]  Script started
+[2026-02-23 15:16:16] [INFO]  Running PostgreSQL benchmark (50 iterations)
+[2026-02-23 15:16:16] [INFO]  Running MySQL benchmark (50 iterations)
+[2026-02-23 15:16:16] [INFO]  Running MongoDB benchmark (50 iterations)
+DATABASE PERFORMANCE BASELINE
+Generated: 2026-02-23 15:16:17
+Iterations: 50 per operation
+========================================
+
+PostgreSQL (testdb):
+  INSERT: 50 queries in .037s (1351 qps)
+  SELECT: 50 queries in .043s (1162 qps)
+  UPDATE: 50 queries in .049s (1020 qps)
+  Avg query time: .86ms
+
+MySQL (appdb):
+  INSERT: 50 queries in .008s (6250 qps)
+  SELECT: 50 queries in .013s (3846 qps)
+  UPDATE: 50 queries in .015s (3333 qps)
+  Avg query time: .24ms
+
+MongoDB (appdb):
+  insert: 50 docs in .354s (141 ops/s)
+  find:   50 docs in .252s (198 ops/s)
+  update: 50 docs in .245s (204 ops/s)
+  Avg operation time: 5.67ms
+
+========================================
+[2026-02-23 15:16:17] [INFO]  Report saved to /home/aakash/Desktop/DevOpsBootcamp/week2/day2/var/log/apps/db_performance_baseline.txt
+[2026-02-23 15:16:17] [INFO]  Script completed successfully
