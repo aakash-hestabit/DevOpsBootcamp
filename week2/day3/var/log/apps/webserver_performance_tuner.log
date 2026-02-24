@@ -1,0 +1,85 @@
+[2026-02-24 17:46:31] [INFO]  === webserver_performance_tuner.sh started ===
+[2026-02-24 17:46:31] [INFO]  Detected: 12 CPU cores, 23716MB RAM (23.2GB)
+[2026-02-24 17:47:00] [INFO]  === webserver_performance_tuner.sh started ===
+[2026-02-24 17:47:00] [INFO]  Detected: 12 CPU cores, 23716MB RAM (23.2GB)
+[2026-02-24 17:47:00] [INFO]  Backing up Nginx config...
+[2026-02-24 17:47:00] [OK]    Backup created: /etc/nginx/nginx.conf.bak
+[2026-02-24 17:47:00] [INFO]  Backing up Apache config...
+[2026-02-24 17:47:00] [OK]    Backup created: apache2.conf.bak
+[2026-02-24 17:47:00] [INFO]  Report generated: var/log/apps/performance_tuning_2026-02-24.txt
+[2026-02-24 17:47:00] [INFO]  === webserver_performance_tuner.sh completed successfully ===
+[2026-02-24 17:48:03] [INFO]  === webserver_performance_tuner.sh started ===
+[2026-02-24 17:48:03] [INFO]  Detected: 12 CPU cores, 23716MB RAM (23.2GB)
+[2026-02-24 17:48:03] [DEBUG] Nginx: workers=12, connections=2048
+[2026-02-24 17:48:03] [DEBUG] Apache: MaxRequestWorkers=400
+[2026-02-24 17:48:03] [INFO]  Backing up Nginx config...
+[2026-02-24 17:48:03] [OK]    Backup created: /etc/nginx/nginx.conf.bak
+[2026-02-24 17:48:03] [INFO]  Applying Nginx performance tuning...
+[2026-02-24 17:48:03] [OK]    Nginx performance tuning applied
+[2026-02-24 17:48:03] [ERROR] Nginx config test failed, restoring backup...
+[2026-02-24 17:49:41] [INFO]  === webserver_performance_tuner.sh started ===
+[2026-02-24 17:49:41] [INFO]  Detected: 12 CPU cores, 23716MB RAM (23.2GB)
+[2026-02-24 17:49:42] [INFO]  Backing up Nginx config...
+[2026-02-24 17:49:42] [OK]    Backup created: /etc/nginx/nginx.conf.bak
+[2026-02-24 17:49:42] [INFO]  Backing up Apache config...
+[2026-02-24 17:49:42] [OK]    Backup created: apache2.conf.bak
+[2026-02-24 17:49:42] [INFO]  Report generated: var/log/apps/performance_tuning_2026-02-24.txt
+[2026-02-24 17:49:42] [INFO]  === webserver_performance_tuner.sh completed successfully ===
+[2026-02-24 17:51:29] [INFO]  === webserver_performance_tuner.sh started ===
+[2026-02-24 17:51:29] [INFO]  Detected: 12 CPU cores, 23716MB RAM (23.2GB)
+[2026-02-24 17:51:29] [INFO]  Backing up Nginx config...
+[2026-02-24 17:51:29] [OK]    Backup created: /etc/nginx/nginx.conf.bak
+[2026-02-24 17:51:29] [INFO]  Backing up Apache config...
+[2026-02-24 17:51:29] [OK]    Backup created: apache2.conf.bak.20260224175129
+[2026-02-24 17:51:29] [INFO]  Report generated: var/log/apps/performance_tuning_2026-02-24.txt
+[2026-02-24 17:51:29] [INFO]  === webserver_performance_tuner.sh completed successfully ===
+[2026-02-24 17:52:33] [INFO]  === webserver_performance_tuner.sh started ===
+[2026-02-24 17:52:33] [INFO]  Detected: 12 CPU cores, 23716MB RAM (23.2GB)
+[2026-02-24 17:52:33] [INFO]  Backing up Nginx config...
+[2026-02-24 17:52:33] [OK]    Backup created: /etc/nginx/nginx.conf.bak.20260224175233
+[2026-02-24 17:52:33] [INFO]  Backing up Apache config...
+[2026-02-24 17:52:33] [OK]    Backup created: apache2.conf.bak.20260224175233
+[2026-02-24 17:52:33] [INFO]  Report generated: var/log/apps/performance_tuning_2026-02-24.txt
+[2026-02-24 17:52:33] [INFO]  === webserver_performance_tuner.sh completed successfully ===
+[2026-02-24 17:52:45] [INFO]  === webserver_performance_tuner.sh started ===
+[2026-02-24 17:52:45] [INFO]  Detected: 12 CPU cores, 23716MB RAM (23.2GB)
+[2026-02-24 17:52:45] [DEBUG] Nginx: workers=12, connections=2048
+[2026-02-24 17:52:45] [DEBUG] Apache: MaxRequestWorkers=400
+[2026-02-24 17:52:45] [INFO]  Backing up Nginx config...
+[2026-02-24 17:52:45] [OK]    Backup created: /etc/nginx/nginx.conf.bak.20260224175245
+[2026-02-24 17:52:45] [INFO]  Backing up Apache config...
+[2026-02-24 17:52:45] [OK]    Backup created: apache2.conf.bak.20260224175245
+[2026-02-24 17:52:45] [INFO]  Report generated: var/log/apps/performance_tuning_2026-02-24.txt
+[2026-02-24 17:52:45] [INFO]  === webserver_performance_tuner.sh completed successfully ===
+[2026-02-24 17:54:14] [INFO]  === webserver_performance_tuner.sh started ===
+[2026-02-24 17:54:14] [INFO]  Detected: 12 CPU cores, 23716MB RAM (23.2GB)
+[2026-02-24 17:54:14] [DEBUG] Nginx: workers=12, connections=2048
+[2026-02-24 17:54:14] [DEBUG] Apache: MaxRequestWorkers=400
+[2026-02-24 17:54:14] [INFO]  Backing up Nginx config...
+[2026-02-24 17:54:14] [OK]    Backup created: /etc/nginx/nginx.conf.bak.20260224175414
+[2026-02-24 17:54:14] [INFO]  Applying Nginx performance tuning...
+[2026-02-24 17:54:14] [OK]    Nginx performance tuning applied
+[2026-02-24 17:54:14] [ERROR] Nginx config test failed, restoring backup...
+[2026-02-24 17:54:14] [INFO]  Backing up Apache config...
+[2026-02-24 17:54:14] [OK]    Backup created: apache2.conf.bak.20260224175414
+[2026-02-24 17:54:14] [INFO]  Applying Apache performance tuning...
+[2026-02-24 17:54:14] [OK]    Apache performance tuning applied
+[2026-02-24 17:54:14] [OK]    Apache reloaded with new settings
+[2026-02-24 17:54:14] [INFO]  Report generated: var/log/apps/performance_tuning_2026-02-24.txt
+[2026-02-24 17:54:14] [INFO]  === webserver_performance_tuner.sh completed successfully ===
+[2026-02-24 17:55:55] [INFO]  === webserver_performance_tuner.sh started ===
+[2026-02-24 17:55:55] [INFO]  Detected: 12 CPU cores, 23716MB RAM (23.2GB)
+[2026-02-24 17:55:55] [DEBUG] Nginx: workers=12, connections=2048
+[2026-02-24 17:55:55] [DEBUG] Apache: MaxRequestWorkers=400
+[2026-02-24 17:55:55] [INFO]  Backing up Nginx config...
+[2026-02-24 17:55:55] [OK]    Backup created: /etc/nginx/nginx.conf.bak.20260224175555
+[2026-02-24 17:55:55] [INFO]  Applying Nginx performance tuning...
+[2026-02-24 17:55:55] [OK]    Nginx performance tuning applied
+[2026-02-24 17:55:55] [ERROR] Nginx config test failed, restoring backup...
+[2026-02-24 17:55:55] [INFO]  Backing up Apache config...
+[2026-02-24 17:55:55] [OK]    Backup created: apache2.conf.bak.20260224175555
+[2026-02-24 17:55:55] [INFO]  Applying Apache performance tuning...
+[2026-02-24 17:55:55] [OK]    Apache performance tuning applied
+[2026-02-24 17:55:55] [OK]    Apache reloaded with new settings
+[2026-02-24 17:55:55] [INFO]  Report generated: var/log/apps/performance_tuning_2026-02-24.txt
+[2026-02-24 17:55:55] [INFO]  === webserver_performance_tuner.sh completed successfully ===

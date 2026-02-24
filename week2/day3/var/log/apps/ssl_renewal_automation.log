@@ -1,0 +1,8 @@
+[2026-02-24 17:57:36] [INFO]  === ssl_renewal_automation.sh started ===
+[2026-02-24 17:57:36] [ERROR] certbot is not installed. Install with: apt-get install -y certbot python3-certbot-nginx
+[2026-02-24 17:58:16] [INFO]  === ssl_renewal_automation.sh started ===
+[2026-02-24 17:58:16] [DEBUG] certbot found: certbot 2.9.0
+[2026-02-24 17:58:16] [INFO]  Current Let's Encrypt certificates:
+[2026-02-24 17:58:16] [INFO]  No certificates require renewal at this time
+[2026-02-24 17:58:16] [OK]    Cron job added: every Monday at 3:00 AM
+[2026-02-24 17:58:16] [INFO]  === ssl_renewal_automation.sh completed ===

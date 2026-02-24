@@ -7,7 +7,7 @@ Production-ready database setup, management, and monitoring for **PostgreSQL 15*
 ## Project Structure
 
 ```
-db-project/
+day2/
 ├── scripts/                        # All executable bash scripts
 ├── configs/                        # Production configuration files
 └── docs/                           # Documentation

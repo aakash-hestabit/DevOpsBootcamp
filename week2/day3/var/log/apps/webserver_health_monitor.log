@@ -1,0 +1,170 @@
+[2026-02-24 17:14:48] [INFO]  === webserver_health_monitor.sh started ===
+[2026-02-24 17:14:48] [OK]    Nginx service active
+[2026-02-24 17:14:55] [INFO]  === webserver_health_monitor.sh started ===
+[2026-02-24 17:14:55] [OK]    Nginx service active
+[2026-02-24 17:15:00] [INFO]  === webserver_health_monitor.sh started ===
+[2026-02-24 17:15:00] [OK]    Nginx service active
+[2026-02-24 17:18:13] [INFO]  === webserver_health_monitor.sh started ===
+[2026-02-24 17:18:13] [OK]    Nginx service active
+[2026-02-24 17:18:13] [OK]    Nginx HTTP responding in 7ms
+[2026-02-24 17:18:13] [ALERT] Nginx has 11 critical errors in log
+[2026-02-24 17:22:11] [INFO]  === webserver_health_monitor.sh started ===
+[2026-02-24 17:22:11] [OK]    Nginx service active
+[2026-02-24 17:22:11] [OK]    Nginx process running
+[2026-02-24 17:22:11] [OK]    Nginx HTTP responding in 9ms
+[2026-02-24 17:22:11] [ALERT] Nginx has 11 critical errors in log
+[2026-02-24 17:22:20] [INFO]  === webserver_health_monitor.sh started ===
+[2026-02-24 17:22:20] [OK]    Nginx service active
+[2026-02-24 17:22:20] [OK]    Nginx process running
+[2026-02-24 17:22:20] [OK]    Nginx HTTP responding in 7ms
+[2026-02-24 17:22:20] [ALERT] Nginx has 11 critical errors in log
+[2026-02-24 17:22:29] [INFO]  === webserver_health_monitor.sh started ===
+[2026-02-24 17:22:29] [OK]    Nginx service active
+[2026-02-24 17:22:29] [OK]    Nginx process running
+[2026-02-24 17:22:29] [OK]    Nginx HTTP responding in 8ms
+[2026-02-24 17:22:29] [ALERT] Nginx has 11 critical errors in log
+[2026-02-24 17:22:46] [INFO]  === webserver_health_monitor.sh started ===
+[2026-02-24 17:22:46] [OK]    Nginx service active
+[2026-02-24 17:22:46] [OK]    Nginx process running
+[2026-02-24 17:22:46] [OK]    Nginx HTTP responding in 7ms
+[2026-02-24 17:22:46] [ALERT] Nginx has 11 critical errors in log
+[2026-02-24 17:23:15] [INFO]  === webserver_health_monitor.sh started ===
+[2026-02-24 17:23:15] [OK]    Nginx service active
+[2026-02-24 17:23:15] [OK]    Nginx process running
+[2026-02-24 17:23:15] [OK]    Nginx HTTP responding in 7ms
+[2026-02-24 17:23:15] [ALERT] Nginx has 11 critical errors in log
+[2026-02-24 17:23:33] [INFO]  === webserver_health_monitor.sh started ===
+[2026-02-24 17:23:33] [OK]    Nginx service active
+[2026-02-24 17:23:33] [OK]    Nginx process running
+[2026-02-24 17:23:33] [OK]    Nginx HTTP responding in 7ms
+[2026-02-24 17:23:33] [ALERT] Nginx has 11 critical errors in log
+[2026-02-24 17:24:48] [INFO]  === webserver_health_monitor.sh started ===
+[2026-02-24 17:24:48] [OK]    Nginx service active
+[2026-02-24 17:24:48] [OK]    Nginx process running
+[2026-02-24 17:24:48] [OK]    Nginx HTTP responding in 7ms
+[2026-02-24 17:24:48] [ALERT] Nginx has 11 critical errors in log
+[2026-02-24 17:25:04] [INFO]  === webserver_health_monitor.sh started ===
+[2026-02-24 17:25:04] [OK]    Nginx service active
+[2026-02-24 17:25:04] [OK]    Nginx process running
+[2026-02-24 17:25:04] [OK]    Nginx HTTP responding in 8ms
+[2026-02-24 17:25:05] [ALERT] Nginx has 11 critical errors in log
+[2026-02-24 17:26:04] [INFO]  === webserver_health_monitor.sh started ===
+[2026-02-24 17:26:04] [OK]    Nginx service active
+[2026-02-24 17:26:04] [OK]    Nginx process running
+[2026-02-24 17:26:04] [OK]    Nginx HTTP responding in 8ms
+[2026-02-24 17:26:04] [ALERT] Nginx has 11 critical errors in log
+[2026-02-24 17:26:29] [INFO]  === webserver_health_monitor.sh started ===
+[2026-02-24 17:26:29] [OK]    Nginx service active
+[2026-02-24 17:26:29] [OK]    Nginx process running
+[2026-02-24 17:26:29] [ALERT] Port 443 not listening for Nginx
+[2026-02-24 17:27:09] [INFO]  === webserver_health_monitor.sh started ===
+[2026-02-24 17:27:09] [OK]    Nginx service active
+[2026-02-24 17:27:09] [OK]    Nginx process running
+[2026-02-24 17:27:09] [OK]    Nginx HTTP responding in 8ms
+[2026-02-24 17:28:24] [INFO]  === webserver_health_monitor.sh started ===
+[2026-02-24 17:28:24] [OK]    Nginx service active
+[2026-02-24 17:28:24] [OK]    Nginx process running
+[2026-02-24 17:28:24] [OK]    Nginx HTTP responding in 8ms
+[2026-02-24 17:28:24] [ALERT] Nginx has 11 critical errors in log
+[2026-02-24 17:31:57] [INFO]  === webserver_health_monitor.sh started ===
+[2026-02-24 17:31:57] [OK]    Nginx service active
+[2026-02-24 17:31:57] [OK]    Nginx process running
+[2026-02-24 17:31:57] [OK]    Nginx HTTP responding in 7ms
+[2026-02-24 17:31:57] [ALERT] Nginx has 11 critical errors in log
+[2026-02-24 17:31:57] [OK]    Apache service active
+[2026-02-24 17:31:57] [OK]    Apache process running
+[2026-02-24 17:31:57] [OK]    Apache HTTP responding in 7ms
+[2026-02-24 17:31:57] [ALERT] Apache has 0
+0 critical errors in log
+[2026-02-24 17:31:58] [OK]    Backend http://127.0.0.1:3000/slow is UP
+[2026-02-24 17:32:01] [ALERT] Backend 192.168.1.11:3000 is DOWN
+[2026-02-24 17:32:04] [ALERT] Backend 192.168.1.12:3000 is DOWN
+[2026-02-24 17:32:04] [INFO]  === Health check completed. Issues: 4 ===
+[2026-02-24 17:32:54] [INFO]  === webserver_health_monitor.sh started ===
+[2026-02-24 17:32:54] [OK]    Nginx service active
+[2026-02-24 17:32:54] [OK]    Nginx process running
+[2026-02-24 17:32:54] [ALERT] Port 80 not listening for Nginx
+[2026-02-24 17:32:54] [OK]    Nginx HTTP responding in 8ms
+[2026-02-24 17:32:54] [ALERT] Nginx has 11 critical errors in log
+[2026-02-24 17:32:54] [OK]    Apache service active
+[2026-02-24 17:32:54] [OK]    Apache process running
+[2026-02-24 17:32:54] [OK]    Apache HTTP responding in 8ms
+[2026-02-24 17:32:54] [ALERT] Apache has 0
+0 critical errors in log
+[2026-02-24 17:32:54] [OK]    Backend http://127.0.0.1:3000/slow is UP
+[2026-02-24 17:32:57] [ALERT] Backend 192.168.1.11:3000 is DOWN
+[2026-02-24 17:33:01] [ALERT] Backend 192.168.1.12:3000 is DOWN
+[2026-02-24 17:33:01] [INFO]  === Health check completed. Issues: 5 ===
+[2026-02-24 17:33:30] [INFO]  === webserver_health_monitor.sh started ===
+[2026-02-24 17:33:30] [OK]    Nginx service active
+[2026-02-24 17:33:30] [OK]    Nginx process running
+[2026-02-24 17:33:30] [OK]    Nginx HTTP responding in 6ms
+[2026-02-24 17:33:30] [ALERT] Nginx has 11 critical errors in log
+[2026-02-24 17:33:30] [OK]    Apache service active
+[2026-02-24 17:33:30] [OK]    Apache process running
+[2026-02-24 17:33:30] [OK]    Apache HTTP responding in 8ms
+[2026-02-24 17:33:30] [ALERT] Apache has 0
+0 critical errors in log
+[2026-02-24 17:33:30] [OK]    Backend http://127.0.0.1:3000/slow is UP
+[2026-02-24 17:33:33] [ALERT] Backend 192.168.1.11:3000 is DOWN
+[2026-02-24 17:33:36] [ALERT] Backend 192.168.1.12:3000 is DOWN
+[2026-02-24 17:33:36] [INFO]  === Health check completed. Issues: 4 ===
+[2026-02-24 17:35:16] [INFO]  === webserver_health_monitor.sh started ===
+[2026-02-24 17:35:16] [OK]    Nginx service active
+[2026-02-24 17:35:16] [OK]    Nginx process running
+[2026-02-24 17:35:16] [OK]    Nginx HTTP responding in 7ms
+[2026-02-24 17:35:16] [ALERT] Nginx has 11 critical errors in log
+[2026-02-24 17:35:16] [OK]    Apache service active
+[2026-02-24 17:35:16] [OK]    Apache process running
+[2026-02-24 17:35:16] [OK]    Apache HTTP responding in 8ms
+[2026-02-24 17:35:16] [OK]    Backend http://127.0.0.1:3000/slow is UP
+[2026-02-24 17:35:19] [ALERT] Backend 192.168.1.11:3000 is DOWN
+[2026-02-24 17:35:22] [ALERT] Backend 192.168.1.12:3000 is DOWN
+[2026-02-24 17:35:22] [INFO]  === Health check completed. Issues: 3 ===
+[2026-02-24 17:35:49] [INFO]  === webserver_health_monitor.sh started ===
+[2026-02-24 17:35:49] [OK]    Nginx service active
+[2026-02-24 17:35:49] [OK]    Nginx process running
+[2026-02-24 17:35:49] [OK]    Nginx HTTP responding in 7ms
+[2026-02-24 17:35:49] [ALERT] Nginx has 11 critical errors in log
+[2026-02-24 17:35:49] [OK]    Apache service active
+[2026-02-24 17:35:49] [OK]    Apache process running
+[2026-02-24 17:35:49] [OK]    Apache HTTP responding in 7ms
+[2026-02-24 17:35:49] [OK]    Backend http://127.0.0.1:3000/slow is UP
+[2026-02-24 17:35:52] [ALERT] Backend 192.168.1.11:3000 is DOWN
+[2026-02-24 17:35:55] [ALERT] Backend 192.168.1.12:3000 is DOWN
+[2026-02-24 17:35:55] [INFO]  === Health check completed. Issues: 3 ===
+[2026-02-24 17:36:02] [INFO]  === webserver_health_monitor.sh started ===
+[2026-02-24 17:36:02] [OK]    Nginx service active
+[2026-02-24 17:36:02] [OK]    Nginx process running
+[2026-02-24 17:36:02] [OK]    Nginx HTTP responding in 7ms
+[2026-02-24 17:36:02] [ALERT] Nginx has 11 critical errors in log
+[2026-02-24 17:36:02] [OK]    Apache service active
+[2026-02-24 17:36:02] [OK]    Apache process running
+[2026-02-24 17:36:02] [OK]    Apache HTTP responding in 7ms
+[2026-02-24 17:36:03] [OK]    Backend http://127.0.0.1:3000/slow is UP
+[2026-02-24 17:36:06] [ALERT] Backend 192.168.1.11:3000 is DOWN
+[2026-02-24 17:36:09] [ALERT] Backend 192.168.1.12:3000 is DOWN
+[2026-02-24 17:36:09] [INFO]  === Health check completed. Issues: 3 ===
+[2026-02-24 17:36:18] [INFO]  === webserver_health_monitor.sh started ===
+[2026-02-24 17:36:18] [OK]    Nginx service active
+[2026-02-24 17:36:18] [OK]    Nginx process running
+[2026-02-24 17:36:18] [OK]    Nginx HTTP responding in 7ms
+[2026-02-24 17:36:18] [ALERT] Nginx has 11 critical errors in log
+[2026-02-24 17:36:18] [OK]    Apache service active
+[2026-02-24 17:36:18] [OK]    Apache process running
+[2026-02-24 17:36:18] [OK]    Apache HTTP responding in 7ms
+[2026-02-24 17:36:18] [OK]    Backend http://localhost:80 is UP
+[2026-02-24 17:36:18] [OK]    Backend 127.0.0.1:8080 is UP
+[2026-02-24 17:36:18] [INFO]  === Health check completed. Issues: 1 ===
+[2026-02-24 17:36:43] [INFO]  === webserver_health_monitor.sh started ===
+[2026-02-24 17:36:43] [OK]    Nginx service active
+[2026-02-24 17:36:43] [OK]    Nginx process running
+[2026-02-24 17:36:43] [OK]    Nginx HTTP responding in 7ms
+[2026-02-24 17:36:43] [ALERT] Nginx has 11 critical errors in log
+[2026-02-24 17:36:43] [OK]    Apache service active
+[2026-02-24 17:36:43] [OK]    Apache process running
+[2026-02-24 17:36:43] [OK]    Apache HTTP responding in 7ms
+[2026-02-24 17:36:43] [OK]    Backend http://127.0.0.1:3000/slow is UP
+[2026-02-24 17:36:47] [ALERT] Backend 192.168.1.11:3000 is DOWN
+[2026-02-24 17:36:50] [ALERT] Backend 192.168.1.12:3000 is DOWN
+[2026-02-24 17:36:50] [INFO]  === Health check completed. Issues: 3 ===

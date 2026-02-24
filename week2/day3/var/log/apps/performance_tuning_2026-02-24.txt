@@ -1,0 +1,140 @@
+System: 12 cores, 23716MB RAM
+System: 12 cores, 23716MB RAM
+
+===== Performance Tuning Report =====
+Date:    2026-02-24 17:47:00
+Host:    hestabit-Latitude-3450
+CPU:     12 cores
+RAM:     23716MB (23.2GB)
+
+Nginx Settings:
+  worker_processes:   12
+  worker_connections: 2048
+  gzip:               on (level 6)
+  keepalive_timeout:  65s
+
+Apache Settings:
+  MaxRequestWorkers:  400
+  ThreadsPerChild:    25
+  KeepAlive:          On
+=====================================
+System: 12 cores, 23716MB RAM
+Nginx optimizations applied: workers=12, connections=2048
+System: 12 cores, 23716MB RAM
+
+===== Performance Tuning Report =====
+Date:    2026-02-24 17:49:42
+Host:    hestabit-Latitude-3450
+CPU:     12 cores
+RAM:     23716MB (23.2GB)
+
+Nginx Settings:
+  worker_processes:   12
+  worker_connections: 2048
+  gzip:               on (level 6)
+  keepalive_timeout:  65s
+
+Apache Settings:
+  MaxRequestWorkers:  400
+  ThreadsPerChild:    25
+  KeepAlive:          On
+=====================================
+System: 12 cores, 23716MB RAM
+
+===== Performance Tuning Report =====
+Date:    2026-02-24 17:51:29
+Host:    hestabit-Latitude-3450
+CPU:     12 cores
+RAM:     23716MB (23.2GB)
+
+Nginx Settings:
+  worker_processes:   12
+  worker_connections: 2048
+  gzip:               on (level 6)
+  keepalive_timeout:  65s
+
+Apache Settings:
+  MaxRequestWorkers:  400
+  ThreadsPerChild:    25
+  KeepAlive:          On
+=====================================
+System: 12 cores, 23716MB RAM
+
+===== Performance Tuning Report =====
+Date:    2026-02-24 17:52:33
+Host:    hestabit-Latitude-3450
+CPU:     12 cores
+RAM:     23716MB (23.2GB)
+
+Nginx Settings:
+  worker_processes:   12
+  worker_connections: 2048
+  gzip:               on (level 6)
+  keepalive_timeout:  65s
+
+Apache Settings:
+  MaxRequestWorkers:  400
+  ThreadsPerChild:    25
+  KeepAlive:          On
+=====================================
+System: 12 cores, 23716MB RAM
+
+===== Performance Tuning Report =====
+Date:    2026-02-24 17:52:45
+Host:    hestabit-Latitude-3450
+CPU:     12 cores
+RAM:     23716MB (23.2GB)
+
+Nginx Settings:
+  worker_processes:   12
+  worker_connections: 2048
+  gzip:               on (level 6)
+  keepalive_timeout:  65s
+
+Apache Settings:
+  MaxRequestWorkers:  400
+  ThreadsPerChild:    25
+  KeepAlive:          On
+=====================================
+System: 12 cores, 23716MB RAM
+Nginx optimizations applied: workers=12, connections=2048
+Apache optimizations applied: MaxRequestWorkers=400
+
+===== Performance Tuning Report =====
+Date:    2026-02-24 17:54:14
+Host:    hestabit-Latitude-3450
+CPU:     12 cores
+RAM:     23716MB (23.2GB)
+
+Nginx Settings:
+  worker_processes:   12
+  worker_connections: 2048
+  gzip:               on (level 6)
+  keepalive_timeout:  65s
+
+Apache Settings:
+  MaxRequestWorkers:  400
+  ThreadsPerChild:    25
+  KeepAlive:          On
+=====================================
+System: 12 cores, 23716MB RAM
+Nginx optimizations applied: workers=12, connections=2048
+Apache optimizations applied: MaxRequestWorkers=400
+
+===== Performance Tuning Report =====
+Date:    2026-02-24 17:55:55
+Host:    hestabit-Latitude-3450
+CPU:     12 cores
+RAM:     23716MB (23.2GB)
+
+Nginx Settings:
+  worker_processes:   12
+  worker_connections: 2048
+  gzip:               on (level 6)
+  keepalive_timeout:  65s
+
+Apache Settings:
+  MaxRequestWorkers:  400
+  ThreadsPerChild:    25
+  KeepAlive:          On
+=====================================
