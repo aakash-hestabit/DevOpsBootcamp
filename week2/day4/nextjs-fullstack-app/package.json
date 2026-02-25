@@ -1,0 +1,29 @@
+{
+  "name": "nextjs-fullstack-app",
+  "version": "1.0.0",
+  "description": "Full-stack Next.js app with SSR, API routes, and PostgreSQL",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start -p 3001",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "16.1.6",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "pg": "^8.11.3",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "babel-plugin-react-compiler": "1.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "tailwindcss": "^4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
