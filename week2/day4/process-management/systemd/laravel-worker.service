@@ -1,0 +1,36 @@
+[Unit]
+Description=Laravel Queue Worker — laravel-mysql-api
+After=network.target mysql.service
+Wants=mysql.service
+
+[Service]
+Type=simple
+
+User=aakash
+Group=aakash
+
+WorkingDirectory=/home/aakash/Desktop/DevOpsBootcamp/week2/day4/laravel-mysql-api
+
+ExecStart=/usr/bin/php artisan queue:work \
+    --sleep=3 \
+    --tries=3 \
+    --max-time=3600 \
+    --timeout=90 \
+    --queue=default
+
+EnvironmentFile=/home/aakash/Desktop/DevOpsBootcamp/week2/day4/laravel-mysql-api/.env
+
+Restart=always
+RestartSec=10
+
+KillSignal=SIGTERM
+# Allows the worker to finish the current job before killing it
+FinalKillSignal=SIGKILL 
+
+# Simplified logging to let Laravel handle its own logs, 
+# while systemd captures the console output in journalctl
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

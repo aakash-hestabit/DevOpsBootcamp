@@ -1,0 +1,338 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Laravel Task API",
+    "version": "1.0.0",
+    "description": "Production-ready REST API for task management with MySQL"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8880",
+      "description": "Development Server"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Health",
+      "description": "Health check endpoints"
+    },
+    {
+      "name": "Tasks",
+      "description": "Task management endpoints"
+    }
+  ],
+  "paths": {
+    "/api/health": {
+      "get": {
+        "summary": "Health Check",
+        "description": "Returns application and database health status",
+        "tags": ["Health"],
+        "responses": {
+          "200": {
+            "description": "Application is healthy",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {"type": "string", "example": "healthy"},
+                    "timestamp": {"type": "string", "format": "date-time"},
+                    "uptime": {"type": "integer"},
+                    "database": {
+                      "type": "object",
+                      "properties": {
+                        "status": {"type": "string", "example": "connected"},
+                        "driver": {"type": "string", "example": "mysql"}
+                      }
+                    },
+                    "environment": {"type": "string"},
+                    "version": {"type": "string"}
+                  }
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Application is unhealthy"
+          }
+        }
+      }
+    },
+    "/api/tasks": {
+      "get": {
+        "summary": "List Tasks",
+        "description": "Get a paginated list of tasks with optional filtering",
+        "tags": ["Tasks"],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {"type": "integer", "default": 1}
+          },
+          {
+            "name": "per_page",
+            "in": "query",
+            "description": "Items per page",
+            "schema": {"type": "integer", "default": 15}
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "description": "Filter by status",
+            "schema": {"type": "string", "enum": ["pending", "in_progress", "completed"]}
+          },
+          {
+            "name": "priority",
+            "in": "query",
+            "description": "Filter by priority",
+            "schema": {"type": "string", "enum": ["low", "medium", "high"]}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {"type": "string"},
+                    "data": {
+                      "type": "array",
+                      "items": {"$ref": "#/components/schemas/Task"}
+                    },
+                    "meta": {
+                      "type": "object",
+                      "properties": {
+                        "total": {"type": "integer"},
+                        "per_page": {"type": "integer"},
+                        "current_page": {"type": "integer"},
+                        "last_page": {"type": "integer"}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create Task",
+        "description": "Create a new task",
+        "tags": ["Tasks"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["title", "status", "priority"],
+                "properties": {
+                  "title": {"type": "string", "example": "New Task"},
+                  "description": {"type": "string", "example": "Task description"},
+                  "status": {"type": "string", "enum": ["pending", "in_progress", "completed"]},
+                  "priority": {"type": "string", "enum": ["low", "medium", "high"]},
+                  "due_date": {"type": "string", "format": "date", "nullable": true}
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Task created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {"type": "string"},
+                    "data": {"$ref": "#/components/schemas/Task"}
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation error"
+          }
+        }
+      }
+    },
+    "/api/tasks/{id}": {
+      "get": {
+        "summary": "Get Task",
+        "description": "Retrieve a single task by ID",
+        "tags": ["Tasks"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "Task ID",
+            "schema": {"type": "integer"}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {"type": "string"},
+                    "data": {"$ref": "#/components/schemas/Task"}
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Task not found"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update Task",
+        "description": "Update an existing task",
+        "tags": ["Tasks"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "Task ID",
+            "schema": {"type": "integer"}
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {"type": "string"},
+                  "description": {"type": "string"},
+                  "status": {"type": "string", "enum": ["pending", "in_progress", "completed"]},
+                  "priority": {"type": "string", "enum": ["low", "medium", "high"]},
+                  "due_date": {"type": "string", "format": "date", "nullable": true}
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {"type": "string"},
+                    "data": {"$ref": "#/components/schemas/Task"}
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Task not found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete Task",
+        "description": "Delete a task by ID",
+        "tags": ["Tasks"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "Task ID",
+            "schema": {"type": "integer"}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {"type": "string"},
+                    "message": {"type": "string"}
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Task not found"
+          }
+        }
+      }
+    },
+    "/api/tasks/{id}/complete": {
+      "post": {
+        "summary": "Mark Task Complete",
+        "description": "Mark a task as completed",
+        "tags": ["Tasks"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "Task ID",
+            "schema": {"type": "integer"}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {"type": "string"},
+                    "data": {"$ref": "#/components/schemas/Task"}
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Task not found"
+          },
+          "409": {
+            "description": "Task already completed"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Task": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "integer"},
+          "title": {"type": "string"},
+          "description": {"type": "string"},
+          "status": {"type": "string", "enum": ["pending", "in_progress", "completed"]},
+          "priority": {"type": "string", "enum": ["low", "medium", "high"]},
+          "due_date": {"type": "string", "format": "date", "nullable": true},
+          "created_at": {"type": "string", "format": "date-time"},
+          "updated_at": {"type": "string", "format": "date-time"}
+        }
+      }
+    }
+  }
+}

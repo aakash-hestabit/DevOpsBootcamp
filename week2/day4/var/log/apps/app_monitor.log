@@ -1,0 +1,106 @@
+[2026-02-26 02:16:07] [INFO]  Monitoring started
+Report saved: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 02:16:08] [INFO]  Monitoring completed. Issues: 6
+[2026-02-26 02:17:10] [INFO]  Monitoring started
+Report saved: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 02:17:11] [INFO]  Monitoring completed. Issues: 4
+[2026-02-26 04:55:58] [INFO]  Monitoring started
+Report saved: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 04:55:59] [INFO]  Monitoring completed. Issues: 0
+[2026-02-26 05:00:44] [INFO]  Monitoring started
+Report saved to: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 05:00:44] [INFO]  Monitoring completed. Critical: 1, Warnings: 1
+[2026-02-26 05:01:22] [INFO]  Monitoring started
+Report saved to: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 05:01:23] [INFO]  Monitoring completed. Critical: 1, Warnings: 1
+[2026-02-26 05:01:56] [INFO]  Monitoring started
+[2026-02-26 05:02:04] [INFO]  Monitoring started
+[2026-02-26 05:02:46] [INFO]  Monitoring started
+Report saved to: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 05:02:47] [INFO]  Monitoring completed. Critical: 1, Warnings: 1
+[2026-02-26 05:03:07] [INFO]  Monitoring started
+Report saved to: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 05:03:08] [INFO]  Monitoring completed. Critical: 1, Warnings: 1
+[2026-02-26 05:03:28] [INFO]  Monitoring started
+Report saved to: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 05:03:29] [INFO]  Monitoring completed. Critical: 1, Warnings: 1
+[2026-02-26 05:03:34] [INFO]  Monitoring started
+Report saved to: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 05:03:35] [INFO]  Monitoring completed. Critical: 1, Warnings: 1
+[2026-02-26 05:04:20] [INFO]  Monitoring started
+Report saved to: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 05:04:21] [INFO]  Monitoring completed. Critical: 1, Warnings: 1
+[2026-02-26 05:06:08] [INFO]  Monitoring started
+Report saved: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 05:06:09] [INFO]  Monitoring completed. Issues: 0
+[2026-02-26 05:07:41] [INFO]  Monitoring started
+Report saved: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 05:07:42] [INFO]  Monitoring completed. Issues: 0
+[2026-02-26 05:12:13] [INFO]  Monitoring started
+Report saved: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 05:12:14] [INFO]  Monitoring completed. Issues: 0
+[2026-02-26 05:14:10] [INFO]  Monitoring started
+Report saved: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 05:14:11] [INFO]  Monitoring completed. Issues: 0
+[2026-02-26 05:16:02] [INFO]  Monitoring started
+Report saved: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 05:16:02] [INFO]  Monitoring completed. Issues: 0
+[2026-02-26 05:16:48] [INFO]  Monitoring started
+Report saved: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 05:16:48] [INFO]  Monitoring completed. Issues: 0
+[2026-02-26 05:16:58] [INFO]  Monitoring started
+Report saved: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 05:16:59] [INFO]  Monitoring completed. Issues: 0
+[2026-02-26 05:17:13] [INFO]  Monitoring started
+Report saved: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 05:17:14] [INFO]  Monitoring completed. Issues: 0
+[2026-02-26 05:17:30] [INFO]  Monitoring started
+Report saved: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 05:17:31] [INFO]  Monitoring completed. Issues: 0
+[2026-02-26 05:17:45] [INFO]  Monitoring started
+Report saved: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 05:17:46] [INFO]  Monitoring completed. Issues: 0
+[2026-02-26 05:32:54] [INFO]  Monitoring started
+[2026-02-26 05:33:17] [INFO]  Monitoring started
+[2026-02-26 05:37:08] Monitoring started
+[2026-02-26 05:37:09] Complete — warnings: 2, issues: 2. Report: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 05:37:47] [INFO]  Monitoring started
+Report saved: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 05:37:48] [INFO]  Monitoring completed. Issues: 0
+[2026-02-26 05:48:00] Monitoring started
+[2026-02-26 05:48:01] Complete — warnings: 2, issues: 0. Report: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 13:00:23] Monitoring started
+[2026-02-26 13:03:15] Monitoring started
+[2026-02-26 13:03:17] Complete — warnings: 1, issues: 6. Report: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 13:03:49] Monitoring started
+[2026-02-26 13:03:50] Complete — warnings: 1, issues: 6. Report: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 13:08:36] Monitoring started
+[2026-02-26 13:08:37] Complete — warnings: 0, issues: 2. Report: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 13:12:49] Monitoring started
+[2026-02-26 13:12:50] Complete — warnings: 0, issues: 2. Report: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 13:14:56] Monitoring started
+[2026-02-26 13:14:58] Complete — warnings: 0, issues: 0. Report: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 13:15:14] Monitoring started
+[2026-02-26 13:15:15] Complete — warnings: 0, issues: 0. Report: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 13:19:46] Monitoring started
+[2026-02-26 13:19:47] Complete — warnings: 0, issues: 1. Report: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 13:20:02] Monitoring started
+[2026-02-26 13:20:03] Complete — warnings: 0, issues: 1. Report: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 13:21:19] Monitoring started
+[2026-02-26 13:21:21] Complete — warnings: 0, issues: 1. Report: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 13:22:46] Monitoring started
+[2026-02-26 13:22:47] Complete — warnings: 0, issues: 0. Report: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 13:22:57] Monitoring started
+[2026-02-26 13:22:58] Complete — warnings: 0, issues: 0. Report: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 13:24:14] Monitoring started
+[2026-02-26 13:24:15] Complete — warnings: 0, issues: 0. Report: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 13:24:27] Monitoring started
+[2026-02-26 13:24:28] Complete — warnings: 0, issues: 0. Report: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 13:24:41] Monitoring started
+[2026-02-26 13:24:42] Complete — warnings: 0, issues: 0. Report: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 13:25:14] Monitoring started
+[2026-02-26 13:25:16] Complete — warnings: 0, issues: 0. Report: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 13:25:27] Monitoring started
+[2026-02-26 13:25:29] Complete — warnings: 0, issues: 0. Report: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log
+[2026-02-26 13:29:20] Monitoring started
+[2026-02-26 13:29:21] Complete — warnings: 0, issues: 0. Report: /home/aakash/Desktop/DevOpsBootcamp/week2/day4/var/reports/monitor_2026-02-26.log

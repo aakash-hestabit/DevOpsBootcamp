@@ -1,0 +1,150 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: #3182ce;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: #2c5aa0;
+  text-decoration: underline;
+}
+
+.error {
+  background-color: #fed7d7;
+  border: 1px solid #fc8181;
+  border-radius: 8px;
+  padding: 2rem;
+  color: #c53030;
+}
+
+.error h1 {
+  margin-top: 0;
+  color: #742a2a;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #2d3748;
+}
+
+.count {
+  color: #718096;
+  font-size: 0.95rem;
+}
+
+.btnCreate {
+  padding: 0.75rem 1.5rem;
+  background-color: #38a169;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnCreate:hover {
+  background-color: #2f855a;
+  box-shadow: 0 2px 8px rgba(56, 161, 105, 0.3);
+}
+
+.formSection {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formSection h2 {
+  margin-top: 0;
+  color: #2d3748;
+}
+
+.searchBar {
+  margin-bottom: 2rem;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+}
+
+.usersList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: white;
+  border-radius: 8px;
+  border: 2px dashed #cbd5e0;
+  color: #718096;
+}
+
+.emptyState h2 {
+  margin-top: 0;
+  color: #4a5568;
+}
+
+.emptyState p {
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 0.5rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .btnCreate {
+    width: 100%;
+  }
+
+  .usersList {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+}

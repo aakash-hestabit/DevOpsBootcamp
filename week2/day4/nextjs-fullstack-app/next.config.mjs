@@ -3,10 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
-  
-  experimental: {
-    reactCompiler: true,
-  },
+  reactCompiler: true,
 
   async headers() {
     return [

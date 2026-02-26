@@ -1,0 +1,18 @@
+{"level":"info","message":"Express API running on port 3000 in production mode","service":"express-postgresql-api","timestamp":"2026-02-25 12:26:27"}
+{"level":"info","message":"API Docs: http://localhost:3000/api-docs","service":"express-postgresql-api","timestamp":"2026-02-25 12:26:27"}
+{"level":"info","message":"User created: id=1 username=johndoe","service":"express-postgresql-api","timestamp":"2026-02-25 12:28:21"}
+{"level":"info","message":"User updated: id=1","service":"express-postgresql-api","timestamp":"2026-02-25 12:29:33"}
+{"level":"info","message":"User deleted: id=1","service":"express-postgresql-api","timestamp":"2026-02-25 12:29:50"}
+{"level":"info","message":"User created: id=2 username=johndoe","service":"express-postgresql-api","timestamp":"2026-02-25 12:30:11"}
+{"level":"info","message":"SIGINT received — shutting down gracefully","service":"express-postgresql-api","timestamp":"2026-02-25 12:30:45"}
+{"level":"info","message":"Express API running on port 3000 in production mode","service":"express-postgresql-api","timestamp":"2026-02-25 12:30:52"}
+{"level":"info","message":"API Docs: http://localhost:3000/api-docs","service":"express-postgresql-api","timestamp":"2026-02-25 12:30:52"}
+{"level":"info","message":"SIGINT received — shutting down gracefully","service":"express-postgresql-api","timestamp":"2026-02-25 12:44:19"}
+{"level":"info","message":"SIGINT received — shutting down gracefully","service":"express-postgresql-api","timestamp":"2026-02-25 12:44:24"}
+{"level":"error","message":"Forced shutdown after timeout","service":"express-postgresql-api","timestamp":"2026-02-25 12:44:29"}
+{"level":"info","message":"Express API running on port 3000 in production mode","service":"express-postgresql-api","timestamp":"2026-02-25 12:44:45"}
+{"level":"info","message":"API Docs: http://localhost:3000/api-docs","service":"express-postgresql-api","timestamp":"2026-02-25 12:44:45"}
+{"level":"info","message":"SIGINT received — shutting down gracefully","service":"express-postgresql-api","timestamp":"2026-02-25 14:16:25"}
+{"level":"info","message":"Express API running on port 3000 in production mode","service":"express-postgresql-api","timestamp":"2026-02-25 20:56:29"}
+{"level":"info","message":"API Docs: http://localhost:3000/api-docs","service":"express-postgresql-api","timestamp":"2026-02-25 20:56:29"}
+{"level":"info","message":"SIGINT received — shutting down gracefully","service":"express-postgresql-api","timestamp":"2026-02-25 20:56:51"}

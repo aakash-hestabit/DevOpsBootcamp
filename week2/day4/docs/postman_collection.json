@@ -1,0 +1,205 @@
+{
+  "info": {
+    "name": "Day 4 - REST API Collection",
+    "description": "Complete API test collection for Express, FastAPI, Laravel, and Next.js applications",
+    "version": "1.0.0",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "express_url",  "value": "http://localhost:3000" },
+    { "key": "fastapi_url",  "value": "http://localhost:8000" },
+    { "key": "laravel_url",  "value": "http://localhost:8880" },
+    { "key": "nextjs_url",   "value": "http://localhost:3001" }
+  ],
+  "item": [
+    {
+      "name": "Express API",
+      "item": [
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "url": "{{express_url}}/api/health",
+            "description": "Returns service health, DB pool stats, and uptime"
+          }
+        },
+        {
+          "name": "List Users",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{express_url}}/api/users?limit=10&offset=0",
+              "host": ["{{express_url}}"],
+              "path": ["api", "users"],
+              "query": [
+                { "key": "limit",  "value": "10" },
+                { "key": "offset", "value": "0" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get User by ID",
+          "request": {
+            "method": "GET",
+            "url": "{{express_url}}/api/users/1"
+          }
+        },
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "url": "{{express_url}}/api/users",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"johndoe\",\n  \"email\": \"john@example.com\",\n  \"full_name\": \"John Doe\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Update User",
+          "request": {
+            "method": "PUT",
+            "url": "{{express_url}}/api/users/1",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"full_name\": \"John Updated Doe\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Delete User",
+          "request": {
+            "method": "DELETE",
+            "url": "{{express_url}}/api/users/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "FastAPI (Products)",
+      "item": [
+        {
+          "name": "Health Check",
+          "request": { "method": "GET", "url": "{{fastapi_url}}/health" }
+        },
+        {
+          "name": "List Products",
+          "request": { "method": "GET", "url": "{{fastapi_url}}/api/v1/products?limit=10&offset=0" }
+        },
+        {
+          "name": "Get Product",
+          "request": { "method": "GET", "url": "{{fastapi_url}}/api/v1/products/1" }
+        },
+        {
+          "name": "Create Product",
+          "request": {
+            "method": "POST",
+            "url": "{{fastapi_url}}/api/v1/products",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Widget Pro\",\n  \"description\": \"A great widget\",\n  \"price\": 29.99,\n  \"stock_quantity\": 100\n}"
+            }
+          }
+        },
+        {
+          "name": "Update Product",
+          "request": {
+            "method": "PUT",
+            "url": "{{fastapi_url}}/api/v1/products/1",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"price\": 24.99,\n  \"stock_quantity\": 90\n}" }
+          }
+        },
+        {
+          "name": "Delete Product",
+          "request": { "method": "DELETE", "url": "{{fastapi_url}}/api/v1/products/1" }
+        }
+      ]
+    },
+    {
+      "name": "Laravel API (Tasks)",
+      "item": [
+        {
+          "name": "Health Check",
+          "request": { "method": "GET", "url": "{{laravel_url}}/api/health" }
+        },
+        {
+          "name": "List Tasks",
+          "request": { "method": "GET", "url": "{{laravel_url}}/api/tasks?per_page=10" }
+        },
+        {
+          "name": "Get Task",
+          "request": { "method": "GET", "url": "{{laravel_url}}/api/tasks/1" }
+        },
+        {
+          "name": "Create Task",
+          "request": {
+            "method": "POST",
+            "url": "{{laravel_url}}/api/tasks",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Accept", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Deploy application\",\n  \"description\": \"Deploy to production server\",\n  \"priority\": \"high\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Update Task",
+          "request": {
+            "method": "PUT",
+            "url": "{{laravel_url}}/api/tasks/1",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Accept", "value": "application/json" }
+            ],
+            "body": { "mode": "raw", "raw": "{\n  \"status\": \"in_progress\"\n}" }
+          }
+        },
+        {
+          "name": "Complete Task",
+          "request": {
+            "method": "POST",
+            "url": "{{laravel_url}}/api/tasks/1/complete",
+            "header": [{ "key": "Accept", "value": "application/json" }]
+          }
+        },
+        {
+          "name": "Delete Task",
+          "request": { "method": "DELETE", "url": "{{laravel_url}}/api/tasks/1" }
+        }
+      ]
+    },
+    {
+      "name": "Next.js API",
+      "item": [
+        {
+          "name": "Health Check",
+          "request": { "method": "GET", "url": "{{nextjs_url}}/api/health" }
+        },
+        {
+          "name": "List Users",
+          "request": { "method": "GET", "url": "{{nextjs_url}}/api/users" }
+        },
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "url": "{{nextjs_url}}/api/users",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"nextjsuser\",\n  \"email\": \"next@example.com\",\n  \"full_name\": \"Next User\"\n}"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

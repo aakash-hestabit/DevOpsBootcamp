@@ -1,0 +1,115 @@
+.card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: #cbd5e0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.username {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #2d3748;
+}
+
+.id {
+  background-color: #edf2f7;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  color: #4a5568;
+}
+
+.body {
+  margin-bottom: 1rem;
+  color: #4a5568;
+}
+
+.body p {
+  margin: 0.5rem 0;
+}
+
+.body a {
+  color: #3182ce;
+  text-decoration: none;
+}
+
+.body a:hover {
+  text-decoration: underline;
+}
+
+.meta {
+  font-size: 0.875rem;
+  color: #718096;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.btnPrimary,
+.btnDanger {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btnPrimary {
+  background-color: #3182ce;
+  color: white;
+}
+
+.btnPrimary:hover {
+  background-color: #2c5aa0;
+}
+
+.btnDanger {
+  background-color: #f56565;
+  color: white;
+}
+
+.btnDanger:hover {
+  background-color: #e53e3e;
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .actions {
+    flex-wrap: wrap;
+  }
+}

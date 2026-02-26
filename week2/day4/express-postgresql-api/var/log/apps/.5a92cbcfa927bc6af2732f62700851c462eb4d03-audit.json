@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "var/log/apps/.5a92cbcfa927bc6af2732f62700851c462eb4d03-audit.json",
+    "files": [
+        {
+            "date": 1772061923396,
+            "name": "var/log/apps/express-api-combined-2026-02-26.log",
+            "hash": "fd2278daa7dfe63efae97d52f4c926086ff504b22c7c563995dd1703fd75f927"
+        }
+    ],
+    "hashType": "sha256"
+}

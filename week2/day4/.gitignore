@@ -1,0 +1,28 @@
+.env
+node_modules/
+venv/
+vendor/
+var/reports/
+*.env
+.env
+node_modules/
+__pycache__/
+venv/
+.next/
+vendor/
+Impleme*
+*.pyc
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+### Node Patch ###
+# Serverless Webpack directories
+.webpack/
+
+
+# SvelteKit build / generate output
+.svelte-kit

@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "../var/log/apps/.90f226c82811a2b5fdfb49e236f2f924596871e5-audit.json",
+    "files": [
+        {
+            "date": 1772002299446,
+            "name": "../var/log/apps/express-api-error-2026-02-25.log",
+            "hash": "d785ed69508e895396340e48e167b9ca221e8db7d057d2abdaf6544009261803"
+        },
+        {
+            "date": 1772056435309,
+            "name": "../var/log/apps/express-api-error-2026-02-26.log",
+            "hash": "7a4d156b8a28bf50a73b1097ee9d75be66d6cb57f55fbc4c5f7cb0bf4010ea7e"
+        }
+    ],
+    "hashType": "sha256"
+}

@@ -1,0 +1,10 @@
+[2026-02-26 05:19:56] [INFO]  Migration runner started (target: all)
+[2026-02-26 05:19:56] [INFO]  --- Running Express (PostgreSQL) migrations ---
+[2026-02-26 05:19:56] [INFO]  Connecting to PostgreSQL: apiuser@localhost:5432/apidb
+[2026-02-26 05:20:04] [INFO]   Express migration 001 applied
+[2026-02-26 05:20:04] [INFO]  --- Running FastAPI (MySQL) migrations ---
+[2026-02-26 05:20:04] [INFO]  Connecting to MySQL: fastapiuser@localhost:3306/fastapidb
+[2026-02-26 05:20:11] [INFO]   FastAPI migration 001 applied
+[2026-02-26 05:20:11] [INFO]  --- Running Laravel (MySQL) migrations ---
+[2026-02-26 05:20:11] [INFO]   Laravel migrations applied
+[2026-02-26 05:20:11] [INFO]  All migrations completed successfully

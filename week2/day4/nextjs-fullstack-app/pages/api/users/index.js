@@ -1,41 +1,64 @@
 import { query } from '../../../lib/db';
 
 export default async function handler(req, res) {
+  res.setHeader('Content-Type', 'application/json');
+
   if (req.method === 'GET') {
     try {
+      const limit = Math.min(parseInt(req.query.limit || '50', 10), 500);
+      const offset = Math.max(parseInt(req.query.offset || '0', 10), 0);
+
       const { rows } = await query(
-        'SELECT id, username, email, full_name, created_at, updated_at FROM users ORDER BY id ASC LIMIT $1 OFFSET $2',
-        [parseInt(req.query.limit || '50'), parseInt(req.query.offset || '0')]
+        'SELECT * FROM users ORDER BY created_at DESC LIMIT $1 OFFSET $2',
+        [limit, offset]
       );
-      const count = await query('SELECT COUNT(*) AS total FROM users');
+
+      const countResult = await query('SELECT COUNT(*) as count FROM users');
+      const total = parseInt(countResult.rows[0].count, 10);
+
       return res.status(200).json({
         status: 'success',
         data: rows,
-        meta: { total: parseInt(count.rows[0].total), limit: 50, offset: 0 },
+        total,
+        limit,
+        offset,
       });
     } catch (err) {
-      return res.status(500).json({ status: 'error', message: err.message });
+      console.error('[GET /api/users]', err.message);
+      return res.status(500).json({ error: 'Failed to fetch users', message: err.message });
     }
   }
 
   if (req.method === 'POST') {
-    const { username, email, full_name } = req.body;
-    if (!username || !email) {
-      return res.status(422).json({ status: 'error', message: 'username and email are required' });
-    }
     try {
+      const { username, email, full_name } = req.body;
+
+      if (!username || !email) {
+        return res.status(400).json({ error: 'username and email are required' });
+      }
+
       const { rows } = await query(
         'INSERT INTO users (username, email, full_name) VALUES ($1, $2, $3) RETURNING *',
         [username, email, full_name || null]
       );
-      return res.status(201).json({ status: 'success', data: rows[0] });
+
+      return res.status(201).json({
+        status: 'success',
+        data: rows[0],
+      });
     } catch (err) {
+      console.error('[POST /api/users]', err.message);
+
       if (err.code === '23505') {
-        return res.status(409).json({ status: 'error', message: 'Username or email already exists' });
+        return res.status(409).json({
+          error: 'Duplicate entry',
+          message: 'Username or email already exists',
+        });
       }
-      return res.status(500).json({ status: 'error', message: err.message });
+
+      return res.status(500).json({ error: 'Failed to create user', message: err.message });
     }
   }
 
-  res.status(405).json({ status: 'error', message: 'Method not allowed' });
+  return res.status(405).json({ error: 'Method not allowed' });
 }

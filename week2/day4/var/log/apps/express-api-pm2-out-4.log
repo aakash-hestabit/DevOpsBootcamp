@@ -1,0 +1,4 @@
+2026-02-26 03:34:47: {"level":"info","message":"SIGINT received — shutting down gracefully","service":"express-postgresql-api","timestamp":"2026-02-26 03:34:47"}
+2026-02-26 03:34:48: {"level":"info","message":"Express API running on port 3000 in production mode","service":"express-postgresql-api","timestamp":"2026-02-26 03:34:48"}
+2026-02-26 03:34:48: {"level":"info","message":"API Docs: http://localhost:3000/api-docs","service":"express-postgresql-api","timestamp":"2026-02-26 03:34:48"}
+2026-02-26 03:37:59: {"level":"info","message":"SIGINT received — shutting down gracefully","service":"express-postgresql-api","timestamp":"2026-02-26 03:37:59"}
