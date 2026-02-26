@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "../var/log/apps/.83f58e9540e60f863f80eb5a4843f9fe8638b362-audit.json",
+    "files": [
+        {
+            "date": 1772111019218,
+            "name": "../var/log/apps/express-mongo-error-2026-02-26.log",
+            "hash": "3b0d323b57d673773f6c3bb413786313c0c7aca01ec2d556ad37697952fb6a99"
+        }
+    ],
+    "hashType": "sha256"
+}

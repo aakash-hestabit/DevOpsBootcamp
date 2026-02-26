@@ -1,0 +1,26 @@
+{"level":"info","message":"MongoDB connected: localhost/usersdb","service":"express-mongodb-api","timestamp":"2026-02-26 18:33:39"}
+{"level":"info","message":"MongoDB connection pool ready","service":"express-mongodb-api","timestamp":"2026-02-26 18:33:39"}
+{"level":"info","message":"Express MongoDB API running on port 3000 [production]","service":"express-mongodb-api","timestamp":"2026-02-26 18:33:39"}
+{"level":"info","message":"Swagger UI: http://localhost:3000/api-docs","service":"express-mongodb-api","timestamp":"2026-02-26 18:33:39"}
+{"level":"info","message":"SIGINT received — shutting down","service":"express-mongodb-api","timestamp":"2026-02-26 18:34:01"}
+{"level":"info","message":"MongoDB connected: localhost/usersdb","service":"express-mongodb-api","timestamp":"2026-02-26 18:34:03"}
+{"level":"info","message":"MongoDB connection pool ready","service":"express-mongodb-api","timestamp":"2026-02-26 18:34:03"}
+{"level":"info","message":"Express MongoDB API running on port 3000 [production]","service":"express-mongodb-api","timestamp":"2026-02-26 18:34:03"}
+{"level":"info","message":"Swagger UI: http://localhost:3000/api-docs","service":"express-mongodb-api","timestamp":"2026-02-26 18:34:03"}
+{"level":"error","message":"Unhandled: TypeError: getPoolStats is not a function","service":"express-mongodb-api","timestamp":"2026-02-26 18:34:29"}
+{"level":"info","message":"MongoDB connected: localhost/usersdb","service":"express-mongodb-api","timestamp":"2026-02-26 18:36:40"}
+{"level":"info","message":"MongoDB connection pool ready","service":"express-mongodb-api","timestamp":"2026-02-26 18:36:40"}
+{"level":"info","message":"Express MongoDB API running on port 3000 [production]","service":"express-mongodb-api","timestamp":"2026-02-26 18:36:40"}
+{"level":"info","message":"Swagger UI: http://localhost:3000/api-docs","service":"express-mongodb-api","timestamp":"2026-02-26 18:36:40"}
+{"level":"info","message":"SIGTERM received — shutting down","service":"express-mongodb-api","timestamp":"2026-02-26 18:36:49"}
+{"level":"info","message":"MongoDB connected: localhost/usersdb","service":"express-mongodb-api","timestamp":"2026-02-26 18:36:59"}
+{"level":"info","message":"MongoDB connection pool ready","service":"express-mongodb-api","timestamp":"2026-02-26 18:36:59"}
+{"level":"info","message":"Express MongoDB API running on port 3000 [production]","service":"express-mongodb-api","timestamp":"2026-02-26 18:36:59"}
+{"level":"info","message":"Swagger UI: http://localhost:3000/api-docs","service":"express-mongodb-api","timestamp":"2026-02-26 18:36:59"}
+{"level":"info","message":"SIGTERM received — shutting down","service":"express-mongodb-api","timestamp":"2026-02-26 18:37:00"}
+{"level":"info","message":"MongoDB connected: localhost/usersdb","service":"express-mongodb-api","timestamp":"2026-02-26 18:38:01"}
+{"level":"info","message":"MongoDB connection pool ready","service":"express-mongodb-api","timestamp":"2026-02-26 18:38:01"}
+{"level":"info","message":"Express MongoDB API running on port 3000 [production]","service":"express-mongodb-api","timestamp":"2026-02-26 18:38:01"}
+{"level":"info","message":"Swagger UI: http://localhost:3000/api-docs","service":"express-mongodb-api","timestamp":"2026-02-26 18:38:01"}
+{"ip":"::1","level":"error","message":"Command aggregate requires authentication","method":"GET","service":"express-mongodb-api","stack":"MongoServerError: Command aggregate requires authentication\n    at Connection.sendCommand (/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack1_next_node_mongodb/backend/node_modules/mongodb/lib/cmap/connection.js:306:27)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Connection.command (/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack1_next_node_mongodb/backend/node_modules/mongodb/lib/cmap/connection.js:334:26)\n    at async Server.command (/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack1_next_node_mongodb/backend/node_modules/mongodb/lib/sdam/server.js:194:29)\n    at async tryOperation (/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack1_next_node_mongodb/backend/node_modules/mongodb/lib/operations/execute_operation.js:213:32)\n    at async executeOperation (/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack1_next_node_mongodb/backend/node_modules/mongodb/lib/operations/execute_operation.js:78:16)\n    at async AggregationCursor._initialize (/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack1_next_node_mongodb/backend/node_modules/mongodb/lib/cursor/aggregation_cursor.js:57:26)\n    at async AggregationCursor.cursorInit (/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack1_next_node_mongodb/backend/node_modules/mongodb/lib/cursor/abstract_cursor.js:632:27)\n    at async AggregationCursor.fetchBatch (/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack1_next_node_mongodb/backend/node_modules/mongodb/lib/cursor/abstract_cursor.js:666:13)\n    at async AggregationCursor.next (/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack1_next_node_mongodb/backend/node_modules/mongodb/lib/cursor/abstract_cursor.js:342:17)","statusCode":500,"timestamp":"2026-02-26 18:38:16","url":"/api/users?limit=50&offset=0"}
+{"level":"info","message":"SIGINT received — shutting down","service":"express-mongodb-api","timestamp":"2026-02-26 18:38:44"}
