@@ -32,6 +32,13 @@ day4/
 
 ## Quick Start
 
+
+## PLEASE SETUP THE PROJECT BY RUNNING THE COMMANDS IN [ DEPLOYMENT_GUIDE](docs/DEPLOYMENT_GUIDE.md)
+
+- **this guide has steps to setup the database users, moving the config files to correct places and steps to restart the services.**
+
+---
+
 - Postgresql set up 
 ![postgresql is set up](image.png)
 
@@ -40,32 +47,24 @@ day4/
 
 ---
 
-## PLEASE SETUP THE PROJECT BY RUNNING THE COMMANDS IN [ DEPLOYMENT_GUIDE](docs/DEPLOYMENT_GUIDE.md)
-
-- **this guide has steps to setup the database users, moving the config files to correct places and steps to restart the services.**
-
----
 
 ```bash
-# 1. Create project structure
-chmod +x setup_structure.sh
-./setup_structure.sh
 
-# 2. Set up each project (please see individual READMEs in specific project folders)
+# 1. Set up each project (please see individual READMEs in specific project folders)
 
-# 3. Run all migrations
+# 2. Run all migrations
 bash scripts/run_migrations.sh
 
-# 4. Start Node.js apps with PM2
+# 3. Start Node.js apps with PM2
 pm2 start process-management/ecosystem.config.js --env production
 
-# 5. Start FastAPI with Supervisor
+# 4. Start FastAPI with Supervisor
 sudo supervisorctl start fastapi-mysql-api
 
-# 6. Start Laravel queue worker
+# 5. Start Laravel queue worker
 sudo systemctl start laravel-worker
 
-# 7. Monitor all apps
+# 6. Monitor all apps
 bash scripts/app_monitor.sh --verbose
 ```
 
