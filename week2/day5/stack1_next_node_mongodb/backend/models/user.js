@@ -33,7 +33,6 @@ const userSchema = new mongoose.Schema(
   }
 );
 
-
 userSchema.set('toJSON', {
   transform: (doc, ret) => {
     ret.id = ret._id.toString();
@@ -42,9 +41,13 @@ userSchema.set('toJSON', {
   },
 });
 
+// FIX: Register the model only once using mongoose.models check to prevent
+// "Cannot overwrite `User` model once compiled" error
+const UserMongoModel = mongoose.models.User || mongoose.model('User', userSchema);
+
 class UserModel {
   static get Model() {
-    return mongoose.model('User', userSchema);
+    return UserMongoModel;
   }
 
   static async findAll({ limit = 50, offset = 0 } = {}) {
@@ -53,9 +56,15 @@ class UserModel {
       User.find().sort({ created_at: 1 }).skip(offset).limit(limit).lean({ virtuals: false }),
       User.countDocuments(),
     ]);
-    // Normalise _id
     return {
-      users: users.map((u) => ({ id: u._id.toString(), username: u.username, email: u.email, full_name: u.full_name, created_at: u.created_at, updated_at: u.updated_at })),
+      users: users.map((u) => ({
+        id: u._id.toString(),
+        username: u.username,
+        email: u.email,
+        full_name: u.full_name,
+        created_at: u.created_at,
+        updated_at: u.updated_at,
+      })),
       total,
     };
   }
@@ -65,13 +74,27 @@ class UserModel {
     if (!mongoose.isValidObjectId(id)) return null;
     const u = await User.findById(id).lean();
     if (!u) return null;
-    return { id: u._id.toString(), username: u.username, email: u.email, full_name: u.full_name, created_at: u.created_at, updated_at: u.updated_at };
+    return {
+      id: u._id.toString(),
+      username: u.username,
+      email: u.email,
+      full_name: u.full_name,
+      created_at: u.created_at,
+      updated_at: u.updated_at,
+    };
   }
 
   static async create({ username, email, full_name }) {
     const User = this.Model;
     const u = await User.create({ username, email, full_name: full_name || null });
-    return { id: u._id.toString(), username: u.username, email: u.email, full_name: u.full_name, created_at: u.created_at, updated_at: u.updated_at };
+    return {
+      id: u._id.toString(),
+      username: u.username,
+      email: u.email,
+      full_name: u.full_name,
+      created_at: u.created_at,
+      updated_at: u.updated_at,
+    };
   }
 
   static async update(id, data) {
@@ -84,7 +107,14 @@ class UserModel {
     if (Object.keys(updates).length === 0) return null;
     const u = await User.findByIdAndUpdate(id, updates, { new: true, runValidators: true }).lean();
     if (!u) return null;
-    return { id: u._id.toString(), username: u.username, email: u.email, full_name: u.full_name, created_at: u.created_at, updated_at: u.updated_at };
+    return {
+      id: u._id.toString(),
+      username: u.username,
+      email: u.email,
+      full_name: u.full_name,
+      created_at: u.created_at,
+      updated_at: u.updated_at,
+    };
   }
 
   static async delete(id) {
@@ -94,8 +124,5 @@ class UserModel {
     return result !== null;
   }
 }
-
-// Initialise model (required so Mongoose registers the schema)
-mongoose.model('User', userSchema);
 
 module.exports = UserModel;

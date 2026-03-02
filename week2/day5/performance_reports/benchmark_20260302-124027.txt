@@ -1,0 +1,18 @@
+Performance Benchmark — 20260302-124027
+==========================================
+
+System:
+  CPU: 12 cores, load: 1.50 1.42 1.39
+  Memory: 23Gi total, 13Gi used, 9.7Gi available
+  Disk: 468G total, 339G used, 77% used%
+
+Response Times:
+  Stack1-Express: HTTP 200 in 16ms
+  Stack1-NextJS: HTTP 200 in 33ms
+  Stack2-Laravel: HTTP 200 in 24ms
+  Stack3-FastAPI: HTTP 200 in 16ms
+  Stack3-NextJS: HTTP 200 in 27ms
+
+Connections:
+  Total: Total: 1778
+  ESTABLISHED: 237

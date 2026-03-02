@@ -46,8 +46,22 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DB_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '3306'),
+
+            // Read/write split for master-slave replication.
+            // Write queries go to the master (DB_HOST:DB_PORT).
+            // Read queries go to the slave (DB_READ_HOST:DB_READ_PORT).
+            // If DB_READ_HOST is not set, all queries go to master.
+            'read' => [
+                'host' => env('DB_READ_HOST', env('DB_HOST', '127.0.0.1')),
+                'port' => env('DB_READ_PORT', env('DB_PORT', '3306')),
+            ],
+            'write' => [
+                'host' => env('DB_HOST', '127.0.0.1'),
+                'port' => env('DB_PORT', '3306'),
+            ],
+
+            'sticky' => true,
+
             'database' => env('DB_DATABASE', 'laravel'),
             'username' => env('DB_USERNAME', 'root'),
             'password' => env('DB_PASSWORD', ''),

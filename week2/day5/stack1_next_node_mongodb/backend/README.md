@@ -71,7 +71,7 @@ MONGODB_URI=mongodb://mongo1:27017,mongo2:27017,mongo3:27017/usersdb?replicaSet=
 | DELETE | /api/users/:id | Delete user        |
 | GET    | /api-docs      | Swagger UI         |
 
-> **Note:** IDs are MongoDB ObjectId strings (e.g., `65c1234abcd5678ef90abcde`), not integers.
+**Note:** IDs are MongoDB ObjectId strings (e.g., `65c1234abcd5678ef90abcde`), not integers.
 
 ## Environment Variables
 
@@ -79,7 +79,6 @@ MONGODB_URI=mongodb://mongo1:27017,mongo2:27017,mongo3:27017/usersdb?replicaSet=
 |---------------------|---------------------------------------|--------------------------|
 | PORT                | 3000                                  | Server port              |
 | MONGODB_URI         | mongodb://localhost:27017/usersdb     | MongoDB connection string|
-| CORS_ORIGIN         | *                                     | Allowed CORS origin      |
 | LOG_LEVEL           | info                                  | Logging level            |
 | RATE_LIMIT_MAX_REQUESTS | 100                               | Requests per window      |
 

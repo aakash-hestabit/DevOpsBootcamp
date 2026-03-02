@@ -1,0 +1,74 @@
+# Artillery load test scenario for Stack 2 (Laravel + MySQL)
+# Usage: artillery run artillery-stack2.yml --output stack2_artillery.json
+#        artillery report stack2_artillery.json
+
+config:
+  target: "https://stack2.devops.local"
+  phases:
+    # Warm-up: 5 users/sec for 15s
+    - duration: 15
+      arrivalRate: 5
+      name: "Warm-up"
+    # Ramp-up: 5 → 20 users/sec over 30s
+    - duration: 30
+      arrivalRate: 5
+      rampTo: 20
+      name: "Ramp-up"
+    # Sustained: 20 users/sec for 60s
+    - duration: 60
+      arrivalRate: 20
+      name: "Sustained load"
+    # Spike: 40 users/sec for 15s
+    - duration: 15
+      arrivalRate: 40
+      name: "Spike"
+  defaults:
+    headers:
+      Accept: "application/json"
+      Content-Type: "application/json"
+  tls:
+    rejectUnauthorized: false
+  ensure:
+    thresholds:
+      - http.response_time.p95: 500
+      - http.response_time.p99: 1000
+
+scenarios:
+  # Health check
+  - name: "Health check"
+    weight: 20
+    flow:
+      - get:
+          url: "/health"
+      - get:
+          url: "/api/health"
+
+  # API endpoint browsing
+  - name: "Browse API"
+    weight: 40
+    flow:
+      - get:
+          url: "/api/health"
+      - think: 2
+      - get:
+          url: "/"
+
+  # Frontend page load (Laravel Blade + Vite)
+  - name: "Frontend load"
+    weight: 30
+    flow:
+      - get:
+          url: "/"
+      - think: 3
+      - get:
+          url: "/"
+
+  # Simulated form submission
+  - name: "Form submission"
+    weight: 10
+    flow:
+      - get:
+          url: "/"
+      - think: 2
+      - get:
+          url: "/api/health"

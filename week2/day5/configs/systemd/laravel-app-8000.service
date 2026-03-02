@@ -1,0 +1,45 @@
+# Systemd service: Laravel application instance on port 8000
+# File: /etc/systemd/system/laravel-app-8000.service
+# Install: sudo cp systemd/laravel-app-8000.service /etc/systemd/system/
+# Usage: sudo systemctl start laravel-app-8000
+
+[Unit]
+Description=Laravel Application (port 8000)
+After=network.target mysql.service
+Wants=mysql.service
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack2_laravel_mysql_api
+ExecStart=/usr/bin/php artisan serve --host=127.0.0.1 --port=8000
+Restart=always
+RestartSec=5
+
+# Environment
+Environment=APP_ENV=production
+
+# Logging
+StandardOutput=append:/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack2_laravel_mysql_api/var/log/apps/laravel-8000.log
+StandardError=append:/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack2_laravel_mysql_api/var/log/apps/laravel-8000-error.log
+
+# Process limits
+LimitNOFILE=65535
+
+# Security hardening
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack2_laravel_mysql_api/storage
+ReadWritePaths=/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack2_laravel_mysql_api/bootstrap/cache
+ReadWritePaths=/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack2_laravel_mysql_api/var/log
+
+# Kill behavior
+KillMode=mixed
+KillSignal=SIGTERM
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target

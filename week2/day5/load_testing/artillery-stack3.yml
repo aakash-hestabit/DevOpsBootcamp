@@ -1,0 +1,88 @@
+# Artillery load test scenario for Stack 3 (Next.js + FastAPI + MySQL)
+# Usage: artillery run artillery-stack3.yml --output stack3_artillery.json
+#        artillery report stack3_artillery.json
+
+config:
+  target: "https://stack3.devops.local"
+  phases:
+    # Warm-up: 5 users/sec for 15s
+    - duration: 15
+      arrivalRate: 5
+      name: "Warm-up"
+    # Ramp-up: 5 → 20 users/sec over 30s
+    - duration: 30
+      arrivalRate: 5
+      rampTo: 20
+      name: "Ramp-up"
+    # Sustained: 20 users/sec for 60s
+    - duration: 60
+      arrivalRate: 20
+      name: "Sustained load"
+    # Spike: 40 users/sec for 15s
+    - duration: 15
+      arrivalRate: 40
+      name: "Spike"
+  defaults:
+    headers:
+      Accept: "application/json"
+      Content-Type: "application/json"
+  tls:
+    rejectUnauthorized: false
+  ensure:
+    thresholds:
+      - http.response_time.p95: 500
+      - http.response_time.p99: 1000
+
+scenarios:
+  # Health check (FastAPI /health)
+  - name: "FastAPI health check"
+    weight: 20
+    flow:
+      - get:
+          url: "/api/health"
+          capture:
+            - json: "$.status"
+              as: "api_status"
+
+  # Browse products API (cached by Nginx)
+  - name: "Browse products"
+    weight: 30
+    flow:
+      - get:
+          url: "/api/products"
+      - think: 2
+      - get:
+          url: "/api/health"
+
+  # Frontend SSR (Next.js)
+  - name: "Frontend SSR pages"
+    weight: 30
+    flow:
+      - get:
+          url: "/"
+      - think: 3
+      - get:
+          url: "/"
+
+  # FastAPI Swagger docs
+  - name: "API documentation"
+    weight: 10
+    flow:
+      - get:
+          url: "/docs"
+      - think: 1
+      - get:
+          url: "/openapi.json"
+
+  # Mixed API + Frontend
+  - name: "Mixed workload"
+    weight: 10
+    flow:
+      - get:
+          url: "/"
+      - think: 1
+      - get:
+          url: "/api/products"
+      - think: 2
+      - get:
+          url: "/api/health"

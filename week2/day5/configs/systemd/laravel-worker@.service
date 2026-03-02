@@ -1,0 +1,54 @@
+# Systemd service: Laravel queue worker (template unit)
+# File: /etc/systemd/system/laravel-worker@.service
+# Install: sudo cp systemd/laravel-worker@.service /etc/systemd/system/
+# Usage: sudo systemctl start laravel-worker@1
+#        sudo systemctl start laravel-worker@2
+#
+# This is a template unit. The %i placeholder is the worker number.
+# Start multiple workers by varying the instance name:
+#   laravel-worker@1, laravel-worker@2, etc.
+
+[Unit]
+Description=Laravel Queue Worker %i
+After=network.target mysql.service
+Wants=mysql.service
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack2_laravel_mysql_api
+
+# Queue worker command — processes jobs from the default queue
+# --sleep=3    : seconds to wait before polling for new jobs
+# --tries=3    : number of times to attempt a job before marking it failed
+# --max-time=3600 : maximum seconds a worker should run before restarting (prevents memory leaks)
+ExecStart=/usr/bin/php artisan queue:work database --sleep=3 --tries=3 --max-time=3600
+
+Restart=always
+RestartSec=5
+
+# Environment
+Environment=APP_ENV=production
+
+# Logging
+StandardOutput=append:/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack2_laravel_mysql_api/var/log/apps/laravel-worker-%i.log
+StandardError=append:/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack2_laravel_mysql_api/var/log/apps/laravel-worker-%i-error.log
+
+# Process limits
+LimitNOFILE=65535
+
+# Security hardening
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack2_laravel_mysql_api/storage
+ReadWritePaths=/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack2_laravel_mysql_api/bootstrap/cache
+ReadWritePaths=/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack2_laravel_mysql_api/var/log
+
+# Kill behavior
+KillMode=mixed
+KillSignal=SIGTERM
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target

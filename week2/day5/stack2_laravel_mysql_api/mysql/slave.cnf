@@ -1,0 +1,66 @@
+# MySQL Slave Configuration
+# File: mysql/slave.cnf
+# Purpose: Read replica with relay logging for master-slave replication
+# Port: 3307
+
+[mysqld]
+# Server identity
+server-id                      = 2
+port                           = 3307
+bind-address                   = 127.0.0.1
+
+# Data directory (separate from master)
+datadir                        = /var/lib/mysql-slave
+socket                         = /var/run/mysqld/mysqld-slave.sock
+pid-file                       = /var/run/mysqld/mysqld-slave.pid
+
+# Relay log (slave receives master's binlog here)
+relay_log                      = /var/log/mysql/relay-bin
+relay_log_purge                = 1
+
+# Binary logging on slave (useful for chained replication or point-in-time recovery)
+log_bin                        = /var/log/mysql/mysql-slave-bin
+binlog_format                  = ROW
+expire_logs_days               = 7
+
+# GTID-based replication
+gtid_mode                      = ON
+enforce_gtid_consistency       = ON
+
+# Read-only (prevent accidental writes to slave)
+read_only                      = 1
+super_read_only                = 1
+
+# Slave parallel replication (improves apply speed)
+slave_parallel_workers         = 4
+slave_parallel_type            = LOGICAL_CLOCK
+
+# InnoDB settings
+innodb_buffer_pool_size        = 256M
+innodb_log_file_size           = 64M
+innodb_flush_log_at_trx_commit = 2
+innodb_flush_method            = O_DIRECT
+
+# Character set
+character-set-server           = utf8mb4
+collation-server               = utf8mb4_unicode_ci
+
+# Connection limits
+max_connections                = 200
+wait_timeout                   = 600
+interactive_timeout            = 600
+
+# Logging
+log_error                      = /var/log/mysql/error-slave.log
+slow_query_log                 = 1
+slow_query_log_file            = /var/log/mysql/slow-slave.log
+long_query_time                = 2
+
+# Performance
+tmp_table_size                 = 64M
+max_heap_table_size            = 64M
+table_open_cache               = 400
+thread_cache_size              = 16
+
+[client]
+socket                         = /var/run/mysqld/mysqld-slave.sock

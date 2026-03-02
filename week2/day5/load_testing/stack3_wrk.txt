@@ -1,0 +1,22 @@
+================================================================
+  Load Test Results: Stack 3
+  Date: 2026-03-02 14:27:24
+  Target: https://stack3.devops.local/api/products
+================================================================
+
+=== wrk: t=4 c=50 d=10s  (2026-03-02 14:27:35) ===
+URL: https://stack3.devops.local/health
+Running 10s test @ https://stack3.devops.local/health
+  4 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   395.04us    1.38ms  76.51ms   96.05%
+    Req/Sec    39.95k     7.03k   75.61k    81.00%
+  Latency Distribution
+     50%  184.00us
+     75%  287.00us
+     90%  664.00us
+     99%    3.41ms
+  1589944 requests in 10.00s, 332.06MB read
+Requests/sec: 158920.90
+Transfer/sec:     33.19MB
+

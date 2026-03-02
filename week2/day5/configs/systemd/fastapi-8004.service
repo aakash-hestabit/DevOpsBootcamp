@@ -1,0 +1,33 @@
+[Unit]
+Description=FastAPI Stack3 Backend Instance on Port 8004
+Documentation=https://fastapi.tiangolo.com
+After=network.target mysql.service
+Wants=mysql.service
+
+[Service]
+Type=simple
+User=aakash
+Group=aakash
+WorkingDirectory=/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack3_next_fastapi_mysql/backend
+Environment="PATH=/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack3_next_fastapi_mysql/backend/venv/bin:/usr/local/bin:/usr/bin:/bin"
+Environment="APP_PORT=8004"
+Environment="APP_WORKERS=4"
+EnvironmentFile=/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack3_next_fastapi_mysql/.env.production
+
+ExecStart=/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack3_next_fastapi_mysql/backend/venv/bin/uvicorn main:app --host 0.0.0.0 --port 8004 --workers 4 --log-level info
+
+Restart=always
+RestartSec=5
+StandardOutput=append:/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack3_next_fastapi_mysql/var/log/apps/fastapi-8004.log
+StandardError=append:/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack3_next_fastapi_mysql/var/log/apps/fastapi-8004-error.log
+
+# Process limits
+LimitNOFILE=65536
+LimitNPROC=4096
+
+# Security hardening
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

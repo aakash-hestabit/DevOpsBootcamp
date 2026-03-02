@@ -1,0 +1,22 @@
+================================================================
+  Load Test Results: Stack 2
+  Date: 2026-03-02 14:25:06
+  Target: https://stack2.devops.local/api/health
+================================================================
+
+=== wrk: t=4 c=50 d=10s  (2026-03-02 14:25:16) ===
+URL: https://stack2.devops.local/health
+Running 10s test @ https://stack2.devops.local/health
+  4 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   329.11us    0.96ms  54.60ms   94.84%
+    Req/Sec    50.95k    19.21k  119.07k    77.31%
+  Latency Distribution
+     50%  140.00us
+     75%  248.00us
+     90%  526.00us
+     99%    3.34ms
+  2031756 requests in 10.10s, 424.33MB read
+Requests/sec: 201155.99
+Transfer/sec:     42.01MB
+

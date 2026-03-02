@@ -1,0 +1,18 @@
+# Systemd timer: Triggers laravel-scheduler.service every minute
+# File: /etc/systemd/system/laravel-scheduler.timer
+# Install: sudo cp systemd/laravel-scheduler.timer /etc/systemd/system/
+# Usage: sudo systemctl enable --now laravel-scheduler.timer
+#
+# This replaces the traditional cron entry:
+#   * * * * * cd /path/to/project && php artisan schedule:run >> /dev/null 2>&1
+
+[Unit]
+Description=Run Laravel Scheduler Every Minute
+
+[Timer]
+OnCalendar=*-*-* *:*:00
+AccuracySec=1s
+Persistent=true
+
+[Install]
+WantedBy=timers.target

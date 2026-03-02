@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# nextjs-users-frontend
 
-## Getting Started
+Next.js 15 frontend for the Express MongoDB Users API (Stack 1).
 
-First, run the development server:
+## Features
+- Server Components + Client Components (Next.js 15 App Router)
+- Users CRUD (list, create, edit, delete) with pagination
+- Live backend health indicator on home page
+- TypeScript throughout
+- Tailwind CSS v4 styling
+- Runs on ports 3001 and 3002 (two instances for load balancing)
+
+## Quick Start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# 1. Install dependencies
+npm install
+
+# 2. Set up environment
+cp .env.example .env.local
+# Edit .env.local — set NEXT_PUBLIC_API_URL to your backend
+
+# 3. Start development server
+npm run dev          # starts on port 3001
+
+# Second instance (separate terminal)
+npm run dev:3002     # starts on port 3002
+
+# Production build
+npm run build
+npm run start        # starts on port 3001
+npm run start:3002   # starts on port 3002
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Environment Variables
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Variable              | Default               | Description                        |
+|-----------------------|-----------------------|------------------------------------|
+| NEXT_PUBLIC_API_URL   | http://localhost:3000 | Express MongoDB API base URL       |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+> In production with Nginx load balancer, set `NEXT_PUBLIC_API_URL=http://localhost:80`
 
-## Learn More
+## Pages
 
-To learn more about Next.js, take a look at the following resources:
+| Route   | Description                   |
+|---------|-------------------------------|
+| /       | Dashboard with health status  |
+| /users  | Full users CRUD interface     |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Architecture
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+Browser → Nginx (port 80) → Next.js instance 1 (3001) or instance 2 (3002)
+                          ↓
+                     Express API (3000 / 3003 / 3004) → MongoDB replica set
+```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Notes
+- User IDs are MongoDB ObjectIds (24-char hex strings), not integers
+- The API URL is embedded in the browser bundle via `NEXT_PUBLIC_API_URL`
+- For local dev, the browser calls the Express API directly (no proxy needed)

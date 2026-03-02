@@ -1,0 +1,81 @@
+# Artillery load test scenario for Stack 1 (Next.js + Node.js + MongoDB)
+# Usage: artillery run artillery-stack1.yml --output stack1_artillery.json
+#        artillery report stack1_artillery.json
+
+config:
+  target: "https://stack1.devops.local"
+  phases:
+    # Warm-up: 5 users/sec for 15s — lets connections settle
+    - duration: 15
+      arrivalRate: 5
+      name: "Warm-up"
+    # Ramp-up: 5 → 20 users/sec over 30s
+    - duration: 30
+      arrivalRate: 5
+      rampTo: 20
+      name: "Ramp-up"
+    # Sustained: 20 users/sec for 60s — steady-state measurement
+    - duration: 60
+      arrivalRate: 20
+      name: "Sustained load"
+    # Spike: 40 users/sec for 15s — brief burst
+    - duration: 15
+      arrivalRate: 40
+      name: "Spike"
+  defaults:
+    headers:
+      Accept: "application/json"
+      Content-Type: "application/json"
+  tls:
+    rejectUnauthorized: false
+  ensure:
+    thresholds:
+      - http.response_time.p95: 500
+      - http.response_time.p99: 1000
+
+scenarios:
+  # Health check (lightweight)
+  - name: "Health check"
+    weight: 20
+    flow:
+      - get:
+          url: "/health"
+          capture:
+            - json: "$.status"
+              as: "health_status"
+
+  # Browse users API
+  - name: "Browse users"
+    weight: 40
+    flow:
+      - get:
+          url: "/api/users"
+      - think: 2
+      - get:
+          url: "/api/health"
+
+  # Frontend page load
+  - name: "Frontend SSR"
+    weight: 30
+    flow:
+      - get:
+          url: "/"
+      - think: 3
+      - get:
+          url: "/"
+
+  # CRUD user flow
+  - name: "Create and read user"
+    weight: 10
+    flow:
+      - post:
+          url: "/api/users"
+          json:
+            name: "LoadTest User {{ $randomNumber() }}"
+            email: "loadtest{{ $randomNumber() }}@example.com"
+          capture:
+            - json: "$.data._id"
+              as: "userId"
+      - think: 1
+      - get:
+          url: "/api/users"

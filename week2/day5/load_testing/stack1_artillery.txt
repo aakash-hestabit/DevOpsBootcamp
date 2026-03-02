@@ -1,0 +1,7 @@
+================================================================
+  Load Test Results: Stack 1
+  Date: 2026-03-02 14:22:48
+  Target: https://stack1.devops.local/api/users
+================================================================
+
+Artillery JSON: /home/aakash/Desktop/DevOpsBootcamp/week2/day5/load_testing/stack1_artillery_20260302-142248.json

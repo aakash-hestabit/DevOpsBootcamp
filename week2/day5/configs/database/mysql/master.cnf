@@ -1,0 +1,57 @@
+# MySQL Master Configuration
+# File: mysql/master.cnf
+# Purpose: Primary MySQL server with binary logging for replication
+# Port: 3306
+
+[mysqld]
+# Server identity
+server-id                      = 1
+port                           = 3306
+bind-address                   = 127.0.0.1
+
+# Data directory (override per-instance if needed)
+datadir                        = /var/lib/mysql-master
+socket                         = /var/run/mysqld/mysqld-master.sock
+pid-file                       = /var/run/mysqld/mysqld-master.pid
+
+# Binary logging (required for replication)
+log_bin                        = /var/log/mysql/mysql-bin
+binlog_format                  = ROW
+binlog_row_image               = FULL
+expire_logs_days               = 7
+max_binlog_size                = 100M
+sync_binlog                    = 1
+
+# GTID-based replication 
+gtid_mode                      = ON
+enforce_gtid_consistency       = ON
+
+# InnoDB settings
+innodb_buffer_pool_size        = 256M
+innodb_log_file_size           = 64M
+innodb_flush_log_at_trx_commit = 1
+innodb_flush_method            = O_DIRECT
+
+# Character set
+character-set-server           = utf8mb4
+collation-server               = utf8mb4_unicode_ci
+
+# Connection limits
+max_connections                = 200
+wait_timeout                   = 600
+interactive_timeout            = 600
+
+# Logging
+log_error                      = /var/log/mysql/error-master.log
+slow_query_log                 = 1
+slow_query_log_file            = /var/log/mysql/slow-master.log
+long_query_time                = 2
+
+# Performance
+tmp_table_size                 = 64M
+max_heap_table_size            = 64M
+table_open_cache               = 400
+thread_cache_size              = 16
+
+[client]
+socket                         = /var/run/mysqld/mysqld-master.sock

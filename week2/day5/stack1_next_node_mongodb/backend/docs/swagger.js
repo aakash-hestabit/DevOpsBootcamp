@@ -21,6 +21,7 @@ const options = {
         User: {
           type: 'object',
           properties: {
+            // FIX: id is a MongoDB ObjectId string, not an integer
             id: { type: 'string', example: '65c1234abcd5678ef90abcde' },
             username: { type: 'string', example: 'johndoe' },
             email: { type: 'string', format: 'email', example: 'john@example.com' },
@@ -36,6 +37,31 @@ const options = {
             username: { type: 'string', minLength: 3, maxLength: 50, example: 'johndoe' },
             email: { type: 'string', format: 'email', example: 'john@example.com' },
             full_name: { type: 'string', maxLength: 100, example: 'John Doe' },
+          },
+        },
+        UpdateUser: {
+          type: 'object',
+          properties: {
+            username: { type: 'string', minLength: 3, maxLength: 50, example: 'johndoe' },
+            email: { type: 'string', format: 'email', example: 'john@example.com' },
+            full_name: { type: 'string', maxLength: 100, example: 'John Doe' },
+          },
+        },
+        HealthResponse: {
+          type: 'object',
+          properties: {
+            status: { type: 'string', example: 'healthy' },
+            timestamp: { type: 'string', format: 'date-time' },
+            uptime: { type: 'integer', example: 120 },
+            database: {
+              type: 'object',
+              properties: {
+                status: { type: 'string', example: 'connected' },
+                pool: { type: 'object' },
+              },
+            },
+            environment: { type: 'string', example: 'development' },
+            version: { type: 'string', example: '1.0.0' },
           },
         },
       },

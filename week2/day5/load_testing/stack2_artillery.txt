@@ -1,0 +1,7 @@
+================================================================
+  Load Test Results: Stack 2
+  Date: 2026-03-02 14:25:06
+  Target: https://stack2.devops.local/api/health
+================================================================
+
+Artillery JSON: /home/aakash/Desktop/DevOpsBootcamp/week2/day5/load_testing/stack2_artillery_20260302-142248.json

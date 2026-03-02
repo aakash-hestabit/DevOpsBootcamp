@@ -1,0 +1,61 @@
+================================================================
+  Load Test Results: Stack 3
+  Date: 2026-03-02 14:27:24
+  Target: https://stack3.devops.local/api/products
+================================================================
+
+=== Apache Bench: c=50 n=500  (2026-03-02 14:27:25) ===
+URL: https://stack3.devops.local/health
+This is ApacheBench, Version 2.3 <$Revision: 1903618 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking stack3.devops.local (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Finished 500 requests
+
+
+Server Software:        nginx
+Server Hostname:        stack3.devops.local
+Server Port:            443
+SSL/TLS Protocol:       TLSv1.3,TLS_AES_256_GCM_SHA384,2048,256
+Server Temp Key:        X25519 253 bits
+TLS Server Name:        stack3.devops.local
+
+Document Path:          /health
+Document Length:        32 bytes
+
+Concurrency Level:      50
+Time taken for tests:   0.134 seconds
+Complete requests:      500
+Failed requests:        0
+Keep-Alive requests:    500
+Total transferred:      109500 bytes
+HTML transferred:       16000 bytes
+Requests per second:    3730.76 [#/sec] (mean)
+Time per request:       13.402 [ms] (mean)
+Time per request:       0.268 [ms] (mean, across all concurrent requests)
+Transfer rate:          797.89 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    3  10.0      0      46
+Processing:     0    4  12.3      0      45
+Waiting:        0    4  12.3      0      41
+Total:          0    7  22.0      0      87
+
+Percentage of the requests served within a certain time (ms)
+  50%      0
+  66%      0
+  75%      0
+  80%      0
+  90%     48
+  95%     73
+  98%     82
+  99%     85
+ 100%     87 (longest request)
+

@@ -5,7 +5,8 @@ const router = express.Router();
 const { body, param, query } = require('express-validator');
 const ctrl = require('../controllers/usersController');
 
-const validateId = param('id').isInt({ min: 1 }).withMessage('ID must be a positive integer');
+// FIX: MongoDB uses ObjectId strings, not integers
+const validateId = param('id').isMongoId().withMessage('ID must be a valid MongoDB ObjectId');
 const validateCreateBody = [
   body('username').trim().isLength({ min: 3, max: 50 }).withMessage('Username must be 3-50 chars'),
   body('email').isEmail().normalizeEmail().withMessage('Valid email is required'),
@@ -62,7 +63,7 @@ router.get('/', validatePagination, ctrl.listUsers);
  *       - in: path
  *         name: id
  *         required: true
- *         schema: { type: integer }
+ *         schema: { type: string }
  *     responses:
  *       200:
  *         description: User found
@@ -107,7 +108,7 @@ router.post('/', validateCreateBody, ctrl.createUser);
  *       - in: path
  *         name: id
  *         required: true
- *         schema: { type: integer }
+ *         schema: { type: string }
  *     requestBody:
  *       required: true
  *       content:
@@ -132,7 +133,7 @@ router.put('/:id', [validateId, ...validateUpdateBody], ctrl.updateUser);
  *       - in: path
  *         name: id
  *         required: true
- *         schema: { type: integer }
+ *         schema: { type: string }
  *     responses:
  *       204:
  *         description: User deleted

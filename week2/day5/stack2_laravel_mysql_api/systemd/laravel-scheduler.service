@@ -1,0 +1,31 @@
+# Systemd service: Laravel scheduler (runs artisan schedule:run)
+# File: /etc/systemd/system/laravel-scheduler.service
+# This service is triggered by laravel-scheduler.timer every minute.
+# Install: sudo cp systemd/laravel-scheduler.service /etc/systemd/system/
+#          sudo cp systemd/laravel-scheduler.timer /etc/systemd/system/
+#          sudo systemctl enable --now laravel-scheduler.timer
+
+[Unit]
+Description=Laravel Scheduler (once per minute)
+After=network.target mysql.service
+
+[Service]
+Type=oneshot
+User=www-data
+Group=www-data
+WorkingDirectory=/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack2_laravel_mysql_api
+ExecStart=/usr/bin/php artisan schedule:run --no-interaction
+
+# Environment
+Environment=APP_ENV=production
+
+# Logging
+StandardOutput=append:/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack2_laravel_mysql_api/var/log/apps/laravel-scheduler.log
+StandardError=append:/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack2_laravel_mysql_api/var/log/apps/laravel-scheduler-error.log
+
+# Security hardening
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack2_laravel_mysql_api/storage
+ReadWritePaths=/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack2_laravel_mysql_api/bootstrap/cache
+ReadWritePaths=/home/aakash/Desktop/DevOpsBootcamp/week2/day5/stack2_laravel_mysql_api/var/log
