@@ -368,3 +368,38 @@ week2/day5/
 | [Rollback Procedures](docs/ROLLBACK_PROCEDURES.md) | Backup and rollback workflows |
 | [Caching Strategy](docs/CACHING_STRATEGY.md) | Three-layer caching architecture |
 | [Implementation Guide](IMPLEMENTATION_AND_UNDERSTANDING.md) | Deep-dive: every script explained |
+
+---
+
+## Screenshots 
+
+### stack1
+
+- stack1 landing page 
+![stack one landing page](screenshots/image.png)
+
+- stack1 crud page 
+![user management page](screenshots/image-1.png)
+
+## stack2 
+- stack2 landing page
+![stack2 landing page](screenshots/image-2.png)
+
+- stack2 edit and create page
+![edit and create page for stack2](screenshots/image-3.png)
+
+## stack3 
+- stack3 landing page 
+![stack3 landing page](screenshots/image-4.png)
+
+- product list, create and edit 
+![products page ](screenshots/image-5.png)
+
+## services 
+- PM2 and systemd services are running 
+![pm2 and systemd output](screenshots/image-6.png)
+
+- all the three stacks are configured with nginx and are active 
+![the three stacks nginx configuration](screenshots/image-7.png)
+
+it can be verified by looking at the scrrenshots that the SSL/TLS is working properly and the browser is marking the site as secure 
