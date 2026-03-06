@@ -1,0 +1,153 @@
+name: mern_stack
+
+services:
+  mongo1:
+    build:
+      context: ./mongo
+      dockerfile: Dockerfile
+    container_name: mern_mongo1
+    hostname: mongo1
+    command: ["mongod", "--replSet", "rs0", "--bind_ip_all", "--port", "27017", "--keyFile", "/etc/mongo-keyfile"]
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGO_DB_NAME}
+    volumes:
+      - mongo1_data:/data/db
+    networks:
+      - mern_net
+    restart: unless-stopped
+    healthcheck:
+      test: >
+        mongosh --quiet --username ${MONGO_INITDB_ROOT_USERNAME}
+        --password ${MONGO_INITDB_ROOT_PASSWORD}
+        --authenticationDatabase admin
+        --eval "db.adminCommand('ping').ok"
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+
+  mongo2:
+    build:
+      context: ./mongo
+      dockerfile: Dockerfile
+    container_name: mern_mongo2
+    hostname: mongo2
+    command: ["mongod", "--replSet", "rs0", "--bind_ip_all", "--port", "27017", "--keyFile", "/etc/mongo-keyfile"]
+    ports:
+      - "27018:27017"         
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+    volumes:
+      - mongo2_data:/data/db
+    networks:
+      - mern_net
+    restart: unless-stopped
+    healthcheck:
+      test: >
+        mongosh --quiet --username ${MONGO_INITDB_ROOT_USERNAME}
+        --password ${MONGO_INITDB_ROOT_PASSWORD}
+        --authenticationDatabase admin
+        --eval "db.adminCommand('ping').ok"
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+
+  mongo-init:
+    image: mongo:7
+    container_name: mern_mongo_init
+    depends_on:
+      mongo1: { condition: service_healthy }
+      mongo2: { condition: service_healthy }
+    networks:
+      - mern_net
+    restart: "no"
+    volumes:
+      - ./scripts/mongo-rs-init.js:/scripts/mongo-rs-init.js:ro
+    command: >
+      mongosh
+      --host mongo1:27017
+      --username ${MONGO_INITDB_ROOT_USERNAME}
+      --password ${MONGO_INITDB_ROOT_PASSWORD}
+      --authenticationDatabase admin
+      /scripts/mongo-rs-init.js
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: mern_backend
+    depends_on:
+      mongo1: { condition: service_healthy }
+      mongo2: { condition: service_healthy }
+      mongo-init: { condition: service_completed_successfully }
+    environment:
+      NODE_ENV: production
+      API_PORT: ${API_PORT:-5000}
+      JWT_SECRET: ${JWT_SECRET}
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+      MONGO_DB_NAME: ${MONGO_DB_NAME}
+      MONGO_URI: >-
+        mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@mongo1:27017,mongo2:27017/${MONGO_DB_NAME}?authSource=admin&replicaSet=rs0&readPreference=primaryPreferred
+    ports:
+      - "${API_PORT:-5000}:5000"
+    networks:
+      - mern_net
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:5000/health || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  # ── React/Vite frontend (Nginx static) ──────────────────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: mern_frontend
+    networks:
+      - mern_net
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:80 || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+
+  # ── Nginx reverse proxy ──────────────────────────────────────────────────────
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    container_name: mern_nginx
+    depends_on:
+      backend:  { condition: service_healthy }
+      frontend: { condition: service_healthy }
+    ports:
+      - "${NGINX_PORT:-8080}:80"
+    networks:
+      - mern_net
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:80/nginx-health || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+networks:
+  mern_net:
+    driver: bridge
+
+volumes:
+  mongo1_data:
+  mongo2_data:
