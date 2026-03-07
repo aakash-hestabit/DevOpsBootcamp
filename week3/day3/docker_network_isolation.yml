@@ -1,0 +1,38 @@
+services:
+  frontend:
+    image: nginx:1.25-alpine 
+    networks:
+      - frontend-net
+      - backend-net
+    ports:
+      - "8080:80"
+  
+  api:
+    image: express-basic:1.0
+    networks:
+      - backend-net
+      - db-net
+    expose:
+      - "3000"
+  
+  database:
+    image: postgres:15
+    environment:
+      POSTGRES_PASSWORD: "password"
+    networks:
+      - db-net
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+networks:
+  frontend-net:
+    driver: bridge
+  backend-net:
+    driver: bridge
+    internal: false
+  db-net:
+    driver: bridge
+    internal: true 
+
+volumes:
+  db-data:

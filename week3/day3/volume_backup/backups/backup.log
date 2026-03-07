@@ -1,0 +1,8 @@
+[2026-03-07 17:58:10] ===== Backup run started (20260307-175810) =====
+[2026-03-07 17:58:10] Backup dir : ./backups
+[2026-03-07 17:58:11] Retention  : 7 days
+[2026-03-07 17:58:11] Volumes to back up: postgres_data mysql_data
+[2026-03-07 17:58:11] SUCCESS  postgres_data  ->  postgres_data-20260307-175810.tar.gz  [4.0K]
+[2026-03-07 17:58:12] SUCCESS  mysql_data  ->  mysql_data-20260307-175810.tar.gz  [4.0K]
+[2026-03-07 17:58:12] Cleanup: removed 0 archive(s) older than 7 days
+[2026-03-07 17:58:12] ===== Backup run finished — success=2 failed=0 =====

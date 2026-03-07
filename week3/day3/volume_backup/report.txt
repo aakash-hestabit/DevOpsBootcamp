@@ -1,0 +1,118 @@
+==================================================================
+  Docker Volume Backup — Test Report
+  Generated: Sat Mar  7 05:58:10 PM IST 2026
+==================================================================
+
+── 1. backup-volumes.sh --help ─────────────────────────────────────
+backup-volumes.sh — Docker Named Volume Backup Utility
+
+USAGE
+  ./backup-volumes.sh [OPTIONS]
+
+OPTIONS
+  -d, --dir DIR        Backup destination directory  (default: ./backups)
+  -r, --retain DAYS    Retention period in days       (default: 7)
+  -v, --volumes LIST   Comma-separated volume names   (default: all)
+  -h, --help           Print this message and exit
+
+EXAMPLES
+  # Back up every named volume to the default ./backups directory
+  ./backup-volumes.sh
+
+  # Back up only two specific volumes, keep 30 days worth
+  ./backup-volumes.sh -v postgres_data,mysql_data --retain 30
+
+  # Use a custom output directory
+  ./backup-volumes.sh --dir /mnt/nas/docker-backups
+
+OUTPUT
+  Each volume produces one file:
+    <VOLUME_NAME>-<YYYYMMDD-HHMMSS>.tar.gz
+
+  A run summary is appended to:
+    <BACKUP_DIR>/backup.log
+
+RESTORE
+  Use the companion restore-volume.sh script:
+    ./restore-volume.sh <archive.tar.gz> <target-volume-name>
+
+── 2. restore-volume.sh --help ─────────────────────────────────────
+restore-volume.sh — Docker Named Volume Restore Utility
+
+USAGE
+  ./restore-volume.sh [OPTIONS] <archive.tar.gz> <volume-name>
+
+ARGUMENTS
+  archive.tar.gz   Path to the backup archive created by backup-volumes.sh
+  volume-name      Target Docker volume name (created if it does not exist)
+
+OPTIONS
+  -f, --force      Skip confirmation prompt and overwrite existing volume data
+  -h, --help       Print this message and exit
+
+EXAMPLES
+  # Restore a backup into its original volume
+  ./restore-volume.sh backups/postgres_data-20260307-120000.tar.gz postgres_data
+
+  # Restore into a new volume (useful for testing without touching production)
+  ./restore-volume.sh backups/postgres_data-20260307-120000.tar.gz postgres_data_test
+
+  # Non-interactive restore (useful in scripts/CI)
+  ./restore-volume.sh --force backups/mysql_data-20260307.tar.gz mysql_data
+
+── 3. Backup two specific volumes (postgres_data, mysql_data) ──────
+[2026-03-07 17:58:10] ===== Backup run started (20260307-175810) =====
+[2026-03-07 17:58:10] Backup dir : ./backups
+[2026-03-07 17:58:11] Retention  : 7 days
+[2026-03-07 17:58:11] Volumes to back up: postgres_data mysql_data
+[0;32m[INFO][0m  Backing up volume: postgres_data
+[0;32m[INFO][0m    ✓ postgres_data-20260307-175810.tar.gz  (4.0K)
+[2026-03-07 17:58:11] SUCCESS  postgres_data  ->  postgres_data-20260307-175810.tar.gz  [4.0K]
+[0;32m[INFO][0m  Backing up volume: mysql_data
+[0;32m[INFO][0m    ✓ mysql_data-20260307-175810.tar.gz  (4.0K)
+[2026-03-07 17:58:12] SUCCESS  mysql_data  ->  mysql_data-20260307-175810.tar.gz  [4.0K]
+[0;32m[INFO][0m  Removing backups older than 7 days…
+[2026-03-07 17:58:12] Cleanup: removed 0 archive(s) older than 7 days
+
+[0;32m[INFO][0m  ===== Backup Summary =====
+[0;32m[INFO][0m    Total   : 2
+[0;32m[INFO][0m    Success : 2
+[0;32m[INFO][0m    Failed  : 0
+[0;32m[INFO][0m    Saved to: ./backups
+[0;32m[INFO][0m    Log     : ./backups/backup.log
+[2026-03-07 17:58:12] ===== Backup run finished — success=2 failed=0 =====
+
+── 4. List created archives ────────────────────────────────────────
+-rw-r--r-- 1 aakash aakash 91 Mar  7 17:58 ./backups/mysql_data-20260307-175810.tar.gz
+-rw-r--r-- 1 aakash aakash 93 Mar  7 17:58 ./backups/postgres_data-20260307-175810.tar.gz
+
+── 5. Restore postgres_data into a new test volume ─────────────────
+[0;32m[INFO][0m  Volume 'postgres_data_restore_test' does not exist — it will be created.
+[0;32m[INFO][0m  Restoring 'postgres_data-20260307-175810.tar.gz' → volume 'postgres_data_restore_test'…
+[0;32m[INFO][0m  ✓ Restore complete.
+[0;32m[INFO][0m    Volume        : postgres_data_restore_test
+[0;32m[INFO][0m    Archive used  : postgres_data-20260307-175810.tar.gz
+[0;32m[INFO][0m    Files (depth 2): 1
+
+── 6. Verify restored volume exists and has content ────────────────
+postgres_data_restore_test created=2026-03-07T12:28:12Z
+File count in restored volume:
+/target
+
+── 7. backup.log contents ──────────────────────────────────────────
+[2026-03-07 17:58:10] ===== Backup run started (20260307-175810) =====
+[2026-03-07 17:58:10] Backup dir : ./backups
+[2026-03-07 17:58:11] Retention  : 7 days
+[2026-03-07 17:58:11] Volumes to back up: postgres_data mysql_data
+[2026-03-07 17:58:11] SUCCESS  postgres_data  ->  postgres_data-20260307-175810.tar.gz  [4.0K]
+[2026-03-07 17:58:12] SUCCESS  mysql_data  ->  mysql_data-20260307-175810.tar.gz  [4.0K]
+[2026-03-07 17:58:12] Cleanup: removed 0 archive(s) older than 7 days
+[2026-03-07 17:58:12] ===== Backup run finished — success=2 failed=0 =====
+
+── 8. Cleanup test volume ──────────────────────────────────────────
+postgres_data_restore_test
+Test volume removed.
+
+==================================================================
+  All tests passed.
+==================================================================

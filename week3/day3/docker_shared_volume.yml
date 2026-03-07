@@ -1,0 +1,21 @@
+services:
+  writer:
+    image: alpine
+    volumes:
+      - shared-data:/data
+    command: sh -c "while true; do date > /data/timestamp.txt; sleep 5; done"
+
+  reader:
+    image: alpine
+    volumes:
+      - shared-data:/data:ro
+    command: sh -c "while true; do [ -f /data/timestamp.txt ] && cat /data/timestamp.txt || echo 'Waiting for file...'; sleep 3; done"
+
+  processor:
+    image: alpine
+    volumes:
+      - shared-data:/data
+    command: sh -c "while true; do [ -f /data/timestamp.txt ] && wc -l /data/timestamp.txt || echo 'No file yet'; sleep 10; done"
+
+volumes:
+  shared-data:

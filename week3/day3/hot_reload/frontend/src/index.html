@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hot Reload Demo</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #f0f4f8;
+      gap: 20px;
+    }
+    h1  { color: #2d3748; }
+    .card {
+      background: #4299e1;
+      color: #fff;
+      padding: 24px 40px;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      min-width: 340px;
+      text-align: center;
+    }
+    .meta { font-size: 0.8rem; opacity: 0.85; margin-top: 8px; }
+    button {
+      padding: 10px 28px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background: #2b6cb0;
+      color: #fff;
+      cursor: pointer;
+    }
+    button:hover { background: #2c5282; }
+    .hint { font-size: 0.85rem; color: #718096; }
+  </style>
+</head>
+<body>
+  <h1>Docker Bind Mount — Hot Reload Demo</h1>
+
+  <div class="card">
+    <div id="message">Click the button to fetch from the API</div>
+    <div class="meta" id="meta"></div>
+  </div>
+
+  <button onclick="fetchMessage()">Fetch from API</button>
+
+  <p class="hint">
+    Edit <strong>frontend/src/index.html</strong> or
+    <strong>api/config/app.config.js</strong> on the host and refresh!
+  </p>
+
+  <script>
+    async function fetchMessage() {
+      try {
+        const res  = await fetch('/api/message');
+        const data = await res.json();
+        document.getElementById('message').textContent = data.message;
+        document.getElementById('meta').textContent =
+          `v${data.version} · ${data.timestamp}`;
+      } catch (e) {
+        document.getElementById('message').textContent = 'Error: ' + e.message;
+      }
+    }
+    fetchMessage(); 
+  </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+services:
+  app:
+    image:  express-basic:1.0 
+    tmpfs:
+      - /run/secrets:rw,noexec,nosuid,size=10m
+      - /tmp:rw,noexec,nosuid,size=50m
