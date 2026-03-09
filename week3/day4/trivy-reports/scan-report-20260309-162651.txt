@@ -1,0 +1,840 @@
+==========================================
+     DOCKER IMAGE SECURITY SCAN REPORT
+==========================================
+Scan Date : 2026-03-09 16:26:52
+Scanner   : Trivy v0.69.3
+Severity  : CRITICAL,HIGH
+Images    : 34
+==========================================
+
+Image : 3_tier_app-backend:latest
+------------------------------------------
+CRITICAL : 1 (fixable: 1 | no-fix: 0)
+HIGH     : 10 (fixable: 10 | no-fix: 0)
+TOTAL    : 11
+
+CRITICAL Vulnerabilities:
+  CVE-2026-22184 | pkg=zlib | installed=1.3.1-r2 | fix=1.3.2-r0
+
+HIGH Vulnerabilities:
+  CVE-2024-21538 | pkg=cross-spawn | installed=7.0.3 | fix=7.0.5, 6.0.6
+  CVE-2025-64756 | pkg=glob | installed=10.4.2 | fix=11.1.0, 10.5.0
+  CVE-2026-26996 | pkg=minimatch | installed=9.0.5 | fix=10.2.1, 9.0.6, 8.0.5, 7.4.7, 6.2.1, 5.1.7, 4.2.4, 3.1.3
+  CVE-2026-27903 | pkg=minimatch | installed=9.0.5 | fix=10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.3
+  CVE-2026-27904 | pkg=minimatch | installed=9.0.5 | fix=10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.4
+  CVE-2026-23745 | pkg=tar | installed=6.2.1 | fix=7.5.3
+  CVE-2026-23950 | pkg=tar | installed=6.2.1 | fix=7.5.4
+  CVE-2026-24842 | pkg=tar | installed=6.2.1 | fix=7.5.7
+  CVE-2026-26960 | pkg=tar | installed=6.2.1 | fix=7.5.8
+  CVE-2026-29786 | pkg=tar | installed=6.2.1 | fix=7.5.10
+
+==========================================
+
+Image : 3_tier_app-frontend:latest
+------------------------------------------
+CRITICAL : 3 (fixable: 3 | no-fix: 0)
+HIGH     : 17 (fixable: 17 | no-fix: 0)
+TOTAL    : 20
+
+CRITICAL Vulnerabilities:
+  CVE-2024-45491 | pkg=libexpat | installed=2.6.2-r0 | fix=2.6.3-r0
+  CVE-2024-45492 | pkg=libexpat | installed=2.6.2-r0 | fix=2.6.3-r0
+  CVE-2024-56171 | pkg=libxml2 | installed=2.11.7-r0 | fix=2.11.8-r1
+
+HIGH Vulnerabilities:
+  CVE-2024-2398 | pkg=curl | installed=8.5.0-r0 | fix=8.7.1-r0
+  CVE-2024-6197 | pkg=curl | installed=8.5.0-r0 | fix=8.9.0-r0
+  CVE-2024-6119 | pkg=libcrypto3 | installed=3.1.4-r6 | fix=3.1.7-r0
+  CVE-2024-2398 | pkg=libcurl | installed=8.5.0-r0 | fix=8.7.1-r0
+  CVE-2024-6197 | pkg=libcurl | installed=8.5.0-r0 | fix=8.9.0-r0
+  CVE-2024-45490 | pkg=libexpat | installed=2.6.2-r0 | fix=2.6.3-r0
+  CVE-2024-8176 | pkg=libexpat | installed=2.6.2-r0 | fix=2.7.0-r0
+  CVE-2024-6119 | pkg=libssl3 | installed=3.1.4-r6 | fix=3.1.7-r0
+  CVE-2025-24928 | pkg=libxml2 | installed=2.11.7-r0 | fix=2.11.8-r1
+  CVE-2025-27113 | pkg=libxml2 | installed=2.11.7-r0 | fix=2.11.8-r2
+  CVE-2025-32414 | pkg=libxml2 | installed=2.11.7-r0 | fix=2.11.8-r3
+  CVE-2025-32415 | pkg=libxml2 | installed=2.11.7-r0 | fix=2.11.8-r3
+  CVE-2024-55549 | pkg=libxslt | installed=1.1.39-r0 | fix=1.1.39-r1
+  CVE-2025-24855 | pkg=libxslt | installed=1.1.39-r0 | fix=1.1.39-r1
+  CVE-2025-26519 | pkg=musl | installed=1.2.4_git20230717-r4 | fix=1.2.4_git20230717-r5
+  CVE-2025-26519 | pkg=musl-utils | installed=1.2.4_git20230717-r4 | fix=1.2.4_git20230717-r5
+  CVE-2025-31115 | pkg=xz-libs | installed=5.4.5-r0 | fix=5.4.5-r1
+
+==========================================
+
+Image : alpine:latest
+------------------------------------------
+CRITICAL : 1 (fixable: 1 | no-fix: 0)
+HIGH     : 0 (fixable: 0 | no-fix: 0)
+TOTAL    : 1
+
+CRITICAL Vulnerabilities:
+  CVE-2026-22184 | pkg=zlib | installed=1.3.1-r2 | fix=1.3.2-r0
+
+==========================================
+
+Image : compose_override_practice-backend:latest
+------------------------------------------
+CRITICAL : 1 (fixable: 1 | no-fix: 0)
+HIGH     : 10 (fixable: 10 | no-fix: 0)
+TOTAL    : 11
+
+CRITICAL Vulnerabilities:
+  CVE-2026-22184 | pkg=zlib | installed=1.3.1-r2 | fix=1.3.2-r0
+
+HIGH Vulnerabilities:
+  CVE-2024-21538 | pkg=cross-spawn | installed=7.0.3 | fix=7.0.5, 6.0.6
+  CVE-2025-64756 | pkg=glob | installed=10.4.2 | fix=11.1.0, 10.5.0
+  CVE-2026-26996 | pkg=minimatch | installed=9.0.5 | fix=10.2.1, 9.0.6, 8.0.5, 7.4.7, 6.2.1, 5.1.7, 4.2.4, 3.1.3
+  CVE-2026-27903 | pkg=minimatch | installed=9.0.5 | fix=10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.3
+  CVE-2026-27904 | pkg=minimatch | installed=9.0.5 | fix=10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.4
+  CVE-2026-23745 | pkg=tar | installed=6.2.1 | fix=7.5.3
+  CVE-2026-23950 | pkg=tar | installed=6.2.1 | fix=7.5.4
+  CVE-2026-24842 | pkg=tar | installed=6.2.1 | fix=7.5.7
+  CVE-2026-26960 | pkg=tar | installed=6.2.1 | fix=7.5.8
+  CVE-2026-29786 | pkg=tar | installed=6.2.1 | fix=7.5.10
+
+==========================================
+
+Image : compose_override_practice-frontend:latest
+------------------------------------------
+CRITICAL : 3 (fixable: 3 | no-fix: 0)
+HIGH     : 17 (fixable: 17 | no-fix: 0)
+TOTAL    : 20
+
+CRITICAL Vulnerabilities:
+  CVE-2024-45491 | pkg=libexpat | installed=2.6.2-r0 | fix=2.6.3-r0
+  CVE-2024-45492 | pkg=libexpat | installed=2.6.2-r0 | fix=2.6.3-r0
+  CVE-2024-56171 | pkg=libxml2 | installed=2.11.7-r0 | fix=2.11.8-r1
+
+HIGH Vulnerabilities:
+  CVE-2024-2398 | pkg=curl | installed=8.5.0-r0 | fix=8.7.1-r0
+  CVE-2024-6197 | pkg=curl | installed=8.5.0-r0 | fix=8.9.0-r0
+  CVE-2024-6119 | pkg=libcrypto3 | installed=3.1.4-r6 | fix=3.1.7-r0
+  CVE-2024-2398 | pkg=libcurl | installed=8.5.0-r0 | fix=8.7.1-r0
+  CVE-2024-6197 | pkg=libcurl | installed=8.5.0-r0 | fix=8.9.0-r0
+  CVE-2024-45490 | pkg=libexpat | installed=2.6.2-r0 | fix=2.6.3-r0
+  CVE-2024-8176 | pkg=libexpat | installed=2.6.2-r0 | fix=2.7.0-r0
+  CVE-2024-6119 | pkg=libssl3 | installed=3.1.4-r6 | fix=3.1.7-r0
+  CVE-2025-24928 | pkg=libxml2 | installed=2.11.7-r0 | fix=2.11.8-r1
+  CVE-2025-27113 | pkg=libxml2 | installed=2.11.7-r0 | fix=2.11.8-r2
+  CVE-2025-32414 | pkg=libxml2 | installed=2.11.7-r0 | fix=2.11.8-r3
+  CVE-2025-32415 | pkg=libxml2 | installed=2.11.7-r0 | fix=2.11.8-r3
+  CVE-2024-55549 | pkg=libxslt | installed=1.1.39-r0 | fix=1.1.39-r1
+  CVE-2025-24855 | pkg=libxslt | installed=1.1.39-r0 | fix=1.1.39-r1
+  CVE-2025-26519 | pkg=musl | installed=1.2.4_git20230717-r4 | fix=1.2.4_git20230717-r5
+  CVE-2025-26519 | pkg=musl-utils | installed=1.2.4_git20230717-r4 | fix=1.2.4_git20230717-r5
+  CVE-2025-31115 | pkg=xz-libs | installed=5.4.5-r0 | fix=5.4.5-r1
+
+==========================================
+
+Image : env_management-api:latest
+------------------------------------------
+CRITICAL : 1 (fixable: 1 | no-fix: 0)
+HIGH     : 10 (fixable: 10 | no-fix: 0)
+TOTAL    : 11
+
+CRITICAL Vulnerabilities:
+  CVE-2026-22184 | pkg=zlib | installed=1.3.1-r2 | fix=1.3.2-r0
+
+HIGH Vulnerabilities:
+  CVE-2024-21538 | pkg=cross-spawn | installed=7.0.3 | fix=7.0.5, 6.0.6
+  CVE-2025-64756 | pkg=glob | installed=10.4.2 | fix=11.1.0, 10.5.0
+  CVE-2026-26996 | pkg=minimatch | installed=9.0.5 | fix=10.2.1, 9.0.6, 8.0.5, 7.4.7, 6.2.1, 5.1.7, 4.2.4, 3.1.3
+  CVE-2026-27903 | pkg=minimatch | installed=9.0.5 | fix=10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.3
+  CVE-2026-27904 | pkg=minimatch | installed=9.0.5 | fix=10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.4
+  CVE-2026-23745 | pkg=tar | installed=6.2.1 | fix=7.5.3
+  CVE-2026-23950 | pkg=tar | installed=6.2.1 | fix=7.5.4
+  CVE-2026-24842 | pkg=tar | installed=6.2.1 | fix=7.5.7
+  CVE-2026-26960 | pkg=tar | installed=6.2.1 | fix=7.5.8
+  CVE-2026-29786 | pkg=tar | installed=6.2.1 | fix=7.5.10
+
+==========================================
+
+Image : express-basic:1.0
+------------------------------------------
+CRITICAL : 1 (fixable: 1 | no-fix: 0)
+HIGH     : 10 (fixable: 10 | no-fix: 0)
+TOTAL    : 11
+
+CRITICAL Vulnerabilities:
+  CVE-2026-22184 | pkg=zlib | installed=1.3.1-r2 | fix=1.3.2-r0
+
+HIGH Vulnerabilities:
+  CVE-2024-21538 | pkg=cross-spawn | installed=7.0.3 | fix=7.0.5, 6.0.6
+  CVE-2025-64756 | pkg=glob | installed=10.4.2 | fix=11.1.0, 10.5.0
+  CVE-2026-26996 | pkg=minimatch | installed=9.0.5 | fix=10.2.1, 9.0.6, 8.0.5, 7.4.7, 6.2.1, 5.1.7, 4.2.4, 3.1.3
+  CVE-2026-27903 | pkg=minimatch | installed=9.0.5 | fix=10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.3
+  CVE-2026-27904 | pkg=minimatch | installed=9.0.5 | fix=10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.4
+  CVE-2026-23745 | pkg=tar | installed=6.2.1 | fix=7.5.3
+  CVE-2026-23950 | pkg=tar | installed=6.2.1 | fix=7.5.4
+  CVE-2026-24842 | pkg=tar | installed=6.2.1 | fix=7.5.7
+  CVE-2026-26960 | pkg=tar | installed=6.2.1 | fix=7.5.8
+  CVE-2026-29786 | pkg=tar | installed=6.2.1 | fix=7.5.10
+
+==========================================
+
+Image : fastapi-app:1.0.0
+------------------------------------------
+CRITICAL : 0 (fixable: 0 | no-fix: 0)
+HIGH     : 6 (fixable: 4 | no-fix: 2)
+TOTAL    : 6
+
+HIGH Vulnerabilities:
+  CVE-2026-0861 | pkg=libc-bin | installed=2.41-12+deb13u1 | fix=NO FIX
+  CVE-2026-0861 | pkg=libc6 | installed=2.41-12+deb13u1 | fix=NO FIX
+  CVE-2026-23949 | pkg=jaraco.context | installed=5.3.0 | fix=6.1.0
+  CVE-2024-47874 | pkg=starlette | installed=0.36.3 | fix=0.40.0
+  CVE-2026-24049 | pkg=wheel | installed=0.45.1 | fix=0.46.2
+  CVE-2026-24049 | pkg=wheel | installed=0.45.1 | fix=0.46.2
+
+==========================================
+
+Image : fastapi-single:latest
+------------------------------------------
+CRITICAL : 0 (fixable: 0 | no-fix: 0)
+HIGH     : 6 (fixable: 4 | no-fix: 2)
+TOTAL    : 6
+
+HIGH Vulnerabilities:
+  CVE-2026-0861 | pkg=libc-bin | installed=2.41-12+deb13u1 | fix=NO FIX
+  CVE-2026-0861 | pkg=libc6 | installed=2.41-12+deb13u1 | fix=NO FIX
+  CVE-2026-23949 | pkg=jaraco.context | installed=5.3.0 | fix=6.1.0
+  CVE-2024-47874 | pkg=starlette | installed=0.36.3 | fix=0.40.0
+  CVE-2026-24049 | pkg=wheel | installed=0.45.1 | fix=0.46.2
+  CVE-2026-24049 | pkg=wheel | installed=0.45.1 | fix=0.46.2
+
+==========================================
+
+Image : health_checks-node_api:latest
+------------------------------------------
+CRITICAL : 1 (fixable: 1 | no-fix: 0)
+HIGH     : 10 (fixable: 10 | no-fix: 0)
+TOTAL    : 11
+
+CRITICAL Vulnerabilities:
+  CVE-2026-22184 | pkg=zlib | installed=1.3.1-r2 | fix=1.3.2-r0
+
+HIGH Vulnerabilities:
+  CVE-2024-21538 | pkg=cross-spawn | installed=7.0.3 | fix=7.0.5, 6.0.6
+  CVE-2025-64756 | pkg=glob | installed=10.4.2 | fix=11.1.0, 10.5.0
+  CVE-2026-26996 | pkg=minimatch | installed=9.0.5 | fix=10.2.1, 9.0.6, 8.0.5, 7.4.7, 6.2.1, 5.1.7, 4.2.4, 3.1.3
+  CVE-2026-27903 | pkg=minimatch | installed=9.0.5 | fix=10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.3
+  CVE-2026-27904 | pkg=minimatch | installed=9.0.5 | fix=10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.4
+  CVE-2026-23745 | pkg=tar | installed=6.2.1 | fix=7.5.3
+  CVE-2026-23950 | pkg=tar | installed=6.2.1 | fix=7.5.4
+  CVE-2026-24842 | pkg=tar | installed=6.2.1 | fix=7.5.7
+  CVE-2026-26960 | pkg=tar | installed=6.2.1 | fix=7.5.8
+  CVE-2026-29786 | pkg=tar | installed=6.2.1 | fix=7.5.10
+
+==========================================
+
+Image : health_checks-python_app:latest
+------------------------------------------
+CRITICAL : 0 (fixable: 0 | no-fix: 0)
+HIGH     : 3 (fixable: 1 | no-fix: 2)
+TOTAL    : 3
+
+HIGH Vulnerabilities:
+  CVE-2026-0861 | pkg=libc-bin | installed=2.41-12+deb13u1 | fix=NO FIX
+  CVE-2026-0861 | pkg=libc6 | installed=2.41-12+deb13u1 | fix=NO FIX
+  CVE-2024-21272 | pkg=mysql-connector-python | installed=8.3.0 | fix=9.1.0
+
+==========================================
+
+Image : hot_reload-api:latest
+------------------------------------------
+CRITICAL : 1 (fixable: 1 | no-fix: 0)
+HIGH     : 10 (fixable: 10 | no-fix: 0)
+TOTAL    : 11
+
+CRITICAL Vulnerabilities:
+  CVE-2026-22184 | pkg=zlib | installed=1.3.1-r2 | fix=1.3.2-r0
+
+HIGH Vulnerabilities:
+  CVE-2024-21538 | pkg=cross-spawn | installed=7.0.3 | fix=7.0.5, 6.0.6
+  CVE-2025-64756 | pkg=glob | installed=10.4.2 | fix=11.1.0, 10.5.0
+  CVE-2026-26996 | pkg=minimatch | installed=9.0.5 | fix=10.2.1, 9.0.6, 8.0.5, 7.4.7, 6.2.1, 5.1.7, 4.2.4, 3.1.3
+  CVE-2026-27903 | pkg=minimatch | installed=9.0.5 | fix=10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.3
+  CVE-2026-27904 | pkg=minimatch | installed=9.0.5 | fix=10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.4
+  CVE-2026-23745 | pkg=tar | installed=6.2.1 | fix=7.5.3
+  CVE-2026-23950 | pkg=tar | installed=6.2.1 | fix=7.5.4
+  CVE-2026-24842 | pkg=tar | installed=6.2.1 | fix=7.5.7
+  CVE-2026-26960 | pkg=tar | installed=6.2.1 | fix=7.5.8
+  CVE-2026-29786 | pkg=tar | installed=6.2.1 | fix=7.5.10
+
+==========================================
+
+Image : hot_reload-frontend:latest
+------------------------------------------
+CRITICAL : 3 (fixable: 3 | no-fix: 0)
+HIGH     : 17 (fixable: 17 | no-fix: 0)
+TOTAL    : 20
+
+CRITICAL Vulnerabilities:
+  CVE-2024-45491 | pkg=libexpat | installed=2.6.2-r0 | fix=2.6.3-r0
+  CVE-2024-45492 | pkg=libexpat | installed=2.6.2-r0 | fix=2.6.3-r0
+  CVE-2024-56171 | pkg=libxml2 | installed=2.11.7-r0 | fix=2.11.8-r1
+
+HIGH Vulnerabilities:
+  CVE-2024-2398 | pkg=curl | installed=8.5.0-r0 | fix=8.7.1-r0
+  CVE-2024-6197 | pkg=curl | installed=8.5.0-r0 | fix=8.9.0-r0
+  CVE-2024-6119 | pkg=libcrypto3 | installed=3.1.4-r6 | fix=3.1.7-r0
+  CVE-2024-2398 | pkg=libcurl | installed=8.5.0-r0 | fix=8.7.1-r0
+  CVE-2024-6197 | pkg=libcurl | installed=8.5.0-r0 | fix=8.9.0-r0
+  CVE-2024-45490 | pkg=libexpat | installed=2.6.2-r0 | fix=2.6.3-r0
+  CVE-2024-8176 | pkg=libexpat | installed=2.6.2-r0 | fix=2.7.0-r0
+  CVE-2024-6119 | pkg=libssl3 | installed=3.1.4-r6 | fix=3.1.7-r0
+  CVE-2025-24928 | pkg=libxml2 | installed=2.11.7-r0 | fix=2.11.8-r1
+  CVE-2025-27113 | pkg=libxml2 | installed=2.11.7-r0 | fix=2.11.8-r2
+  CVE-2025-32414 | pkg=libxml2 | installed=2.11.7-r0 | fix=2.11.8-r3
+  CVE-2025-32415 | pkg=libxml2 | installed=2.11.7-r0 | fix=2.11.8-r3
+  CVE-2024-55549 | pkg=libxslt | installed=1.1.39-r0 | fix=1.1.39-r1
+  CVE-2025-24855 | pkg=libxslt | installed=1.1.39-r0 | fix=1.1.39-r1
+  CVE-2025-26519 | pkg=musl | installed=1.2.4_git20230717-r4 | fix=1.2.4_git20230717-r5
+  CVE-2025-26519 | pkg=musl-utils | installed=1.2.4_git20230717-r4 | fix=1.2.4_git20230717-r5
+  CVE-2025-31115 | pkg=xz-libs | installed=5.4.5-r0 | fix=5.4.5-r1
+
+==========================================
+
+Image : laravel_mysql_redis-app:latest
+------------------------------------------
+CRITICAL : 0 (fixable: 0 | no-fix: 0)
+HIGH     : 36 (fixable: 0 | no-fix: 36)
+TOTAL    : 36
+
+HIGH Vulnerabilities:
+  CVE-2026-0861 | pkg=libc-bin | installed=2.41-12+deb13u1 | fix=NO FIX
+  CVE-2026-0861 | pkg=libc-dev-bin | installed=2.41-12+deb13u1 | fix=NO FIX
+  CVE-2026-0861 | pkg=libc6 | installed=2.41-12+deb13u1 | fix=NO FIX
+  CVE-2026-0861 | pkg=libc6-dev | installed=2.41-12+deb13u1 | fix=NO FIX
+  CVE-2013-7445 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2019-19449 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2019-19814 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2021-3847 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2021-3864 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2024-21803 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2024-58015 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2024-58093 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-22104 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-38137 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-38187 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-38204 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-38206 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-38421 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-38584 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-38627 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-38636 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-39859 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-39862 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-39958 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-40064 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-40135 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-40158 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-40168 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-71152 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-71238 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2026-23066 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2026-23152 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2026-23171 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2026-23210 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2026-23226 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2026-23231 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+
+==========================================
+
+Image : laravel_mysql_redis-queue:latest
+------------------------------------------
+CRITICAL : 0 (fixable: 0 | no-fix: 0)
+HIGH     : 36 (fixable: 0 | no-fix: 36)
+TOTAL    : 36
+
+HIGH Vulnerabilities:
+  CVE-2026-0861 | pkg=libc-bin | installed=2.41-12+deb13u1 | fix=NO FIX
+  CVE-2026-0861 | pkg=libc-dev-bin | installed=2.41-12+deb13u1 | fix=NO FIX
+  CVE-2026-0861 | pkg=libc6 | installed=2.41-12+deb13u1 | fix=NO FIX
+  CVE-2026-0861 | pkg=libc6-dev | installed=2.41-12+deb13u1 | fix=NO FIX
+  CVE-2013-7445 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2019-19449 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2019-19814 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2021-3847 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2021-3864 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2024-21803 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2024-58015 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2024-58093 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-22104 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-38137 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-38187 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-38204 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-38206 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-38421 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-38584 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-38627 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-38636 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-39859 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-39862 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-39958 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-40064 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-40135 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-40158 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-40168 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-71152 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2025-71238 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2026-23066 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2026-23152 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2026-23171 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2026-23210 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2026-23226 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+  CVE-2026-23231 | pkg=linux-libc-dev | installed=6.12.73-1 | fix=NO FIX
+
+==========================================
+
+Image : mern_stack-backend:latest
+------------------------------------------
+CRITICAL : 1 (fixable: 1 | no-fix: 0)
+HIGH     : 10 (fixable: 10 | no-fix: 0)
+TOTAL    : 11
+
+CRITICAL Vulnerabilities:
+  CVE-2026-22184 | pkg=zlib | installed=1.3.1-r2 | fix=1.3.2-r0
+
+HIGH Vulnerabilities:
+  CVE-2024-21538 | pkg=cross-spawn | installed=7.0.3 | fix=7.0.5, 6.0.6
+  CVE-2025-64756 | pkg=glob | installed=10.4.2 | fix=11.1.0, 10.5.0
+  CVE-2026-26996 | pkg=minimatch | installed=9.0.5 | fix=10.2.1, 9.0.6, 8.0.5, 7.4.7, 6.2.1, 5.1.7, 4.2.4, 3.1.3
+  CVE-2026-27903 | pkg=minimatch | installed=9.0.5 | fix=10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.3
+  CVE-2026-27904 | pkg=minimatch | installed=9.0.5 | fix=10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.4
+  CVE-2026-23745 | pkg=tar | installed=6.2.1 | fix=7.5.3
+  CVE-2026-23950 | pkg=tar | installed=6.2.1 | fix=7.5.4
+  CVE-2026-24842 | pkg=tar | installed=6.2.1 | fix=7.5.7
+  CVE-2026-26960 | pkg=tar | installed=6.2.1 | fix=7.5.8
+  CVE-2026-29786 | pkg=tar | installed=6.2.1 | fix=7.5.10
+
+==========================================
+
+Image : mern_stack-frontend:latest
+------------------------------------------
+CRITICAL : 1 (fixable: 1 | no-fix: 0)
+HIGH     : 1 (fixable: 1 | no-fix: 0)
+TOTAL    : 2
+
+CRITICAL Vulnerabilities:
+  CVE-2026-22184 | pkg=zlib | installed=1.3.1-r2 | fix=1.3.2-r0
+
+HIGH Vulnerabilities:
+  CVE-2026-25646 | pkg=libpng | installed=1.6.54-r0 | fix=1.6.55-r0
+
+==========================================
+
+Image : mern_stack-mongo1:latest
+------------------------------------------
+CRITICAL : 9 (fixable: 9 | no-fix: 0)
+HIGH     : 20 (fixable: 20 | no-fix: 0)
+TOTAL    : 29
+
+CRITICAL Vulnerabilities:
+  CVE-2025-68121 | pkg=stdlib | installed=v1.25.5 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+  CVE-2025-68121 | pkg=stdlib | installed=v1.25.5 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+  CVE-2025-68121 | pkg=stdlib | installed=v1.25.5 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+  CVE-2025-68121 | pkg=stdlib | installed=v1.25.5 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+  CVE-2025-68121 | pkg=stdlib | installed=v1.25.5 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+  CVE-2025-68121 | pkg=stdlib | installed=v1.25.5 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+  CVE-2025-68121 | pkg=stdlib | installed=v1.25.5 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+  CVE-2025-68121 | pkg=stdlib | installed=v1.25.5 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+  CVE-2025-68121 | pkg=stdlib | installed=v1.24.6 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+
+HIGH Vulnerabilities:
+  CVE-2025-61726 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61726 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61726 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61726 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61726 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61726 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61726 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61726 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-58183 | pkg=stdlib | installed=v1.24.6 | fix=1.24.8, 1.25.2
+  CVE-2025-61726 | pkg=stdlib | installed=v1.24.6 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.24.6 | fix=1.24.12, 1.25.6
+  CVE-2025-61729 | pkg=stdlib | installed=v1.24.6 | fix=1.24.11, 1.25.5
+
+==========================================
+
+Image : mern_stack-mongo2:latest
+------------------------------------------
+CRITICAL : 9 (fixable: 9 | no-fix: 0)
+HIGH     : 20 (fixable: 20 | no-fix: 0)
+TOTAL    : 29
+
+CRITICAL Vulnerabilities:
+  CVE-2025-68121 | pkg=stdlib | installed=v1.25.5 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+  CVE-2025-68121 | pkg=stdlib | installed=v1.25.5 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+  CVE-2025-68121 | pkg=stdlib | installed=v1.25.5 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+  CVE-2025-68121 | pkg=stdlib | installed=v1.25.5 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+  CVE-2025-68121 | pkg=stdlib | installed=v1.25.5 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+  CVE-2025-68121 | pkg=stdlib | installed=v1.25.5 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+  CVE-2025-68121 | pkg=stdlib | installed=v1.25.5 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+  CVE-2025-68121 | pkg=stdlib | installed=v1.25.5 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+  CVE-2025-68121 | pkg=stdlib | installed=v1.24.6 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+
+HIGH Vulnerabilities:
+  CVE-2025-61726 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61726 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61726 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61726 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61726 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61726 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61726 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61726 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-58183 | pkg=stdlib | installed=v1.24.6 | fix=1.24.8, 1.25.2
+  CVE-2025-61726 | pkg=stdlib | installed=v1.24.6 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.24.6 | fix=1.24.12, 1.25.6
+  CVE-2025-61729 | pkg=stdlib | installed=v1.24.6 | fix=1.24.11, 1.25.5
+
+==========================================
+
+Image : mern_stack-nginx:latest
+------------------------------------------
+CRITICAL : 1 (fixable: 1 | no-fix: 0)
+HIGH     : 1 (fixable: 1 | no-fix: 0)
+TOTAL    : 2
+
+CRITICAL Vulnerabilities:
+  CVE-2026-22184 | pkg=zlib | installed=1.3.1-r2 | fix=1.3.2-r0
+
+HIGH Vulnerabilities:
+  CVE-2026-25646 | pkg=libpng | installed=1.6.54-r0 | fix=1.6.55-r0
+
+==========================================
+
+Image : mongo:7
+------------------------------------------
+CRITICAL : 9 (fixable: 9 | no-fix: 0)
+HIGH     : 20 (fixable: 20 | no-fix: 0)
+TOTAL    : 29
+
+CRITICAL Vulnerabilities:
+  CVE-2025-68121 | pkg=stdlib | installed=v1.25.5 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+  CVE-2025-68121 | pkg=stdlib | installed=v1.25.5 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+  CVE-2025-68121 | pkg=stdlib | installed=v1.25.5 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+  CVE-2025-68121 | pkg=stdlib | installed=v1.25.5 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+  CVE-2025-68121 | pkg=stdlib | installed=v1.25.5 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+  CVE-2025-68121 | pkg=stdlib | installed=v1.25.5 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+  CVE-2025-68121 | pkg=stdlib | installed=v1.25.5 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+  CVE-2025-68121 | pkg=stdlib | installed=v1.25.5 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+  CVE-2025-68121 | pkg=stdlib | installed=v1.24.6 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+
+HIGH Vulnerabilities:
+  CVE-2025-61726 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61726 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61726 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61726 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61726 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61726 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61726 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61726 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.25.5 | fix=1.24.12, 1.25.6
+  CVE-2025-58183 | pkg=stdlib | installed=v1.24.6 | fix=1.24.8, 1.25.2
+  CVE-2025-61726 | pkg=stdlib | installed=v1.24.6 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.24.6 | fix=1.24.12, 1.25.6
+  CVE-2025-61729 | pkg=stdlib | installed=v1.24.6 | fix=1.24.11, 1.25.5
+
+==========================================
+
+Image : mysql:8.0
+------------------------------------------
+CRITICAL : 1 (fixable: 1 | no-fix: 0)
+HIGH     : 5 (fixable: 5 | no-fix: 0)
+TOTAL    : 6
+
+CRITICAL Vulnerabilities:
+  CVE-2025-68121 | pkg=stdlib | installed=v1.24.6 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+
+HIGH Vulnerabilities:
+  CVE-2026-26007 | pkg=cryptography | installed=45.0.7 | fix=46.0.5
+  CVE-2025-58183 | pkg=stdlib | installed=v1.24.6 | fix=1.24.8, 1.25.2
+  CVE-2025-61726 | pkg=stdlib | installed=v1.24.6 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.24.6 | fix=1.24.12, 1.25.6
+  CVE-2025-61729 | pkg=stdlib | installed=v1.24.6 | fix=1.24.11, 1.25.5
+
+==========================================
+
+Image : nginx:1.25-alpine
+------------------------------------------
+CRITICAL : 3 (fixable: 3 | no-fix: 0)
+HIGH     : 17 (fixable: 17 | no-fix: 0)
+TOTAL    : 20
+
+CRITICAL Vulnerabilities:
+  CVE-2024-45491 | pkg=libexpat | installed=2.6.2-r0 | fix=2.6.3-r0
+  CVE-2024-45492 | pkg=libexpat | installed=2.6.2-r0 | fix=2.6.3-r0
+  CVE-2024-56171 | pkg=libxml2 | installed=2.11.7-r0 | fix=2.11.8-r1
+
+HIGH Vulnerabilities:
+  CVE-2024-2398 | pkg=curl | installed=8.5.0-r0 | fix=8.7.1-r0
+  CVE-2024-6197 | pkg=curl | installed=8.5.0-r0 | fix=8.9.0-r0
+  CVE-2024-6119 | pkg=libcrypto3 | installed=3.1.4-r6 | fix=3.1.7-r0
+  CVE-2024-2398 | pkg=libcurl | installed=8.5.0-r0 | fix=8.7.1-r0
+  CVE-2024-6197 | pkg=libcurl | installed=8.5.0-r0 | fix=8.9.0-r0
+  CVE-2024-45490 | pkg=libexpat | installed=2.6.2-r0 | fix=2.6.3-r0
+  CVE-2024-8176 | pkg=libexpat | installed=2.6.2-r0 | fix=2.7.0-r0
+  CVE-2024-6119 | pkg=libssl3 | installed=3.1.4-r6 | fix=3.1.7-r0
+  CVE-2025-24928 | pkg=libxml2 | installed=2.11.7-r0 | fix=2.11.8-r1
+  CVE-2025-27113 | pkg=libxml2 | installed=2.11.7-r0 | fix=2.11.8-r2
+  CVE-2025-32414 | pkg=libxml2 | installed=2.11.7-r0 | fix=2.11.8-r3
+  CVE-2025-32415 | pkg=libxml2 | installed=2.11.7-r0 | fix=2.11.8-r3
+  CVE-2024-55549 | pkg=libxslt | installed=1.1.39-r0 | fix=1.1.39-r1
+  CVE-2025-24855 | pkg=libxslt | installed=1.1.39-r0 | fix=1.1.39-r1
+  CVE-2025-26519 | pkg=musl | installed=1.2.4_git20230717-r4 | fix=1.2.4_git20230717-r5
+  CVE-2025-26519 | pkg=musl-utils | installed=1.2.4_git20230717-r4 | fix=1.2.4_git20230717-r5
+  CVE-2025-31115 | pkg=xz-libs | installed=5.4.5-r0 | fix=5.4.5-r1
+
+==========================================
+
+Image : nginx:alpine
+------------------------------------------
+CRITICAL : 1 (fixable: 1 | no-fix: 0)
+HIGH     : 1 (fixable: 1 | no-fix: 0)
+TOTAL    : 2
+
+CRITICAL Vulnerabilities:
+  CVE-2026-22184 | pkg=zlib | installed=1.3.1-r2 | fix=1.3.2-r0
+
+HIGH Vulnerabilities:
+  CVE-2026-25646 | pkg=libpng | installed=1.6.54-r0 | fix=1.6.55-r0
+
+==========================================
+
+Image : node:20-alpine
+------------------------------------------
+CRITICAL : 1 (fixable: 1 | no-fix: 0)
+HIGH     : 10 (fixable: 10 | no-fix: 0)
+TOTAL    : 11
+
+CRITICAL Vulnerabilities:
+  CVE-2026-22184 | pkg=zlib | installed=1.3.1-r2 | fix=1.3.2-r0
+
+HIGH Vulnerabilities:
+  CVE-2024-21538 | pkg=cross-spawn | installed=7.0.3 | fix=7.0.5, 6.0.6
+  CVE-2025-64756 | pkg=glob | installed=10.4.2 | fix=11.1.0, 10.5.0
+  CVE-2026-26996 | pkg=minimatch | installed=9.0.5 | fix=10.2.1, 9.0.6, 8.0.5, 7.4.7, 6.2.1, 5.1.7, 4.2.4, 3.1.3
+  CVE-2026-27903 | pkg=minimatch | installed=9.0.5 | fix=10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.3
+  CVE-2026-27904 | pkg=minimatch | installed=9.0.5 | fix=10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.4
+  CVE-2026-23745 | pkg=tar | installed=6.2.1 | fix=7.5.3
+  CVE-2026-23950 | pkg=tar | installed=6.2.1 | fix=7.5.4
+  CVE-2026-24842 | pkg=tar | installed=6.2.1 | fix=7.5.7
+  CVE-2026-26960 | pkg=tar | installed=6.2.1 | fix=7.5.8
+  CVE-2026-29786 | pkg=tar | installed=6.2.1 | fix=7.5.10
+
+==========================================
+
+Image : non-root-demo:1.0
+------------------------------------------
+CRITICAL : 1 (fixable: 1 | no-fix: 0)
+HIGH     : 10 (fixable: 10 | no-fix: 0)
+TOTAL    : 11
+
+CRITICAL Vulnerabilities:
+  CVE-2026-22184 | pkg=zlib | installed=1.3.1-r2 | fix=1.3.2-r0
+
+HIGH Vulnerabilities:
+  CVE-2024-21538 | pkg=cross-spawn | installed=7.0.3 | fix=7.0.5, 6.0.6
+  CVE-2025-64756 | pkg=glob | installed=10.4.2 | fix=11.1.0, 10.5.0
+  CVE-2026-26996 | pkg=minimatch | installed=9.0.5 | fix=10.2.1, 9.0.6, 8.0.5, 7.4.7, 6.2.1, 5.1.7, 4.2.4, 3.1.3
+  CVE-2026-27903 | pkg=minimatch | installed=9.0.5 | fix=10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.3
+  CVE-2026-27904 | pkg=minimatch | installed=9.0.5 | fix=10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.4
+  CVE-2026-23745 | pkg=tar | installed=6.2.1 | fix=7.5.3
+  CVE-2026-23950 | pkg=tar | installed=6.2.1 | fix=7.5.4
+  CVE-2026-24842 | pkg=tar | installed=6.2.1 | fix=7.5.7
+  CVE-2026-26960 | pkg=tar | installed=6.2.1 | fix=7.5.8
+  CVE-2026-29786 | pkg=tar | installed=6.2.1 | fix=7.5.10
+
+==========================================
+
+Image : postgres:15
+------------------------------------------
+CRITICAL : 1 (fixable: 1 | no-fix: 0)
+HIGH     : 15 (fixable: 4 | no-fix: 11)
+TOTAL    : 16
+
+CRITICAL Vulnerabilities:
+  CVE-2025-68121 | pkg=stdlib | installed=v1.24.6 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+
+HIGH Vulnerabilities:
+  CVE-2026-24882 | pkg=dirmngr | installed=2.4.7-21+deb13u1+b1 | fix=NO FIX
+  CVE-2026-24882 | pkg=gnupg | installed=2.4.7-21+deb13u1 | fix=NO FIX
+  CVE-2026-24882 | pkg=gnupg-l10n | installed=2.4.7-21+deb13u1 | fix=NO FIX
+  CVE-2026-24882 | pkg=gpg | installed=2.4.7-21+deb13u1+b1 | fix=NO FIX
+  CVE-2026-24882 | pkg=gpg-agent | installed=2.4.7-21+deb13u1+b1 | fix=NO FIX
+  CVE-2026-24882 | pkg=gpgconf | installed=2.4.7-21+deb13u1+b1 | fix=NO FIX
+  CVE-2026-24882 | pkg=gpgsm | installed=2.4.7-21+deb13u1+b1 | fix=NO FIX
+  CVE-2026-0861 | pkg=libc-bin | installed=2.41-12+deb13u1 | fix=NO FIX
+  CVE-2026-0861 | pkg=libc-l10n | installed=2.41-12+deb13u1 | fix=NO FIX
+  CVE-2026-0861 | pkg=libc6 | installed=2.41-12+deb13u1 | fix=NO FIX
+  CVE-2026-0861 | pkg=locales | installed=2.41-12+deb13u1 | fix=NO FIX
+  CVE-2025-58183 | pkg=stdlib | installed=v1.24.6 | fix=1.24.8, 1.25.2
+  CVE-2025-61726 | pkg=stdlib | installed=v1.24.6 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.24.6 | fix=1.24.12, 1.25.6
+  CVE-2025-61729 | pkg=stdlib | installed=v1.24.6 | fix=1.24.11, 1.25.5
+
+==========================================
+
+Image : postgres:15-alpine
+------------------------------------------
+CRITICAL : 2 (fixable: 2 | no-fix: 0)
+HIGH     : 4 (fixable: 4 | no-fix: 0)
+TOTAL    : 6
+
+CRITICAL Vulnerabilities:
+  CVE-2026-22184 | pkg=zlib | installed=1.3.1-r2 | fix=1.3.2-r0
+  CVE-2025-68121 | pkg=stdlib | installed=v1.24.6 | fix=1.24.13, 1.25.7, 1.26.0-rc.3
+
+HIGH Vulnerabilities:
+  CVE-2025-58183 | pkg=stdlib | installed=v1.24.6 | fix=1.24.8, 1.25.2
+  CVE-2025-61726 | pkg=stdlib | installed=v1.24.6 | fix=1.24.12, 1.25.6
+  CVE-2025-61728 | pkg=stdlib | installed=v1.24.6 | fix=1.24.12, 1.25.6
+  CVE-2025-61729 | pkg=stdlib | installed=v1.24.6 | fix=1.24.11, 1.25.5
+
+==========================================
+
+Image : python-secure:1.0
+------------------------------------------
+CRITICAL : 0 (fixable: 0 | no-fix: 0)
+HIGH     : 6 (fixable: 4 | no-fix: 2)
+TOTAL    : 6
+
+HIGH Vulnerabilities:
+  CVE-2026-0861 | pkg=libc-bin | installed=2.41-12+deb13u1 | fix=NO FIX
+  CVE-2026-0861 | pkg=libc6 | installed=2.41-12+deb13u1 | fix=NO FIX
+  CVE-2026-23949 | pkg=jaraco.context | installed=5.3.0 | fix=6.1.0
+  CVE-2024-47874 | pkg=starlette | installed=0.36.3 | fix=0.40.0
+  CVE-2026-24049 | pkg=wheel | installed=0.45.1 | fix=0.46.2
+  CVE-2026-24049 | pkg=wheel | installed=0.45.1 | fix=0.46.2
+
+==========================================
+
+Image : redis:alpine
+------------------------------------------
+CRITICAL : 1 (fixable: 1 | no-fix: 0)
+HIGH     : 0 (fixable: 0 | no-fix: 0)
+TOTAL    : 1
+
+CRITICAL Vulnerabilities:
+  CVE-2026-22184 | pkg=zlib | installed=1.3.1-r2 | fix=1.3.2-r0
+
+==========================================
+
+Image : service_scaling-api:latest
+------------------------------------------
+CRITICAL : 1 (fixable: 1 | no-fix: 0)
+HIGH     : 10 (fixable: 10 | no-fix: 0)
+TOTAL    : 11
+
+CRITICAL Vulnerabilities:
+  CVE-2026-22184 | pkg=zlib | installed=1.3.1-r2 | fix=1.3.2-r0
+
+HIGH Vulnerabilities:
+  CVE-2024-21538 | pkg=cross-spawn | installed=7.0.3 | fix=7.0.5, 6.0.6
+  CVE-2025-64756 | pkg=glob | installed=10.4.2 | fix=11.1.0, 10.5.0
+  CVE-2026-26996 | pkg=minimatch | installed=9.0.5 | fix=10.2.1, 9.0.6, 8.0.5, 7.4.7, 6.2.1, 5.1.7, 4.2.4, 3.1.3
+  CVE-2026-27903 | pkg=minimatch | installed=9.0.5 | fix=10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.3
+  CVE-2026-27904 | pkg=minimatch | installed=9.0.5 | fix=10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.4
+  CVE-2026-23745 | pkg=tar | installed=6.2.1 | fix=7.5.3
+  CVE-2026-23950 | pkg=tar | installed=6.2.1 | fix=7.5.4
+  CVE-2026-24842 | pkg=tar | installed=6.2.1 | fix=7.5.7
+  CVE-2026-26960 | pkg=tar | installed=6.2.1 | fix=7.5.8
+  CVE-2026-29786 | pkg=tar | installed=6.2.1 | fix=7.5.10
+
+==========================================
+
+Image : static-spa:1.0.0
+------------------------------------------
+CRITICAL : 1 (fixable: 1 | no-fix: 0)
+HIGH     : 0 (fixable: 0 | no-fix: 0)
+TOTAL    : 1
+
+CRITICAL Vulnerabilities:
+  CVE-2026-22184 | pkg=zlib | installed=1.3.1-r2 | fix=1.3.2-r0
+
+==========================================
+
+Image : ts-multi:latest
+------------------------------------------
+CRITICAL : 1 (fixable: 1 | no-fix: 0)
+HIGH     : 10 (fixable: 10 | no-fix: 0)
+TOTAL    : 11
+
+CRITICAL Vulnerabilities:
+  CVE-2026-22184 | pkg=zlib | installed=1.3.1-r2 | fix=1.3.2-r0
+
+HIGH Vulnerabilities:
+  CVE-2024-21538 | pkg=cross-spawn | installed=7.0.3 | fix=7.0.5, 6.0.6
+  CVE-2025-64756 | pkg=glob | installed=10.4.2 | fix=11.1.0, 10.5.0
+  CVE-2026-26996 | pkg=minimatch | installed=9.0.5 | fix=10.2.1, 9.0.6, 8.0.5, 7.4.7, 6.2.1, 5.1.7, 4.2.4, 3.1.3
+  CVE-2026-27903 | pkg=minimatch | installed=9.0.5 | fix=10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.3
+  CVE-2026-27904 | pkg=minimatch | installed=9.0.5 | fix=10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.4
+  CVE-2026-23745 | pkg=tar | installed=6.2.1 | fix=7.5.3
+  CVE-2026-23950 | pkg=tar | installed=6.2.1 | fix=7.5.4
+  CVE-2026-24842 | pkg=tar | installed=6.2.1 | fix=7.5.7
+  CVE-2026-26960 | pkg=tar | installed=6.2.1 | fix=7.5.8
+  CVE-2026-29786 | pkg=tar | installed=6.2.1 | fix=7.5.10
+
+==========================================
+
+Image : ts-single:latest
+------------------------------------------
+CRITICAL : 1 (fixable: 1 | no-fix: 0)
+HIGH     : 10 (fixable: 10 | no-fix: 0)
+TOTAL    : 11
+
+CRITICAL Vulnerabilities:
+  CVE-2026-22184 | pkg=zlib | installed=1.3.1-r2 | fix=1.3.2-r0
+
+HIGH Vulnerabilities:
+  CVE-2024-21538 | pkg=cross-spawn | installed=7.0.3 | fix=7.0.5, 6.0.6
+  CVE-2025-64756 | pkg=glob | installed=10.4.2 | fix=11.1.0, 10.5.0
+  CVE-2026-26996 | pkg=minimatch | installed=9.0.5 | fix=10.2.1, 9.0.6, 8.0.5, 7.4.7, 6.2.1, 5.1.7, 4.2.4, 3.1.3
+  CVE-2026-27903 | pkg=minimatch | installed=9.0.5 | fix=10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.3
+  CVE-2026-27904 | pkg=minimatch | installed=9.0.5 | fix=10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.4
+  CVE-2026-23745 | pkg=tar | installed=6.2.1 | fix=7.5.3
+  CVE-2026-23950 | pkg=tar | installed=6.2.1 | fix=7.5.4
+  CVE-2026-24842 | pkg=tar | installed=6.2.1 | fix=7.5.7
+  CVE-2026-26960 | pkg=tar | installed=6.2.1 | fix=7.5.8
+  CVE-2026-29786 | pkg=tar | installed=6.2.1 | fix=7.5.10
+
+==========================================
+
+============== SUMMARY ===================
+Total CRITICAL : 61
+   Fixable     : 61
+   No Fix      : 0
+
+Total HIGH     : 368
+   Fixable     : 277
+   No Fix      : 91
+
+Total Fixable Vulnerabilities : 338
+Grand Total Vulnerabilities   : 429
+==========================================
