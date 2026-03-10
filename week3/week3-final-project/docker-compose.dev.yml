@@ -1,0 +1,83 @@
+# Development overrides - hot reload, debug ports, relaxed resource limits
+services:
+
+  user-service:
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+    volumes:
+      - ./services/user-service:/app
+    ports:
+      - "8000:8000"
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 512M
+
+  product-service:
+    command: ["npx", "nodemon", "src/index.js"]
+    volumes:
+      - ./services/product-service:/app
+      - /app/node_modules
+    ports:
+      - "3002:3000"
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 512M
+
+  order-service:
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8001", "--reload"]
+    volumes:
+      - ./services/order-service:/app
+    ports:
+      - "8001:8001"
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 512M
+
+  api-gateway:
+    command: ["npx", "nodemon", "src/index.js"]
+    volumes:
+      - ./api-gateway:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 512M
+
+  frontend:
+    build:
+      context: ./frontend
+      target: builder
+    command: ["npm", "start"]
+    volumes:
+      - ./frontend/src:/app/src
+    ports:
+      - "3003:3000"
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 512M
+
+  user-db:
+    ports:
+      - "5432:5432"
+
+  order-db:
+    ports:
+      - "5433:5432"
+
+  product-db:
+    ports:
+      - "27017:27017"
+
+  redis:
+    ports:
+      - "6379:6379"
