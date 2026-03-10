@@ -1,0 +1,253 @@
+========== Docker System Backup ==========
+Backup started at : Tue Mar 10 03:09:53 PM IST 2026
+Backup directory  : /home/aakash/Desktop/DevOpsBootcamp/week3/day5/backups/20260310-150953
+Retention policy  : last 7 days
+==========================================
+
+[15:09:53] --- Backing up Docker volumes ---
+[15:09:53]   Volume: 5e33c9005c20fd163001667a3e57f45ed3eccdc7bc24ba290ca65be4d4e87aa7
+[15:09:54]     ✓ Backed up successfully
+[15:09:54]   Volume: 6d407e7d167504e329eb400cbb14f0d76d9dae71ad99dcef3063aef820c29109
+[15:09:55]     ✓ Backed up successfully
+[15:09:55]   Volume: app_dev_dev-db-data
+[15:09:57]     ✓ Backed up successfully
+[15:09:57]   Volume: compose_override_practice_postgres_data
+[15:09:59]     ✓ Backed up successfully
+[15:09:59]   Volume: container-monitoring_grafana-data
+[15:10:02]     ✓ Backed up successfully
+[15:10:02]   Volume: container-monitoring_prometheus-data
+[15:10:03]     ✓ Backed up successfully
+[15:10:03]   Volume: d0e9d59543357a8ae10b407e7188877046912fa9675ecafbbd530218fe2c3160
+[15:10:04]     ✓ Backed up successfully
+[15:10:04]   Volume: d40a73b650ad23c2d7257919adfc5f86dc6c859aa11c29499ec65dbfee2b6742
+[15:10:05]     ✓ Backed up successfully
+[15:10:05]   Volume: day3_db-data
+[15:10:07]     ✓ Backed up successfully
+[15:10:07]   Volume: day3_shared-data
+[15:10:07]     ✓ Backed up successfully
+[15:10:07]   Volume: health_checks_mysql_data
+[15:10:11]     ✓ Backed up successfully
+[15:10:11]   Volume: health_checks_pg_data
+[15:10:13]     ✓ Backed up successfully
+[15:10:13]   Volume: hot_reload_node_modules_api
+[15:10:14]     ✓ Backed up successfully
+[15:10:14]   Volume: laravel_mysql_redis_laravel_app
+[15:10:18]     ✓ Backed up successfully
+[15:10:18]   Volume: laravel_mysql_redis_mysql_data
+[15:10:21]     ✓ Backed up successfully
+[15:10:21]   Volume: mern_stack_mongo1_data
+[15:10:24]     ✓ Backed up successfully
+[15:10:24]   Volume: mern_stack_mongo2_data
+[15:10:27]     ✓ Backed up successfully
+[15:10:27]   Volume: mongo_data
+[15:10:30]     ✓ Backed up successfully
+[15:10:30]   Volume: mysql_data
+[15:10:30]     ✓ Backed up successfully
+[15:10:30]   Volume: postgres_data
+[15:10:31]     ✓ Backed up successfully
+[15:10:31]   Volume: postgres_data_new
+[15:10:33]     ✓ Backed up successfully
+[15:10:33]   Volumes processed: 21
+
+[15:10:33] --- Backing up Docker Compose configurations ---
+[15:10:33]   Config: /home/aakash/Desktop/DevOpsBootcamp/week3/day5/container-monitoring/docker-compose.yml
+[15:10:33]   Config: /home/aakash/Desktop/DevOpsBootcamp/week3/day5/multi-env-deployment/docker-compose.yml
+[15:10:33]   Config: /home/aakash/Desktop/DevOpsBootcamp/week3/day5/multi-env-deployment/docker-compose.prod.yml
+[15:10:33]   Config: /home/aakash/Desktop/DevOpsBootcamp/week3/day5/multi-env-deployment/docker-compose.dev.yml
+[15:10:33]   Config: /home/aakash/Desktop/DevOpsBootcamp/week3/day5/multi-env-deployment/docker-compose.staging.yml
+[15:10:33]   Config: /home/aakash/Desktop/DevOpsBootcamp/week3/day5/blue-green-deployment/docker-compose.green.yml
+[15:10:33]   Config: /home/aakash/Desktop/DevOpsBootcamp/week3/day5/blue-green-deployment/docker-compose.blue.yml
+[15:10:33]   Config: /home/aakash/Desktop/DevOpsBootcamp/week3/day5/blue-green-deployment/docker-compose.nginx.yml
+tar: Removing leading `/' from member names
+tar: Removing leading `/' from hard link targets
+[15:10:33]   ✓ Compose configs archived
+[15:10:33]   Compose files found: 8
+
+[15:10:33] --- Backing up environment files ---
+[15:10:33]   Env file: /home/aakash/Desktop/DevOpsBootcamp/week3/day5/multi-env-deployment/.env.dev
+[15:10:33]   Env file: /home/aakash/Desktop/DevOpsBootcamp/week3/day5/multi-env-deployment/.env.prod
+[15:10:33]   Env file: /home/aakash/Desktop/DevOpsBootcamp/week3/day5/multi-env-deployment/.env.staging
+tar: Removing leading `/' from member names
+tar: Removing leading `/' from hard link targets
+[15:10:33]   ✓ Environment files archived
+[15:10:33]   Environment files found: 3
+
+[15:10:33] --- Backing up Docker images ---
+[15:10:34]   Image: bg-node-app:blue
+[15:10:35]     ✓ Saved
+[15:10:35]   Image: bg-node-app:green
+[15:10:37]     ✓ Saved
+[15:10:37]   Image: multi-env-node-app:dev
+[15:10:39]     ✓ Saved
+[15:10:39]   Image: grafana/grafana:latest
+[15:10:46]     ✓ Saved
+[15:10:46]   Image: python-secure:1.0
+[15:10:48]     ✓ Saved
+[15:10:48]   Image: non-root-demo:1.0
+[15:10:50]     ✓ Saved
+[15:10:50]   Image: aakash1hestabit/node-app:1.0.0
+[15:10:51]     ✓ Saved
+[15:10:51]   Image: aakash1hestabit/node-app:latest
+[15:10:54]     ✓ Saved
+[15:10:54]   Image: aakash1hestabit/practice:1.0
+[15:10:55]     ✓ Saved
+[15:10:55]   Image: express-basic:1.0
+[15:10:57]     ✓ Saved
+[15:10:57]   Image: registry.local:5000/node-app:1.0.0
+[15:10:59]     ✓ Saved
+[15:10:59]   Image: hot_reload-api:latest
+[15:11:01]     ✓ Saved
+[15:11:01]   Image: hot_reload-frontend:latest
+[15:11:02]     ✓ Saved
+[15:11:02]   Image: env_management-api:latest
+[15:11:04]     ✓ Saved
+[15:11:04]   Image: service_scaling-api:latest
+[15:11:06]     ✓ Saved
+[15:11:06]   Image: health_checks-python_app:latest
+[15:11:09]     ✓ Saved
+[15:11:09]   Image: health_checks-node_api:latest
+[15:11:11]     ✓ Saved
+[15:11:11]   Image: laravel_mysql_redis-queue:latest
+[15:11:20]     ✓ Saved
+[15:11:20]   Image: laravel_mysql_redis-app:latest
+[15:11:28]     ✓ Saved
+[15:11:28]   Image: mern_stack-backend:latest
+[15:11:30]     ✓ Saved
+[15:11:30]   Image: mern_stack-mongo2:latest
+[15:11:40]     ✓ Saved
+[15:11:40]   Image: mern_stack-mongo1:latest
+[15:11:50]     ✓ Saved
+[15:11:50]   Image: mern_stack-frontend:latest
+[15:11:52]     ✓ Saved
+[15:11:52]   Image: mern_stack-nginx:latest
+[15:11:53]     ✓ Saved
+[15:11:53]   Image: compose_override_practice-backend:latest
+[15:11:55]     ✓ Saved
+[15:11:55]   Image: 3_tier_app-backend:latest
+[15:11:57]     ✓ Saved
+[15:11:57]   Image: 3_tier_app-frontend:latest
+[15:11:58]     ✓ Saved
+[15:11:58]   Image: compose_override_practice-frontend:latest
+[15:11:59]     ✓ Saved
+[15:11:59]   Image: static-spa:1.0.0
+[15:11:59]     ✓ Saved
+[15:11:59]   Image: fastapi-single:latest
+[15:12:01]     ✓ Saved
+[15:12:01]   Image: aakash1hestabit/python-api:latest
+[15:12:03]     ✓ Saved
+[15:12:03]   Image: ts-multi:latest
+[15:12:05]     ✓ Saved
+[15:12:05]   Image: ts-single:latest
+[15:12:08]     ✓ Saved
+[15:12:08]   Image: postgres:15-alpine
+[15:12:12]     ✓ Saved
+[15:12:12]   Image: postgres:15
+[15:12:18]     ✓ Saved
+[15:12:18]   Image: prom/prometheus:latest
+[15:12:23]     ✓ Saved
+[15:12:23]   Image: redis:alpine
+[15:12:25]     ✓ Saved
+[15:12:25]   Image: mysql:8.0
+[15:12:33]     ✓ Saved
+[15:12:33]   Image: mongo:7
+[15:12:43]     ✓ Saved
+[15:12:44]   Image: nginx:alpine
+[15:12:45]     ✓ Saved
+[15:12:45]   Image: node:20-alpine
+[15:12:46]     ✓ Saved
+[15:12:46]   Image: alpine:latest
+[15:12:47]     ✓ Saved
+[15:12:47]   Image: gcr.io/cadvisor/cadvisor:latest
+[15:12:48]     ✓ Saved
+[15:12:48]   Image: nginx:1.25-alpine
+[15:12:49]     ✓ Saved
+[15:12:49]   Image: registry:2
+[15:12:49]     ✓ Saved
+[15:12:50]   Images processed: 45
+
+[15:12:50] --- Creating backup manifest ---
+[15:12:50]   ✓ Manifest written to /home/aakash/Desktop/DevOpsBootcamp/week3/day5/backups/20260310-150953/manifest.txt
+
+[15:12:50] --- Cleaning up old backups (older than 7 days) ---
+[15:12:50]   No backups older than 7 days found.
+
+[15:12:50] --- Restore verification (dry-run) ---
+[15:12:50]   Manifest exists      : PASS
+[15:12:50]   Volumes dir exists   : PASS
+[15:12:50]   Images dir exists    : PASS
+[15:12:50]   Configs dir exists   : PASS
+[15:12:50]   ✓ Archive integrity OK: 5e33c9005c20fd163001667a3e57f45ed3eccdc7bc24ba290ca65be4d4e87aa7.tar.gz
+[15:12:50]   ✓ Archive integrity OK: 6d407e7d167504e329eb400cbb14f0d76d9dae71ad99dcef3063aef820c29109.tar.gz
+[15:12:50]   ✓ Archive integrity OK: app_dev_dev-db-data.tar.gz
+[15:12:50]   ✓ Archive integrity OK: compose_override_practice_postgres_data.tar.gz
+[15:12:51]   ✓ Archive integrity OK: container-monitoring_grafana-data.tar.gz
+[15:12:51]   ✓ Archive integrity OK: container-monitoring_prometheus-data.tar.gz
+[15:12:51]   ✓ Archive integrity OK: d0e9d59543357a8ae10b407e7188877046912fa9675ecafbbd530218fe2c3160.tar.gz
+[15:12:51]   ✓ Archive integrity OK: d40a73b650ad23c2d7257919adfc5f86dc6c859aa11c29499ec65dbfee2b6742.tar.gz
+[15:12:51]   ✓ Archive integrity OK: day3_db-data.tar.gz
+[15:12:51]   ✓ Archive integrity OK: day3_shared-data.tar.gz
+[15:12:52]   ✓ Archive integrity OK: health_checks_mysql_data.tar.gz
+[15:12:52]   ✓ Archive integrity OK: health_checks_pg_data.tar.gz
+[15:12:52]   ✓ Archive integrity OK: hot_reload_node_modules_api.tar.gz
+[15:12:52]   ✓ Archive integrity OK: laravel_mysql_redis_laravel_app.tar.gz
+[15:12:53]   ✓ Archive integrity OK: laravel_mysql_redis_mysql_data.tar.gz
+[15:12:54]   ✓ Archive integrity OK: mern_stack_mongo1_data.tar.gz
+[15:12:55]   ✓ Archive integrity OK: mern_stack_mongo2_data.tar.gz
+[15:12:56]   ✓ Archive integrity OK: mongo_data.tar.gz
+[15:12:56]   ✓ Archive integrity OK: mysql_data.tar.gz
+[15:12:56]   ✓ Archive integrity OK: postgres_data_new.tar.gz
+[15:12:56]   ✓ Archive integrity OK: postgres_data.tar.gz
+[15:12:57]   ✓ Archive integrity OK: 3_tier_app-backend_latest.tar.gz
+[15:12:57]   ✓ Archive integrity OK: 3_tier_app-frontend_latest.tar.gz
+[15:12:57]   ✓ Archive integrity OK: aakash1hestabit_node-app_1.0.0.tar.gz
+[15:12:58]   ✓ Archive integrity OK: aakash1hestabit_node-app_latest.tar.gz
+[15:12:58]   ✓ Archive integrity OK: aakash1hestabit_practice_1.0.tar.gz
+[15:12:58]   ✓ Archive integrity OK: aakash1hestabit_python-api_latest.tar.gz
+[15:12:58]   ✓ Archive integrity OK: alpine_latest.tar.gz
+[15:12:59]   ✓ Archive integrity OK: bg-node-app_blue.tar.gz
+[15:12:59]   ✓ Archive integrity OK: bg-node-app_green.tar.gz
+[15:12:59]   ✓ Archive integrity OK: compose_override_practice-backend_latest.tar.gz
+[15:12:59]   ✓ Archive integrity OK: compose_override_practice-frontend_latest.tar.gz
+[15:13:00]   ✓ Archive integrity OK: env_management-api_latest.tar.gz
+[15:13:00]   ✓ Archive integrity OK: express-basic_1.0.tar.gz
+[15:13:00]   ✓ Archive integrity OK: fastapi-single_latest.tar.gz
+[15:13:00]   ✓ Archive integrity OK: gcr.io_cadvisor_cadvisor_latest.tar.gz
+[15:13:01]   ✓ Archive integrity OK: grafana_grafana_latest.tar.gz
+[15:13:02]   ✓ Archive integrity OK: health_checks-node_api_latest.tar.gz
+[15:13:02]   ✓ Archive integrity OK: health_checks-python_app_latest.tar.gz
+[15:13:02]   ✓ Archive integrity OK: hot_reload-api_latest.tar.gz
+[15:13:02]   ✓ Archive integrity OK: hot_reload-frontend_latest.tar.gz
+[15:13:04]   ✓ Archive integrity OK: laravel_mysql_redis-app_latest.tar.gz
+[15:13:05]   ✓ Archive integrity OK: laravel_mysql_redis-queue_latest.tar.gz
+[15:13:05]   ✓ Archive integrity OK: mern_stack-backend_latest.tar.gz
+[15:13:05]   ✓ Archive integrity OK: mern_stack-frontend_latest.tar.gz
+[15:13:07]   ✓ Archive integrity OK: mern_stack-mongo1_latest.tar.gz
+[15:13:08]   ✓ Archive integrity OK: mern_stack-mongo2_latest.tar.gz
+[15:13:08]   ✓ Archive integrity OK: mern_stack-nginx_latest.tar.gz
+[15:13:09]   ✓ Archive integrity OK: mongo_7.tar.gz
+[15:13:10]   ✓ Archive integrity OK: multi-env-node-app_dev.tar.gz
+[15:13:11]   ✓ Archive integrity OK: mysql_8.0.tar.gz
+[15:13:11]   ✓ Archive integrity OK: nginx_1.25-alpine.tar.gz
+[15:13:11]   ✓ Archive integrity OK: nginx_alpine.tar.gz
+[15:13:12]   ✓ Archive integrity OK: node_20-alpine.tar.gz
+[15:13:12]   ✓ Archive integrity OK: non-root-demo_1.0.tar.gz
+[15:13:12]   ✓ Archive integrity OK: postgres_15-alpine.tar.gz
+[15:13:13]   ✓ Archive integrity OK: postgres_15.tar.gz
+[15:13:14]   ✓ Archive integrity OK: prom_prometheus_latest.tar.gz
+[15:13:14]   ✓ Archive integrity OK: python-secure_1.0.tar.gz
+[15:13:15]   ✓ Archive integrity OK: redis_alpine.tar.gz
+[15:13:15]   ✓ Archive integrity OK: registry_2.tar.gz
+[15:13:15]   ✓ Archive integrity OK: registry.local_5000_node-app_1.0.0.tar.gz
+[15:13:15]   ✓ Archive integrity OK: service_scaling-api_latest.tar.gz
+[15:13:15]   ✓ Archive integrity OK: static-spa_1.0.0.tar.gz
+[15:13:16]   ✓ Archive integrity OK: ts-multi_latest.tar.gz
+[15:13:16]   ✓ Archive integrity OK: ts-single_latest.tar.gz
+[15:13:16]   ✓ Archive integrity OK: docker-compose-configs.tar.gz
+[15:13:16]   ✓ Archive integrity OK: env-files.tar.gz
+
+==========================================
+Backup completed at : Tue Mar 10 03:13:16 PM IST 2026
+Total size          : 3.5G
+Errors              : 0
+Report file         : /home/aakash/Desktop/DevOpsBootcamp/week3/day5/reports/backup-report-20260310.txt
+==========================================

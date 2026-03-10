@@ -1,0 +1,151 @@
+========== Docker Performance Analysis ==========
+Analysis Date : Tue Mar 10 03:09:37 PM IST 2026
+Hostname      : hestabit-Latitude-3450
+Docker Version: Docker version 29.3.0, build 5927d80
+=================================================
+
+IMAGE SIZE ANALYSIS
+-------------------
+REPOSITORY                           TAG           SIZE      CREATED
+bg-node-app                          green         201MB     2 hours ago
+bg-node-app                          blue          201MB     2 hours ago
+multi-env-node-app                   dev           196MB     11 hours ago
+grafana/grafana                      latest        1.01GB    24 hours ago
+python-secure                        1.0           227MB     25 hours ago
+non-root-demo                        1.0           197MB     27 hours ago
+aakash1hestabit/node-app             1.0.0         200MB     27 hours ago
+aakash1hestabit/node-app             latest        200MB     27 hours ago
+aakash1hestabit/practice             1.0           200MB     27 hours ago
+express-basic                        1.0           200MB     27 hours ago
+registry.local:5000/node-app         1.0.0         200MB     27 hours ago
+hot_reload-api                       latest        215MB     2 days ago
+hot_reload-frontend                  latest        74.1MB    2 days ago
+env_management-api                   latest        225MB     4 days ago
+service_scaling-api                  latest        215MB     4 days ago
+health_checks-python_app             latest        311MB     4 days ago
+health_checks-node_api               latest        218MB     4 days ago
+laravel_mysql_redis-app              latest        886MB     4 days ago
+laravel_mysql_redis-queue            latest        886MB     4 days ago
+mern_stack-backend                   latest        249MB     4 days ago
+mern_stack-mongo2                    latest        1.18GB    4 days ago
+mern_stack-mongo1                    latest        1.18GB    4 days ago
+mern_stack-frontend                  latest        92.7MB    4 days ago
+mern_stack-nginx                     latest        92.5MB    4 days ago
+compose_override_practice-backend    latest        219MB     4 days ago
+3_tier_app-backend                   latest        213MB     4 days ago
+3_tier_app-frontend                  latest        74.9MB    4 days ago
+compose_override_practice-frontend   latest        74.9MB    4 days ago
+static-spa                           1.0.0         20.8MB    6 days ago
+fastapi-single                       latest        253MB     6 days ago
+aakash1hestabit/python-api           latest        236MB     6 days ago
+ts-multi                             latest        200MB     6 days ago
+ts-single                            latest        288MB     6 days ago
+postgres                             15-alpine     392MB     11 days ago
+postgres                             15            627MB     11 days ago
+prom/prometheus                      latest        535MB     12 days ago
+redis                                alpine        134MB     2 weeks ago
+mysql                                8.0           1.07GB    2 weeks ago
+mongo                                7             1.18GB    2 weeks ago
+nginx                                alpine        92.5MB    4 weeks ago
+node                                 20-alpine     192MB     5 weeks ago
+alpine                               latest        13MB      5 weeks ago
+gcr.io/cadvisor/cadvisor             latest        107MB     2 months ago
+nginx                                1.25-alpine   74.1MB    22 months ago
+registry                             2             37.2MB    2 years ago
+
+-----------------------------------------------
+
+TOP 10 LARGEST IMAGES
+---------------------
+  1.18GB       mongo:7
+  1.18GB       mern_stack-mongo2:latest
+  1.18GB       mern_stack-mongo1:latest
+  1.07GB       mysql:8.0
+  1.01GB       grafana/grafana:latest
+  886MB        laravel_mysql_redis-queue:latest
+  886MB        laravel_mysql_redis-app:latest
+  627MB        postgres:15
+  535MB        prom/prometheus:latest
+  392MB        postgres:15-alpine
+
+-----------------------------------------------
+
+CONTAINER RESOURCE USAGE
+------------------------
+NAME         CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O
+grafana      0.83%     138.2MiB / 5.573GiB   2.42%     25.4MB / 20.3MB   1.48MB / 101MB
+prometheus   0.00%     140.5MiB / 5.573GiB   2.46%     32MB / 4.36MB     1.21MB / 7.3MB
+cadvisor     1.06%     67.27MiB / 5.573GiB   1.18%     718kB / 31.7MB    1.96MB / 0B
+app-blue     0.00%     22.3MiB / 5.573GiB    0.39%     4.14kB / 2.82kB   20.5kB / 0B
+app-green    4.10%     22.99MiB / 5.573GiB   0.40%     3.08kB / 1.44kB   0B / 0B
+bg-nginx     0.10%     10.38MiB / 5.573GiB   0.18%     197kB / 130kB     0B / 4.1kB
+
+-----------------------------------------------
+
+CONTAINER STARTUP TIMES
+-----------------------
+  CONTAINER                           STARTED_AT                     STATUS
+  grafana                             2026-03-10T08:22:41.479787858Z running (health: no-healthcheck)
+  prometheus                          2026-03-10T08:22:40.977487416Z running (health: no-healthcheck)
+  cadvisor                            2026-03-10T08:22:40.589021913Z running (health: healthy)
+  app-blue                            2026-03-10T07:26:43.11375977Z  running (health: healthy)
+  app-green                           2026-03-10T07:25:00.961157164Z running (health: healthy)
+  bg-nginx                            2026-03-10T07:04:53.453231386Z running (health: healthy)
+
+-----------------------------------------------
+
+APPLICATION RESPONSE TIMES
+-------------------------
+  localhost:80  -->  0.000576s
+  localhost:3001  -->  0.003547s
+  localhost:8080  -->  0.005119s
+  localhost:9090  -->  0.014757s
+  localhost:9091  -->  0.005900s
+
+-----------------------------------------------
+
+VOLUME DISK USAGE
+-----------------
+Local Volumes space usage:
+
+
+-----------------------------------------------
+
+DOCKER SYSTEM OVERVIEW
+----------------------
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          41        6         9.016GB   3.873GB (42%)
+Containers      6         6         110.6kB   0B (0%)
+Local Volumes   21        2         1.717GB   1.658GB (96%)
+Build Cache     204       0         3.552GB   1.341GB
+
+-----------------------------------------------
+
+DOCKER NETWORKS
+---------------
+NAME                              DRIVER    SCOPE
+app_dev_app-network               bridge    local
+bg-network                        bridge    local
+bridge                            bridge    local
+container-monitoring_monitoring   bridge    local
+day3_backend-net                  bridge    local
+day3_db-net                       bridge    local
+day3_default                      bridge    local
+day3_frontend-net                 bridge    local
+host                              host      local
+none                              null      local
+
+-----------------------------------------------
+
+OPTIMISATION RECOMMENDATIONS
+----------------------------
+  ⚠ 26 image(s) using :latest tag — pin to specific versions for reproducibility.
+  ⚠ 5 image(s) larger than 1 GB — consider multi-stage builds or smaller base images.
+  ⚠ 2 running container(s) without HEALTHCHECK — add HEALTHCHECK to Dockerfiles.
+
+-----------------------------------------------
+
+=================================================
+Performance analysis completed at: Tue Mar 10 03:09:46 PM IST 2026
+Report saved to: /home/aakash/Desktop/DevOpsBootcamp/week3/day5/reports/performance-report-20260310.txt
+=================================================

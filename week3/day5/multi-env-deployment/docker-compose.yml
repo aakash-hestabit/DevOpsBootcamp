@@ -1,0 +1,53 @@
+services:
+  api:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    image: multi-env-node-app:${APP_VERSION:-latest}
+    container_name: ${COMPOSE_PROJECT_NAME:-app}_api
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - PORT=${PORT:-3000}
+      - APP_VERSION=${APP_VERSION:-1.0.0}
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=${DB_NAME}
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:${PORT:-3000}/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  db:
+    image: postgres:15-alpine
+    container_name: ${COMPOSE_PROJECT_NAME:-app}_db
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+volumes:
+  db-data:
+
+networks:
+  app-network:
+    driver: bridge

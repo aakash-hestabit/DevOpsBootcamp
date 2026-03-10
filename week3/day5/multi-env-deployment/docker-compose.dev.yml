@@ -1,0 +1,32 @@
+# Extends docker-compose.yml with dev-specific settings:
+#   - Source-code hot-reload via nodemon
+#   - Exposed DB port for direct access (DBeaver, psql, etc.)
+#   - Debug logging
+
+services:
+  api:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+      target: builder          # Use the builder stage (includes devDeps)
+    image: multi-env-node-app:dev
+    container_name: app_dev_api
+    ports:
+      - "3000:3000"            # Direct host access
+    volumes:
+      - ./app:/app             # Live-reload: mount source into container
+      - /app/node_modules      # Keep container node_modules intact
+    environment:
+      - LOG_LEVEL=debug
+    command: ["node", "server.js"]   # npx nodemon server.js if nodemon is added
+    restart: "no"             # Don't auto-restart during development
+
+  db:
+    container_name: app_dev_db
+    ports:
+      - "5433:5432"            # Expose DB on a non-standard host port
+    volumes:
+      - dev-db-data:/var/lib/postgresql/data
+
+volumes:
+  dev-db-data:

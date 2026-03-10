@@ -1,0 +1,26 @@
+# "green" version of the application.
+
+services:
+  app-green:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    image: bg-node-app:green
+    container_name: app-green
+    restart: unless-stopped
+    environment:
+      - COLOR=green
+      - APP_VERSION=2.0.0          # Represents the "new" version being deployed
+      - PORT=3000
+    networks:
+      - bg-network
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:3000/health | grep -q '\"status\":\"OK\"' || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+networks:
+  bg-network:
+    external: true
