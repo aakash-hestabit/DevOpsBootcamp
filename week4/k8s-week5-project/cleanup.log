@@ -1,0 +1,21 @@
+[0;34m[INFO][0m Starting cleanup...
+[0;34m[INFO][0m Namespace: default
+[0;34m[INFO][0m Checking prerequisites...
+[0;32m[✓][0m Prerequisites OK
+[0;34m[INFO][0m Resources in default:
+[1;33m[⚠][0m This will delete resources
+[0;34m[INFO][0m Deleting manifests...
+[0;32m[✓][0m Manifests deleted
+[0;34m[INFO][0m Removing resources...
+[0;32m[✓][0m svc frontend-service removed
+[0;32m[✓][0m svc backend-service removed
+[0;32m[✓][0m svc assets-service removed
+[0;32m[✓][0m svc db-service removed
+[0;32m[✓][0m deploy frontend removed
+[0;32m[✓][0m deploy backend removed
+[0;32m[✓][0m deploy assets removed
+[0;32m[✓][0m deploy postgres-db removed
+[0;32m[✓][0m Cleanup done
+[0;34m[INFO][0m Resources in default:
+[1;33m[⚠][0m Remaining: 1
+[0;34m[INFO][0m Logs: /home/aakash/Desktop/DevOpsBootcamp/week4/k8s-week5-project/cleanup.log

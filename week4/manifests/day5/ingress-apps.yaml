@@ -1,0 +1,180 @@
+---
+# App 1 - Main website
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-main
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web-main
+  template:
+    metadata:
+      labels:
+        app: web-main
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.25-alpine
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "100m"
+            limits:
+              memory: "128Mi"
+              cpu: "200m"
+          volumeMounts:
+            - name: html
+              mountPath: /usr/share/nginx/html
+      initContainers:
+        - name: create-html
+          image: busybox:1.36
+          command: ['sh', '-c']
+          args:
+            - |
+              cat > /html/index.html << 'EOF'
+              <html><body style="background:#e3f2fd;text-align:center;padding:50px;">
+              <h1>Main Website</h1>
+              <p>This is the main website served at /</p>
+              </body></html>
+              EOF
+          volumeMounts:
+            - name: html
+              mountPath: /html
+      volumes:
+        - name: html
+          emptyDir: {}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-main-service
+spec:
+  selector:
+    app: web-main
+  ports:
+    - port: 80
+
+---
+# App 2 - API
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: api
+  template:
+    metadata:
+      labels:
+        app: api
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.25-alpine
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "100m"
+            limits:
+              memory: "128Mi"
+              cpu: "200m"
+          volumeMounts:
+            - name: html
+              mountPath: /usr/share/nginx/html
+      initContainers:
+        - name: create-html
+          image: busybox:1.36
+          command: ['sh', '-c']
+          args:
+            - |
+              mkdir -p /html
+              cat > /html/index.html << 'EOF'
+              {"service": "api", "status": "ok", "message": "API endpoint at /api"}
+              EOF
+          volumeMounts:
+            - name: html
+              mountPath: /html
+      volumes:
+        - name: html
+          emptyDir: {}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: api-service
+spec:
+  selector:
+    app: api
+  ports:
+    - port: 80
+
+---
+# App 3 - Admin
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: admin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: admin
+  template:
+    metadata:
+      labels:
+        app: admin
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.25-alpine
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "100m"
+            limits:
+              memory: "128Mi"
+              cpu: "200m"
+          volumeMounts:
+            - name: html
+              mountPath: /usr/share/nginx/html
+      initContainers:
+        - name: create-html
+          image: busybox:1.36
+          command: ['sh', '-c']
+          args:
+            - |
+              cat > /html/index.html << 'EOF'
+              <html><body style="background:#ffebee;text-align:center;padding:50px;">
+              <h1>Admin Panel</h1>
+              <p>Admin dashboard served at /admin</p>
+              </body></html>
+              EOF
+          volumeMounts:
+            - name: html
+              mountPath: /html
+      volumes:
+        - name: html
+          emptyDir: {}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: admin-service
+spec:
+  selector:
+    app: admin
+  ports:
+    - port: 80

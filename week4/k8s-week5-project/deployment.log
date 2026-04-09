@@ -1,0 +1,64 @@
+[0;34m[INFO][0m Starting K8S Bootcamp deployment...
+[0;34m[INFO][0m Namespace: default
+[0;34m[INFO][0m Manifests directory: /home/aakash/Desktop/DevOpsBootcamp/week4/k8s-week5-project/manifests
+[0;34m[INFO][0m Checking prerequisites...
+[0;32m[0m Prerequisites check passed
+[0;34m[INFO][0m Applying db.yaml...
+deployment.apps/postgres-db created
+[0;32m[0m db.yaml applied successfully
+[0;34m[INFO][0m Applying db-service.yaml...
+service/db-service created
+[0;32m[0m db-service.yaml applied successfully
+[0;34m[INFO][0m Applying backend-deployment.yaml...
+deployment.apps/backend created
+[0;32m[0m backend-deployment.yaml applied successfully
+[0;34m[INFO][0m Applying backend-service.yaml...
+service/backend-service created
+[0;32m[0m backend-service.yaml applied successfully
+[0;34m[INFO][0m Applying frontend-deployment.yaml...
+deployment.apps/frontend created
+[0;32m[0m frontend-deployment.yaml applied successfully
+[0;34m[INFO][0m Applying frontend-service.yaml...
+service/frontend-service created
+[0;32m[0m frontend-service.yaml applied successfully
+[0;34m[INFO][0m Applying assets-deployment.yaml...
+deployment.apps/assets created
+[0;32m[0m assets-deployment.yaml applied successfully
+[0;34m[INFO][0m Applying assets-service.yaml...
+service/assets-service created
+[0;32m[0m assets-service.yaml applied successfully
+[0;34m[INFO][0m Applying ingress.yaml...
+ingress.networking.k8s.io/project-ingress created
+[0;32m[0m ingress.yaml applied successfully
+[0;34m[INFO][0m Waiting for deployments to be ready...
+[0;34m[INFO][0m Waiting for rollout of deployment: postgres-db...
+[0;32m[0m postgres-db rolled out successfully
+[0;34m[INFO][0m Waiting for rollout of deployment: backend...
+[0;32m[0m backend rolled out successfully
+[0;34m[INFO][0m Waiting for rollout of deployment: frontend...
+[0;32m[0m frontend rolled out successfully
+[0;34m[INFO][0m Waiting for rollout of deployment: assets...
+[0;32m[0m assets rolled out successfully
+[0;34m[INFO][0m Deployment completed!
+[0;34m[INFO][0m Deployment status:
+NAME          READY   UP-TO-DATE   AVAILABLE   AGE
+assets        3/3     3            3           27s
+backend       3/3     3            3           36s
+frontend      3/3     3            3           31s
+postgres-db   1/1     1            1           40s
+[0;34m[INFO][0m Service status:
+NAME               TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE
+assets-service     ClusterIP   10.101.229.240   <none>        80/TCP     26s
+backend-service    ClusterIP   10.96.206.253    <none>        80/TCP     34s
+db-service         ClusterIP   10.103.197.104   <none>        5432/TCP   39s
+frontend-service   ClusterIP   10.100.180.211   <none>        80/TCP     30s
+kubernetes         ClusterIP   10.96.0.1        <none>        443/TCP    19d
+[0;34m[INFO][0m Ingress status:
+NAME              CLASS   HOSTS                                                         ADDRESS   PORTS   AGE
+project-ingress   nginx   www.bootcamp.local,api.bootcamp.local,assets.bootcamp.local             80      23s
+[0;32m[0m All manifests deployed successfully!
+[0;34m[INFO][0m   - Add hosts entries: <cluster ip> www.bootcamp.local api.bootcamp.local assets.bootcamp.local
+[0;34m[INFO][0m   - Access frontend: http://www.bootcamp.local
+[0;34m[INFO][0m   - Access API: http://api.bootcamp.local
+[0;34m[INFO][0m   - Access assets: http://assets.bootcamp.local
+[0;34m[INFO][0m Logs saved to: /home/aakash/Desktop/DevOpsBootcamp/week4/k8s-week5-project/deployment.log

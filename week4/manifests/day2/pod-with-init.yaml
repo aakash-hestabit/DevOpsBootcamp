@@ -1,0 +1,53 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp-with-init
+  labels:
+    app: webapp
+spec:
+  # Init containers run BEFORE main containers
+  # They run in order, each must complete successfully
+  initContainers:
+    - name: init-setup
+      image: busybox:1.36
+      command: ['sh', '-c']
+      args:
+        - |
+          echo "=========================================="
+          echo "Init container starting..."
+          echo "Simulating dependency check..."
+          sleep 5
+          echo "Creating required directories..."
+          mkdir -p /work/data
+          echo "Writing initial config..."
+          echo "initialized=true" > /work/data/config.txt
+          echo "timestamp=$(date)" >> /work/data/config.txt
+          echo "Init container completed!"
+          echo "=========================================="
+      volumeMounts:
+        - name: workdir
+          mountPath: /work
+
+  
+  # Main container
+  
+  containers:
+      - name: webapp
+        image: nginx:1.25-alpine
+        ports:
+          - containerPort: 80
+        volumeMounts:
+          - name: workdir
+            mountPath: /app-data
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "100m"
+          limits:
+            memory: "128Mi"
+            cpu: "200m"
+    
+  volumes:
+    - name: workdir
+      emptyDir: {}
+
