@@ -1,0 +1,16 @@
+trigger:
+  - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  - script: echo "Hello World from Azure Pipelines!"
+    displayName: 'Hello World'
+
+  - script: |
+      echo "Pipeline triggered by: $(Build.Reason)"
+      echo "Branch: $(Build.SourceBranchName)"
+      echo "Commit: $(Build.SourceVersion)"
+      echo "Build number: $(Build.BuildNumber)"
+    displayName: 'Print pipeline info'
